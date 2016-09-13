@@ -1,7 +1,7 @@
 #!/bin/bash
 mkdir /root/.chef 
-mkdir -p chef_cookbooks/iptables 
-mkdir -p chef_cookbooks/nginx
+mkdir -p /root/chef_cookbooks/iptables 
+mkdir -p /root/chef_cookbooks/nginx
 mkdir /root/chef_resources
 touch /root/.chef/runlist.json
 cd /root/chef_resources/
