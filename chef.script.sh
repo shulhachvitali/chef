@@ -1,6 +1,7 @@
 #!/bin/bash
 mkdir /root/.chef 
-mkdir /root/chef_cookbooks
+mkdir -p chef_cookbooks/iptables 
+mkdir -p chef_cookbooks/nginx
 mkdir /root/chef_resources
 touch /root/.chef/runlist.json
 cd /root/chef_resources/
@@ -12,7 +13,7 @@ echo `chef -v`
 cat > /root/.chef/solo.rb << EOF
 log_level :debug
 file_cache_path "/root/.chef"
-cookbook_path "/root/chef_cookbooks"
+cookbook_path "/root/chef_cookbooks/nginx/cookbooks", "/root/chef_cookbooks/iptables/cookbooks"
 json_attribs "/root/.chef/runlist.json"
 EOF
 #yum install git -y
@@ -21,22 +22,24 @@ EOF
 #git clone https://github.com/miketheman/nginx
 wget https://github.com/chef-cookbooks/iptables/archive/v2.0.2.zip
 unzip v2.0.2.zip
-cd /root/chef_resources/v2.0.2
+cd /root/chef_resources/iptables-2.0.2
 berks install
 berks package
-tar -xvf /root/chef_resources/iptables-2.0.2/cookbooks-*.tar.gz -C /root/
+tar -xvf /root/chef_resources/iptables-2.0.2/cookbooks-*.tar.gz -C /root/chef_cookbooks/iptables
 cd /root/chef_resources/
 wget https://github.com/miketheman/nginx/archive/2.7.x.zip
 unzip 2.7.x.zip
 cd /root/chef_resources/nginx-2.7.x/
 berks install
 berks package
-tar -xvf /root/chef_resources/nginx-2.7.x/cookbooks-*.tar.gz -C /root/
-mv -fu cookbooks chef_cookbooks
+tar -xvf /root/chef_resources/nginx-2.7.x/cookbooks-*.tar.gz -C /root/chef_cookbooks/nginx
+#cd /root/cookbooks
+#cp -R ./ /root/chef_cookbooks/
 cat > /root/.chef/runlist.json <<EOF
 {
 "run_list": ["recipe[nginx::default]", "recipe[iptables::default]"],
   "nginx": {"default_root":"/usr/share/nginx/html"}
 }
 EOF
-#chown -R vagrant:vagrant /home/vagrant
+chef-solo -c /root/.chef/solo.rb > /root/chef.console.output
+
