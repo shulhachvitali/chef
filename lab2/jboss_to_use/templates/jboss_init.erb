@@ -11,20 +11,20 @@ JBOSS_HOME="<%= @jboss_home %>"
 start()
 {
 echo "Starting jboss"
-       su - <%= @jboss_user %> -c "nohup $JBOSS_HOME/bin/run.sh -b <%= @jboss_ip %> > $JBOSS_HOME/server/default/logs/run.log 2>> $JBOSS_HOME/server/default/logs/error_start.log & "
+       su -l <%= @jboss_user %> -c "<%= @jboss_home %>/bin/run.sh -b <%= @jboss_ip %> > /dev/null 2> /dev/null &"
 #exit 0
 }
 
 stop()
 {
 echo "Stopping jboss"
-       su - <%= @jboss_user %> -c "nohup $JBOSS_HOME/bin/shutdown.sh -s <%= @jboss_ip %> -u jboss -p jboss > $JBOSS_HOME/server/default/logs/shutdown.log 2>> $JBOSS_HOME/server/default/logs/error_stop.log & "
-#exit 0
+       su -l <%= @jboss_user %> -c "<%= @jboss_home %>/bin/shutdown.sh -S"
 }
 
 restart()
 {
 stop
+sleep 30
 start
 }
 
