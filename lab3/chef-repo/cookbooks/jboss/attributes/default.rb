@@ -1,0 +1,10 @@
+default['jboss']['tmp_dir'] = '/tmp'
+default['jboss']['install_path'] = '/opt'
+default['jboss']['jboss_home'] = "#{ node['jboss']['install_path'] }/jboss-6.1.0.Final"
+default['jboss']['jboss_log'] = "#{ node['jboss']['jboss_home'] }/server/default/logs"
+default['jboss']['url'] = 'http://download.jboss.org/jbossas/6.1/jboss-as-distribution-6.1.0.Final.zip'
+default['jboss']['jboss_ip'] = '192.168.33.210'
+default['jboss']['jboss_user'] = 'jboss'
+default['jboss']['jboss_group'] = 'jboss'
+default['jboss']['deploy_path'] = "#{ node['jboss']['jboss_home'] }/server/default/deploy"
+default['jboss']['app_url'] = "http://www.cumulogic.com/download/Apps/hudson.zip"
