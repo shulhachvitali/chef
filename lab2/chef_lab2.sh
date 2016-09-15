@@ -18,7 +18,7 @@ cat > /root/.chef/runlist.json <<EOF
 "run_list": ["recipe[java::default]","recipe[jboss::default]"]
 }
 EOF
-cat > /root/.chef/solo.rb << EOF
+cat > /root/.chef/solo.rb <<EOF
 log_level :debug
 file_cache_path "/root/.chef"
 cookbook_path "/root/chef_cookbooks/java/cookbooks", "/root/chef_cookbooks/jboss/cookbooks"
