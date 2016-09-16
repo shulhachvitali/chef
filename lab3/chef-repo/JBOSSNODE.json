@@ -1,9 +1,0 @@
-Node Name:   JBOSSNODE
-Environment: Chef-dev
-FQDN:        
-IP:          
-Run List:    role[JBOSS]
-Roles:       
-Recipes:     
-Platform:     
-Tags:        

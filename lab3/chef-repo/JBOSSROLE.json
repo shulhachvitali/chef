@@ -1,8 +1,0 @@
-chef_type:           role
-default_attributes:
-description:         test role
-env_run_lists:
-json_class:          Chef::Role
-name:                JBOSS
-override_attributes:
-run_list:            recipe[jboss]
