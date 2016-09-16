@@ -1,5 +1,6 @@
 knife bootstrap 192.168.33.135 --ssh-user root --ssh-password vagrant --node-name JBOSSNODE --run-list "role[web_server_nginx]"
 #APACHE
+#Role web_server_nginx
 #{
 #  "name": "web_server_apache",
 #  "description": "web server apache role",
@@ -19,6 +20,7 @@ knife bootstrap 192.168.33.135 --ssh-user root --ssh-password vagrant --node-nam
 #  }
 #}
 #NGINX
+#Role web_server_nginx
 #{
 #  "name": "web_server_nginx",
 #  "description": "web server nginx",
