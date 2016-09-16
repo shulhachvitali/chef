@@ -1,0 +1,39 @@
+knife bootstrap 192.168.33.135 --ssh-user root --ssh-password vagrant --node-name JBOSSNODE --run-list "role[web_server_nginx]"
+#APACHE
+#{
+#  "name": "web_server_apache",
+#  "description": "web server apache role",
+#  "json_class": "Chef::Role",
+#  "default_attributes": {
+#
+#  },
+#  "override_attributes": {
+#
+#  },
+#  "chef_type": "role",
+#  "run_list": [
+#    "recipe[web]"
+#  ],
+#  "env_run_lists": {
+#
+#  }
+#}
+#NGINX
+#{
+#  "name": "web_server_nginx",
+#  "description": "web server nginx",
+#  "json_class": "Chef::Role",
+#  "default_attributes": {
+#
+#  },
+#  "override_attributes": {
+#
+#  },
+#  "chef_type": "role",
+#  "run_list": [
+#    "recipe[web]"
+#  ],
+#  "env_run_lists": {
+#
+#  }
+#}
