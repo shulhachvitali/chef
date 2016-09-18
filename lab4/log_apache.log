@@ -1,0 +1,44 @@
+192.168.33.135 -----> Existing Chef installation detected
+192.168.33.135 Starting the first Chef Client run...
+192.168.33.135 Starting Chef Client, version 12.14.60[0m
+192.168.33.135 resolving cookbooks for run list: ["web"][0m
+192.168.33.135 Synchronizing Cookbooks:[0m
+192.168.33.135   - web (1.0.0)[0m
+192.168.33.135   - web_nginx (1.0.0)[0m
+192.168.33.135   - web_apache (1.0.0)[0m
+192.168.33.135 Installing Cookbook Gems:[0m
+192.168.33.135 Compiling Cookbooks...[0m
+192.168.33.135 Converging 3 resources[0m
+192.168.33.135 Recipe: web_apache::default[0m
+192.168.33.135   * web[install apache] action install (up to date)
+192.168.33.135   * yum_package[httpd] action install
+192.168.33.135     [32m- install version 2.2.15-54.el6.centos of package httpd[0m
+192.168.33.135 [0m  * web[setup default page] action setup (up to date)
+192.168.33.135   * template[/var/www/error/noindex.html] action create
+192.168.33.135     [32m- update content in file /var/www/error/noindex.html from 29a8b2 to 983c17[0m
+192.168.33.135     [37m--- /var/www/error/noindex.html	2014-10-19 19:00:54.000000000 +0000[0m
+192.168.33.135     [37m+++ /var/www/error/.chef-noindex.html20160916-23573-hibkr2	2016-09-16 12:50:28.928536009 +0000[0m
+192.168.33.135     [37m@@ -75,7 +75,7 @@[0m
+192.168.33.135     [37m 	</head>[0m
+192.168.33.135     [37m [0m
+192.168.33.135     [37m 	<body>[0m
+192.168.33.135     [37m-	<h1>Apache 2 Test Page<br><font size="-1"><strong>powered by</font> CentOS</strong></h1>[0m
+192.168.33.135     [37m+	<h1>APACHE HTTPD provided with Chef<br><font size="-1"><strong>powered by</font> CentOS</strong></h1>[0m
+192.168.33.135     [37m [0m
+192.168.33.135     [37m 		<div class="content">[0m
+192.168.33.135     [37m 			<div class="content-middle">[0m
+192.168.33.135     [32m- restore selinux security context[0m
+192.168.33.135 [0m  * web[start apach] action start (up to date)
+192.168.33.135   * service[httpd] action start
+192.168.33.135     [32m- start service service[httpd][0m
+192.168.33.135 [0m[0m
+192.168.33.135 Running handlers:[0m
+192.168.33.135 Running handlers complete
+192.168.33.135 [0m[0m
+192.168.33.135 Deprecated features used![0m
+192.168.33.135   Using an LWRP provider by its name (WebApache) directly is no longer supported in Chef 12 and will be removed.  Use Chef::ProviderResolver.new(node, resource, action) instead. at 3 locations:[0m
+192.168.33.135     - /var/chef/cache/cookbooks/web_apache/recipes/default.rb:7:in `block in from_file'[0m
+192.168.33.135     - /var/chef/cache/cookbooks/web_apache/recipes/default.rb:12:in `block in from_file'[0m
+192.168.33.135     - /var/chef/cache/cookbooks/web_apache/recipes/default.rb:17:in `block in from_file'[0m
+192.168.33.135 [0m
+192.168.33.135 Chef Client finished, 3/6 resources updated in 06 seconds[0m

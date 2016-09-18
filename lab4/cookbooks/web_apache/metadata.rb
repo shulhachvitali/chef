@@ -1,0 +1,6 @@
+name             'web_apache'
+maintainer       'vitali_shulhach'
+maintainer_email 'vitali_shulhach@epam.com'
+description      'Installation of Apache_web_server'
+version          '1.0.0'
+depends	'web'
