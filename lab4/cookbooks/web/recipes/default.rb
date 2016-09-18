@@ -3,10 +3,9 @@
 # Recipe :: default
 #
 
-if node.role?('web_server_nginx')
-   include_recipe 'web_nginx'
+if node.role?("#{node['web_server_type']['web_server_nginx']}")
+	include_recipe 'web_nginx'
 
-elsif node.role?('web_server_apache')
-   include_recipe 'web_apache'
-
+elsif node.role?("#{node['web_server_type']['web_server_apache']}")
+	include_recipe 'web_apache'
 end
