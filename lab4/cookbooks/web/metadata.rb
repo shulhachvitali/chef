@@ -1,8 +1,0 @@
-name             'web'
-maintainer       'vitali_shulhach'
-maintainer_email 'vitali_shulhach@epam.com'
-license          'All rights reserved'
-description      'Installation of web-server'
-version          '1.0.0'
-depends	'web_nginx'
-depends 'web_apache'

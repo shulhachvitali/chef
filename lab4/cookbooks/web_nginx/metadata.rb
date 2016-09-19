@@ -1,6 +1,0 @@
-name             'web_nginx'
-maintainer       'vitali_shulhach'
-maintainer_email 'vitali_shulhach@epam.com'
-description      'nginx installation'
-version          '1.0.0'
-depends	'web'
