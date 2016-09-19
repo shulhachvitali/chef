@@ -1,0 +1,4460 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Chef::RunContext
+  
+    &mdash; Documentation by YARD 0.9.5
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Chef::RunContext";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (R)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Chef.html" title="Chef (class)">Chef</a></span></span>
+     &raquo; 
+    <span class="title">RunContext</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="cookbooks_list_link"
+        href="../cookbooks_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="../class_list.html"></iframe>
+
+      <div id="content"><h1>Class: Chef::RunContext
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Chef::RunContext</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb<span class="defines">,<br />
+  compat_resource/files/lib/chef_compat/monkeypatches.rb</span>
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <h2>Chef::RunContext</h2>
+<p>
+Value object that loads and tracks the context of a Chef run
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="RunContext/ChildRunContext.html" title="Chef::RunContext::ChildRunContext (class)">ChildRunContext</a></span></p>
+</div>
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="RunContext/Deprecated.html" title="Chef::RunContext::Deprecated (module)">Deprecated</a></span>
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="RunContext/ChildRunContext.html" title="Chef::RunContext::ChildRunContext (class)">ChildRunContext</a></span>
+    
+  
+</p>
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#audits-instance_method" title="#audits (instance method)">#<strong>audits</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+The list of control groups to execute during the audit phase.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#before_notification_collection-instance_method" title="#before_notification_collection (instance method)">#<strong>before_notification_collection</strong>  &#x21d2; Hash[String, Array[Chef::Resource::Notification]] </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+A Hash containing the before notifications triggered by resources during
+the converge phase of the chef run.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cookbook_collection-instance_method" title="#cookbook_collection (instance method)">#<strong>cookbook_collection</strong>  &#x21d2; Chef::CookbookCollection </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+The set of cookbooks involved in this run.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#definitions-instance_method" title="#definitions (instance method)">#<strong>definitions</strong>  &#x21d2; Array[Chef::ResourceDefinition] </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Resource Definitions for this run.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delayed_actions-instance_method" title="#delayed_actions (instance method)">#<strong>delayed_actions</strong>  &#x21d2; Array[Chef::Resource::Notification] </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+An Array containing the delayed (end of run) notifications triggered by
+resources during the converge phase of the chef run.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delayed_notification_collection-instance_method" title="#delayed_notification_collection (instance method)">#<strong>delayed_notification_collection</strong>  &#x21d2; Hash[String, Array[Chef::Resource::Notification]] </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+A Hash containing the delayed (end of run) notifications triggered by
+resources during the converge phase of the chef run.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#events-instance_method" title="#events (instance method)">#<strong>events</strong>  &#x21d2; Chef::EventDispatch::Dispatcher </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Event dispatcher for this run.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#immediate_notification_collection-instance_method" title="#immediate_notification_collection (instance method)">#<strong>immediate_notification_collection</strong>  &#x21d2; Hash[String, Array[Chef::Resource::Notification]] </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+A Hash containing the immediate notifications triggered by resources during
+the converge phase of the chef run.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#node-instance_method" title="#node (instance method)">#<strong>node</strong>  &#x21d2; Chef::Node </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+The node for this run.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#parent_run_context-instance_method" title="#parent_run_context (instance method)">#<strong>parent_run_context</strong>  &#x21d2; Chef::RunContext </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+The parent run context.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reboot_info-instance_method" title="#reboot_info (instance method)">#<strong>reboot_info</strong>  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Hash of factoids for a reboot request.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resource_collection-instance_method" title="#resource_collection (instance method)">#<strong>resource_collection</strong>  &#x21d2; Chef::ResourceCollection </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+The collection of resources intended to be converged (and able to be
+notified).
+</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_delayed_action-instance_method" title="#add_delayed_action (instance method)">#<strong>add_delayed_action</strong>(notification)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Adds a delayed action to the <tt>delayed_actions</tt>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#before_notifications-instance_method" title="#before_notifications (instance method)">#<strong>before_notifications</strong>(resource)  &#x21d2; Array[Notification] </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Get the list of before notifications sent by the given resource.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cancel_reboot-instance_method" title="#cancel_reboot (instance method)">#<strong>cancel_reboot</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_child-instance_method" title="#create_child (instance method)">#<strong>create_child</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Create a child RunContext.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delayed_notifications-instance_method" title="#delayed_notifications (instance method)">#<strong>delayed_notifications</strong>(resource)  &#x21d2; Array[Notification] </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Get the list of delayed (end of run) notifications sent by the given
+resource.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_cookbook_file_in_cookbook%3F-instance_method" title="#has_cookbook_file_in_cookbook? (instance method)">#<strong>has_cookbook_file_in_cookbook?</strong>(cookbook, cb_file_name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Find out if the cookbook has the given file.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_template_in_cookbook%3F-instance_method" title="#has_template_in_cookbook? (instance method)">#<strong>has_template_in_cookbook?</strong>(cookbook, template_name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Find out if the cookbook has the given template.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#immediate_notifications-instance_method" title="#immediate_notifications (instance method)">#<strong>immediate_notifications</strong>(resource)  &#x21d2; Array[Notification] </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Get the list of immediate notifications sent by the given resource.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#include_recipe-instance_method" title="#include_recipe (instance method)">#<strong>include_recipe</strong>(*recipe_names, current_cookbook: nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Evaluates the recipes <tt>recipe_names</tt>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(node, cookbook_collection, events)  &#x21d2; RunContext </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Creates a new Chef::RunContext object and populates its fields.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize_child_state-instance_method" title="#initialize_child_state (instance method)">#<strong>initialize_child_state</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Initialize state that applies to both Chef::RunContext and
+Chef::ChildRunContext.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load-instance_method" title="#load (instance method)">#<strong>load</strong>(run_list_expansion)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Triggers the compile phase of the chef run.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_recipe-instance_method" title="#load_recipe (instance method)">#<strong>load_recipe</strong>(recipe_name, current_cookbook: nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Evaluates the recipe <tt>recipe_name</tt>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_recipe_file-instance_method" title="#load_recipe_file (instance method)">#<strong>load_recipe_file</strong>(recipe_file)  &#x21d2; Chef::Recipe </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Load the given recipe from a filename.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#loaded_attribute-instance_method" title="#loaded_attribute (instance method)">#<strong>loaded_attribute</strong>(cookbook, attribute_file)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Mark a given attribute file as having been loaded.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#loaded_attributes-instance_method" title="#loaded_attributes (instance method)">#<strong>loaded_attributes</strong>  &#x21d2; Array[String] </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+A list of all attributes files that have been loaded.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#loaded_fully_qualified_attribute%3F-instance_method" title="#loaded_fully_qualified_attribute? (instance method)">#<strong>loaded_fully_qualified_attribute?</strong>(cookbook, attribute_file)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Find out if a given attribute file has been loaded.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#loaded_fully_qualified_recipe%3F-instance_method" title="#loaded_fully_qualified_recipe? (instance method)">#<strong>loaded_fully_qualified_recipe?</strong>(cookbook, recipe)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Find out if a given recipe has been loaded.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#loaded_recipe-instance_method" title="#loaded_recipe (instance method)">#<strong>loaded_recipe</strong>(cookbook, recipe)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Mark a given recipe as having been loaded.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#loaded_recipe%3F-instance_method" title="#loaded_recipe? (instance method)">#<strong>loaded_recipe?</strong>(recipe)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Find out if a given recipe has been loaded.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#loaded_recipes-instance_method" title="#loaded_recipes (instance method)">#<strong>loaded_recipes</strong>  &#x21d2; Array[String] </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+A list of all recipes that have been loaded.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#notifies_before-instance_method" title="#notifies_before (instance method)">#<strong>notifies_before</strong>(notification)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Adds an before notification to the <tt>before_notification_collection</tt>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#notifies_delayed-instance_method" title="#notifies_delayed (instance method)">#<strong>notifies_delayed</strong>(notification)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Adds a delayed notification to the
+<tt>delayed_notification_collection</tt>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#notifies_immediately-instance_method" title="#notifies_immediately (instance method)">#<strong>notifies_immediately</strong>(notification)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Adds an immediate notification to the
+<tt>immediate_notification_collection</tt>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#open_stream-instance_method" title="#open_stream (instance method)">#<strong>open_stream</strong>(name: nil, **options) {|stream| ... } &#x21d2; EventDispatch::EventsOutputStream </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Open a stream object that can be printed into and will dispatch to events.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reboot_requested%3F-instance_method" title="#reboot_requested? (instance method)">#<strong>reboot_requested?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#request_reboot-instance_method" title="#request_reboot (instance method)">#<strong>request_reboot</strong>(reboot_info)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+there are options for how to handle multiple calls to these functions: 1.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resolve_attribute-instance_method" title="#resolve_attribute (instance method)">#<strong>resolve_attribute</strong>(cookbook_name, attr_file_name)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Look up an attribute filename.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unreachable_cookbook%3F-instance_method" title="#unreachable_cookbook? (instance method)">#<strong>unreachable_cookbook?</strong>(cookbook_name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Find out whether the given cookbook is in the cookbook dependency graph.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(node, cookbook_collection, events)  &#x21d2; <tt><span class='object_link'><a href="" title="Chef::RunContext (class)">RunContext</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Creates a new Chef::RunContext object and populates its fields. This object
+gets used by the Chef Server to generate a fully compiled recipe list for a
+node.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>node</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Node.html" title="Chef::Node (class)">Chef::Node</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The node to run against.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>cookbook_collection</span>
+      
+      
+        <span class='type'>(<tt>Chef::CookbookCollection</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The cookbooks involved in this run.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>events</span>
+      
+      
+        <span class='type'>(<tt>EventDispatch::Dispatcher</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The event dispatcher for this run.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 159</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='rubyid_node identifier id'>node</span><span class='comma token'>,</span> <span class='rubyid_cookbook_collection identifier id'>cookbook_collection</span><span class='comma token'>,</span> <span class='rubyid_events identifier id'>events</span><span class='rparen token'>)</span>
+  <span class='rubyid_@node ivar id'>@node</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span>
+  <span class='rubyid_@cookbook_collection ivar id'>@cookbook_collection</span> <span class='assign token'>=</span> <span class='rubyid_cookbook_collection identifier id'>cookbook_collection</span>
+  <span class='rubyid_@events ivar id'>@events</span> <span class='assign token'>=</span> <span class='rubyid_events identifier id'>events</span>
+
+  <span class='rubyid_node identifier id'>node</span><span class='dot token'>.</span><span class='rubyid_run_context identifier id'>run_context</span> <span class='assign token'>=</span> <span class='rubyid_self self kw'>self</span>
+  <span class='rubyid_node identifier id'>node</span><span class='dot token'>.</span><span class='rubyid_set_cookbook_attribute identifier id'>set_cookbook_attribute</span>
+
+  <span class='rubyid_@definitions ivar id'>@definitions</span> <span class='assign token'>=</span> <span class='rubyid_Hash constant id'>Hash</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
+  <span class='rubyid_@loaded_recipes_hash ivar id'>@loaded_recipes_hash</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+  <span class='rubyid_@loaded_attributes_hash ivar id'>@loaded_attributes_hash</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+  <span class='rubyid_@reboot_info ivar id'>@reboot_info</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+  <span class='rubyid_@cookbook_compiler ivar id'>@cookbook_compiler</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span>
+  <span class='rubyid_@delayed_actions ivar id'>@delayed_actions</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+
+  <span class='rubyid_initialize_child_state identifier id'>initialize_child_state</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="audits-instance_method">
+  
+    #<strong>audits</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+The list of control groups to execute during the audit phase
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+109
+110
+111</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 109</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_audits identifier id'>audits</span>
+  <span class='rubyid_@audits ivar id'>@audits</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="before_notification_collection-instance_method">
+  
+    #<strong>before_notification_collection</strong>  &#x21d2; <tt>Hash[String, Array[Chef::Resource::Notification]]</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+A Hash containing the before notifications triggered by resources during
+the converge phase of the chef run.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash[String, Array[Chef::Resource::Notification]]</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+A hash from &lt;notifying resource name&gt; =&gt; &lt;list of notifications
+it sent&gt;
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+122
+123
+124</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 122</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_before_notification_collection identifier id'>before_notification_collection</span>
+  <span class='rubyid_@before_notification_collection ivar id'>@before_notification_collection</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="cookbook_collection-instance_method">
+  
+    #<strong>cookbook_collection</strong>  &#x21d2; <tt>Chef::CookbookCollection</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+The set of cookbooks involved in this run
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Chef::CookbookCollection</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+60
+61
+62</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 60</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_cookbook_collection identifier id'>cookbook_collection</span>
+  <span class='rubyid_@cookbook_collection ivar id'>@cookbook_collection</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="definitions-instance_method">
+  
+    #<strong>definitions</strong>  &#x21d2; <tt>Array[Chef::ResourceDefinition]</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Resource Definitions for this run. Populated when the files in
+<tt>definitions/</tt> are evaluated (this is triggered by #load).
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array[Chef::ResourceDefinition]</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+68
+69
+70</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 68</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_definitions identifier id'>definitions</span>
+  <span class='rubyid_@definitions ivar id'>@definitions</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="delayed_actions-instance_method">
+  
+    #<strong>delayed_actions</strong>  &#x21d2; <tt>Array[Chef::Resource::Notification]</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+An Array containing the delayed (end of run) notifications triggered by
+resources during the converge phase of the chef run.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array[Chef::Resource::Notification]</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+An array of notification objects
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+148
+149
+150</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 148</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_delayed_actions identifier id'>delayed_actions</span>
+  <span class='rubyid_@delayed_actions ivar id'>@delayed_actions</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="delayed_notification_collection-instance_method">
+  
+    #<strong>delayed_notification_collection</strong>  &#x21d2; <tt>Hash[String, Array[Chef::Resource::Notification]]</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+A Hash containing the delayed (end of run) notifications triggered by
+resources during the converge phase of the chef run.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash[String, Array[Chef::Resource::Notification]]</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+A hash from &lt;notifying resource name&gt; =&gt; &lt;list of notifications
+it sent&gt;
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+140
+141
+142</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 140</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_delayed_notification_collection identifier id'>delayed_notification_collection</span>
+  <span class='rubyid_@delayed_notification_collection ivar id'>@delayed_notification_collection</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="events-instance_method">
+  
+    #<strong>events</strong>  &#x21d2; <tt>Chef::EventDispatch::Dispatcher</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Event dispatcher for this run.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Chef::EventDispatch::Dispatcher</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+75
+76
+77</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 75</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_events identifier id'>events</span>
+  <span class='rubyid_@events ivar id'>@events</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="immediate_notification_collection-instance_method">
+  
+    #<strong>immediate_notification_collection</strong>  &#x21d2; <tt>Hash[String, Array[Chef::Resource::Notification]]</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+A Hash containing the immediate notifications triggered by resources during
+the converge phase of the chef run.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash[String, Array[Chef::Resource::Notification]]</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+A hash from &lt;notifying resource name&gt; =&gt; &lt;list of notifications
+it sent&gt;
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+131
+132
+133</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 131</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_immediate_notification_collection identifier id'>immediate_notification_collection</span>
+  <span class='rubyid_@immediate_notification_collection ivar id'>@immediate_notification_collection</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="node-instance_method">
+  
+    #<strong>node</strong>  &#x21d2; <tt><span class='object_link'><a href="Node.html" title="Chef::Node (class)">Chef::Node</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+The node for this run
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Node.html" title="Chef::Node (class)">Chef::Node</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 53</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_node identifier id'>node</span>
+  <span class='rubyid_@node ivar id'>@node</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="parent_run_context-instance_method">
+  
+    #<strong>parent_run_context</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Chef::RunContext (class)">Chef::RunContext</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+The parent run context.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Chef::RunContext (class)">Chef::RunContext</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The parent run context, or `nil` if this is the root context.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+94
+95
+96</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 94</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_parent_run_context identifier id'>parent_run_context</span>
+  <span class='rubyid_@parent_run_context ivar id'>@parent_run_context</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="reboot_info=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="reboot_info-instance_method">
+  
+    #<strong>reboot_info</strong>  &#x21d2; <tt>Hash</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Hash of factoids for a reboot request.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+82
+83
+84</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 82</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_reboot_info identifier id'>reboot_info</span>
+  <span class='rubyid_@reboot_info ivar id'>@reboot_info</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="resource_collection=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="resource_collection-instance_method">
+  
+    #<strong>resource_collection</strong>  &#x21d2; <tt><span class='object_link'><a href="ResourceCollection.html" title="Chef::ResourceCollection (class)">Chef::ResourceCollection</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+The collection of resources intended to be converged (and able to be
+notified).
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="ResourceCollection.html" title="Chef::ResourceCollection (class)">Chef::ResourceCollection</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>CookbookCompiler</li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+104
+105
+106</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 104</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_resource_collection identifier id'>resource_collection</span>
+  <span class='rubyid_@resource_collection ivar id'>@resource_collection</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_delayed_action-instance_method">
+  
+    #<strong>add_delayed_action</strong>(notification)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Adds a delayed action to the <tt>delayed_actions</tt>.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+239
+240
+241
+242
+243
+244
+245
+246</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 239</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_add_delayed_action identifier id'>add_delayed_action</span><span class='lparen token'>(</span><span class='rubyid_notification identifier id'>notification</span><span class='rparen token'>)</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_delayed_actions identifier id'>delayed_actions</span><span class='dot token'>.</span><span class='rubyid_any? fid id'>any?</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_existing_notification identifier id'>existing_notification</span><span class='bitor op'>|</span> <span class='rubyid_existing_notification identifier id'>existing_notification</span><span class='dot token'>.</span><span class='rubyid_duplicates? fid id'>duplicates?</span><span class='lparen token'>(</span><span class='rubyid_notification identifier id'>notification</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span>
+    <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_info identifier id'>info</span><span class='lparen token'>(</span> <span class='dstring node'>&quot;#{notification.notifying_resource} not queuing delayed action #{notification.action} on #{notification.resource}&quot;</span>\
+                   <span class='string val'>&quot; (delayed), as it's already been queued&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_delayed_actions identifier id'>delayed_actions</span> <span class='lshft op'>&lt;&lt;</span> <span class='rubyid_notification identifier id'>notification</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="before_notifications-instance_method">
+  
+    #<strong>before_notifications</strong>(resource)  &#x21d2; <tt>Array[Notification]</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Get the list of before notifications sent by the given resource.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array[Notification]</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+253
+254
+255</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 253</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_before_notifications identifier id'>before_notifications</span><span class='lparen token'>(</span><span class='rubyid_resource identifier id'>resource</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_before_notification_collection identifier id'>before_notification_collection</span><span class='lbrack token'>[</span><span class='rubyid_resource identifier id'>resource</span><span class='dot token'>.</span><span class='rubyid_declared_key identifier id'>declared_key</span><span class='rbrack token'>]</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="cancel_reboot-instance_method">
+  
+    #<strong>cancel_reboot</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+553
+554
+555
+556</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 553</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_cancel_reboot identifier id'>cancel_reboot</span>
+  <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_info identifier id'>info</span> <span class='dstring node'>&quot;Changing reboot status from #{reboot_info.inspect} to {}&quot;</span>
+  <span class='rubyid_@reboot_info ivar id'>@reboot_info</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_child-instance_method">
+  
+    #<strong>create_child</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Create a child RunContext.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+565
+566
+567</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 565</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_create_child identifier id'>create_child</span>
+  <span class='rubyid_ChildRunContext constant id'>ChildRunContext</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_self self kw'>self</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delayed_notifications-instance_method">
+  
+    #<strong>delayed_notifications</strong>(resource)  &#x21d2; <tt>Array[Notification]</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Get the list of delayed (end of run) notifications sent by the given
+resource.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array[Notification]</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+272
+273
+274</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 272</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_delayed_notifications identifier id'>delayed_notifications</span><span class='lparen token'>(</span><span class='rubyid_resource identifier id'>resource</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_delayed_notification_collection identifier id'>delayed_notification_collection</span><span class='lbrack token'>[</span><span class='rubyid_resource identifier id'>resource</span><span class='dot token'>.</span><span class='rubyid_declared_key identifier id'>declared_key</span><span class='rbrack token'>]</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_cookbook_file_in_cookbook?-instance_method">
+  
+    #<strong>has_cookbook_file_in_cookbook?</strong>(cookbook, cb_file_name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Find out if the cookbook has the given file.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>cookbook</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Cookbook name.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>cb_file_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+File name.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+`true` if the file is in the cookbook, `false` otherwise.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>CookbookVersion#has_cookbook_file_for_node?</li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+499
+500
+501
+502</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 499</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_has_cookbook_file_in_cookbook? fid id'>has_cookbook_file_in_cookbook?</span><span class='lparen token'>(</span><span class='rubyid_cookbook identifier id'>cookbook</span><span class='comma token'>,</span> <span class='rubyid_cb_file_name identifier id'>cb_file_name</span><span class='rparen token'>)</span>
+  <span class='rubyid_cookbook identifier id'>cookbook</span> <span class='assign token'>=</span> <span class='rubyid_cookbook_collection identifier id'>cookbook_collection</span><span class='lbrack token'>[</span><span class='rubyid_cookbook identifier id'>cookbook</span><span class='rbrack token'>]</span>
+  <span class='rubyid_cookbook identifier id'>cookbook</span><span class='dot token'>.</span><span class='rubyid_has_cookbook_file_for_node? fid id'>has_cookbook_file_for_node?</span><span class='lparen token'>(</span><span class='rubyid_node identifier id'>node</span><span class='comma token'>,</span> <span class='rubyid_cb_file_name identifier id'>cb_file_name</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_template_in_cookbook?-instance_method">
+  
+    #<strong>has_template_in_cookbook?</strong>(cookbook, template_name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Find out if the cookbook has the given template.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>cookbook</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Cookbook name.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>template_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Template name.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+`true` if the template is in the cookbook, `false` otherwise.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>CookbookVersion#has_template_for_node?</li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+484
+485
+486
+487</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 484</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_has_template_in_cookbook? fid id'>has_template_in_cookbook?</span><span class='lparen token'>(</span><span class='rubyid_cookbook identifier id'>cookbook</span><span class='comma token'>,</span> <span class='rubyid_template_name identifier id'>template_name</span><span class='rparen token'>)</span>
+  <span class='rubyid_cookbook identifier id'>cookbook</span> <span class='assign token'>=</span> <span class='rubyid_cookbook_collection identifier id'>cookbook_collection</span><span class='lbrack token'>[</span><span class='rubyid_cookbook identifier id'>cookbook</span><span class='rbrack token'>]</span>
+  <span class='rubyid_cookbook identifier id'>cookbook</span><span class='dot token'>.</span><span class='rubyid_has_template_for_node? fid id'>has_template_for_node?</span><span class='lparen token'>(</span><span class='rubyid_node identifier id'>node</span><span class='comma token'>,</span> <span class='rubyid_template_name identifier id'>template_name</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="immediate_notifications-instance_method">
+  
+    #<strong>immediate_notifications</strong>(resource)  &#x21d2; <tt>Array[Notification]</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Get the list of immediate notifications sent by the given resource.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array[Notification]</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+262
+263
+264</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 262</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_immediate_notifications identifier id'>immediate_notifications</span><span class='lparen token'>(</span><span class='rubyid_resource identifier id'>resource</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_immediate_notification_collection identifier id'>immediate_notification_collection</span><span class='lbrack token'>[</span><span class='rubyid_resource identifier id'>resource</span><span class='dot token'>.</span><span class='rubyid_declared_key identifier id'>declared_key</span><span class='rbrack token'>]</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="include_recipe-instance_method">
+  
+    #<strong>include_recipe</strong>(*recipe_names, current_cookbook: nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Evaluates the recipes <tt>recipe_names</tt>. Used by DSL::IncludeRecipe
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>recipe_names</span>
+      
+      
+        <span class='type'>(<tt>Array[String]</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The list of recipe names (e.g. &#8216;my_cookbook&#8217; or
+&#8216;my_cookbook::my_resource&#8217;).
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>current_cookbook</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The cookbook we are currently running in.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>DSL::IncludeRecipe#include_recipe</li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+289
+290
+291
+292
+293
+294
+295
+296
+297</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 289</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_include_recipe identifier id'>include_recipe</span><span class='lparen token'>(</span><span class='mult op'>*</span><span class='rubyid_recipe_names identifier id'>recipe_names</span><span class='comma token'>,</span> <span class='label val'>current_cookbook:</span> <span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='rubyid_result_recipes identifier id'>result_recipes</span> <span class='assign token'>=</span> <span class='rubyid_Array constant id'>Array</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
+  <span class='rubyid_recipe_names identifier id'>recipe_names</span><span class='dot token'>.</span><span class='rubyid_flatten identifier id'>flatten</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_recipe_name identifier id'>recipe_name</span><span class='bitor op'>|</span>
+    <span class='rubyid_if if kw'>if</span> <span class='rubyid_result identifier id'>result</span> <span class='assign token'>=</span> <span class='rubyid_load_recipe identifier id'>load_recipe</span><span class='lparen token'>(</span><span class='rubyid_recipe_name identifier id'>recipe_name</span><span class='comma token'>,</span> <span class='label val'>current_cookbook:</span> <span class='rubyid_current_cookbook identifier id'>current_cookbook</span><span class='rparen token'>)</span>
+      <span class='rubyid_result_recipes identifier id'>result_recipes</span> <span class='lshft op'>&lt;&lt;</span> <span class='rubyid_result identifier id'>result</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_result_recipes identifier id'>result_recipes</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="initialize_child_state-instance_method">
+  
+    #<strong>initialize_child_state</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Initialize state that applies to both Chef::RunContext and
+Chef::ChildRunContext
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+191
+192
+193
+194
+195
+196
+197
+198</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 191</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_initialize_child_state identifier id'>initialize_child_state</span>
+  <span class='rubyid_@audits ivar id'>@audits</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+  <span class='rubyid_@resource_collection ivar id'>@resource_collection</span> <span class='assign token'>=</span> <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_ResourceCollection constant id'>ResourceCollection</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_self self kw'>self</span><span class='rparen token'>)</span>
+  <span class='rubyid_@before_notification_collection ivar id'>@before_notification_collection</span> <span class='assign token'>=</span> <span class='rubyid_Hash constant id'>Hash</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_h identifier id'>h</span><span class='comma token'>,</span> <span class='rubyid_k identifier id'>k</span><span class='bitor op'>|</span> <span class='rubyid_h identifier id'>h</span><span class='lbrack token'>[</span><span class='rubyid_k identifier id'>k</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_@immediate_notification_collection ivar id'>@immediate_notification_collection</span> <span class='assign token'>=</span> <span class='rubyid_Hash constant id'>Hash</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_h identifier id'>h</span><span class='comma token'>,</span> <span class='rubyid_k identifier id'>k</span><span class='bitor op'>|</span> <span class='rubyid_h identifier id'>h</span><span class='lbrack token'>[</span><span class='rubyid_k identifier id'>k</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_@delayed_notification_collection ivar id'>@delayed_notification_collection</span> <span class='assign token'>=</span> <span class='rubyid_Hash constant id'>Hash</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_h identifier id'>h</span><span class='comma token'>,</span> <span class='rubyid_k identifier id'>k</span><span class='bitor op'>|</span> <span class='rubyid_h identifier id'>h</span><span class='lbrack token'>[</span><span class='rubyid_k identifier id'>k</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_@delayed_actions ivar id'>@delayed_actions</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load-instance_method">
+  
+    #<strong>load</strong>(run_list_expansion)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Triggers the compile phase of the chef run.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>run_list_expansion</span>
+      
+      
+        <span class='type'>(<tt>Chef::RunList::RunListExpansion</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The run list.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>CookbookCompiler</li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+183
+184
+185
+186</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 183</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_load identifier id'>load</span><span class='lparen token'>(</span><span class='rubyid_run_list_expansion identifier id'>run_list_expansion</span><span class='rparen token'>)</span>
+  <span class='rubyid_@cookbook_compiler ivar id'>@cookbook_compiler</span> <span class='assign token'>=</span> <span class='rubyid_CookbookCompiler constant id'>CookbookCompiler</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_self self kw'>self</span><span class='comma token'>,</span> <span class='rubyid_run_list_expansion identifier id'>run_list_expansion</span><span class='comma token'>,</span> <span class='rubyid_events identifier id'>events</span><span class='rparen token'>)</span>
+  <span class='rubyid_cookbook_compiler identifier id'>cookbook_compiler</span><span class='dot token'>.</span><span class='rubyid_compile identifier id'>compile</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load_recipe-instance_method">
+  
+    #<strong>load_recipe</strong>(recipe_name, current_cookbook: nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Evaluates the recipe <tt>recipe_name</tt>. Used by DSL::IncludeRecipe
+</p>
+<p>
+TODO I am sort of confused why we have both this and include_recipe &#8230;
+</p>
+<pre class="code ruby18"><code class="ruby18">
+     I don't see anything different beyond accepting and returning an
+     array of recipes.
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>recipe_names</span>
+      
+      
+        <span class='type'>(<tt>Array[String]</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The recipe name (e.g &#8216;my_cookbook&#8217; or
+&#8216;my_cookbook::my_resource&#8217;).
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>current_cookbook</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The cookbook we are currently running in.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>
+A truthy value if the load occurred; `false` if already loaded.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>DSL::IncludeRecipe#load_recipe</li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 314</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_load_recipe identifier id'>load_recipe</span><span class='lparen token'>(</span><span class='rubyid_recipe_name identifier id'>recipe_name</span><span class='comma token'>,</span> <span class='label val'>current_cookbook:</span> <span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Loading recipe #{recipe_name} via include_recipe&quot;</span><span class='rparen token'>)</span>
+
+  <span class='rubyid_cookbook_name identifier id'>cookbook_name</span><span class='comma token'>,</span> <span class='rubyid_recipe_short_name identifier id'>recipe_short_name</span> <span class='assign token'>=</span> <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Recipe constant id'>Recipe</span><span class='dot token'>.</span><span class='rubyid_parse_recipe_name identifier id'>parse_recipe_name</span><span class='lparen token'>(</span><span class='rubyid_recipe_name identifier id'>recipe_name</span><span class='comma token'>,</span> <span class='label val'>current_cookbook:</span> <span class='rubyid_current_cookbook identifier id'>current_cookbook</span><span class='rparen token'>)</span>
+
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_unreachable_cookbook? fid id'>unreachable_cookbook?</span><span class='lparen token'>(</span><span class='rubyid_cookbook_name identifier id'>cookbook_name</span><span class='rparen token'>)</span> <span class='comment val'># CHEF-4367</span>
+    <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_warn identifier id'>warn</span><span class='lparen token'>(</span><span class='string val'>&quot;MissingCookbookDependency:\nRecipe `\#{recipe_name}` is not in the run_list, and cookbook '\#{cookbook_name}'\nis not a dependency of any cookbook in the run_list.  To load this recipe,\nfirst add a dependency on cookbook '\#{cookbook_name}' in the cookbook you're\nincluding it from in that cookbook's metadata.\n&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_loaded_fully_qualified_recipe? fid id'>loaded_fully_qualified_recipe?</span><span class='lparen token'>(</span><span class='rubyid_cookbook_name identifier id'>cookbook_name</span><span class='comma token'>,</span> <span class='rubyid_recipe_short_name identifier id'>recipe_short_name</span><span class='rparen token'>)</span>
+    <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='dstring node'>&quot;I am not loading #{recipe_name}, because I have already seen it.&quot;</span><span class='rparen token'>)</span>
+    <span class='rubyid_false false kw'>false</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_loaded_recipe identifier id'>loaded_recipe</span><span class='lparen token'>(</span><span class='rubyid_cookbook_name identifier id'>cookbook_name</span><span class='comma token'>,</span> <span class='rubyid_recipe_short_name identifier id'>recipe_short_name</span><span class='rparen token'>)</span>
+    <span class='rubyid_node identifier id'>node</span><span class='dot token'>.</span><span class='rubyid_loaded_recipe identifier id'>loaded_recipe</span><span class='lparen token'>(</span><span class='rubyid_cookbook_name identifier id'>cookbook_name</span><span class='comma token'>,</span> <span class='rubyid_recipe_short_name identifier id'>recipe_short_name</span><span class='rparen token'>)</span>
+    <span class='rubyid_cookbook identifier id'>cookbook</span> <span class='assign token'>=</span> <span class='rubyid_cookbook_collection identifier id'>cookbook_collection</span><span class='lbrack token'>[</span><span class='rubyid_cookbook_name identifier id'>cookbook_name</span><span class='rbrack token'>]</span>
+    <span class='rubyid_cookbook identifier id'>cookbook</span><span class='dot token'>.</span><span class='rubyid_load_recipe identifier id'>load_recipe</span><span class='lparen token'>(</span><span class='rubyid_recipe_short_name identifier id'>recipe_short_name</span><span class='comma token'>,</span> <span class='rubyid_self self kw'>self</span><span class='rparen token'>)</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load_recipe_file-instance_method">
+  
+    #<strong>load_recipe_file</strong>(recipe_file)  &#x21d2; <tt><span class='object_link'><a href="Recipe.html" title="Chef::Recipe (class)">Chef::Recipe</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Load the given recipe from a filename.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>recipe_file</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The recipe filename.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Recipe.html" title="Chef::Recipe (class)">Chef::Recipe</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The loaded recipe.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Chef::Exceptions::RecipeNotFound</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+If the file does not exist.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 350</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_load_recipe_file identifier id'>load_recipe_file</span><span class='lparen token'>(</span><span class='rubyid_recipe_file identifier id'>recipe_file</span><span class='rparen token'>)</span>
+  <span class='rubyid_if if kw'>if</span> <span class='notop op'>!</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_exist? fid id'>exist?</span><span class='lparen token'>(</span><span class='rubyid_recipe_file identifier id'>recipe_file</span><span class='rparen token'>)</span>
+    <span class='rubyid_raise identifier id'>raise</span> <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Exceptions constant id'>Exceptions</span><span class='colon2 op'>::</span><span class='rubyid_RecipeNotFound constant id'>RecipeNotFound</span><span class='comma token'>,</span> <span class='dstring node'>&quot;could not find recipe file #{recipe_file}&quot;</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Loading recipe file #{recipe_file}&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_recipe identifier id'>recipe</span> <span class='assign token'>=</span> <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Recipe constant id'>Recipe</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;@recipe_files&quot;</span><span class='comma token'>,</span> <span class='rubyid_recipe_file identifier id'>recipe_file</span><span class='comma token'>,</span> <span class='rubyid_self self kw'>self</span><span class='rparen token'>)</span>
+  <span class='rubyid_recipe identifier id'>recipe</span><span class='dot token'>.</span><span class='rubyid_from_file identifier id'>from_file</span><span class='lparen token'>(</span><span class='rubyid_recipe_file identifier id'>recipe_file</span><span class='rparen token'>)</span>
+  <span class='rubyid_recipe identifier id'>recipe</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="loaded_attribute-instance_method">
+  
+    #<strong>loaded_attribute</strong>(cookbook, attribute_file)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Mark a given attribute file as having been loaded.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>cookbook</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Cookbook name.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attribute_file</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Attribute file name.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+467
+468
+469</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 467</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_loaded_attribute identifier id'>loaded_attribute</span><span class='lparen token'>(</span><span class='rubyid_cookbook identifier id'>cookbook</span><span class='comma token'>,</span> <span class='rubyid_attribute_file identifier id'>attribute_file</span><span class='rparen token'>)</span>
+  <span class='rubyid_loaded_attributes_hash identifier id'>loaded_attributes_hash</span><span class='lbrack token'>[</span><span class='dstring node'>&quot;#{cookbook}::#{attribute_file}&quot;</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="loaded_attributes-instance_method">
+  
+    #<strong>loaded_attributes</strong>  &#x21d2; <tt>Array[String]</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+A list of all attributes files that have been loaded.
+</p>
+<p>
+Stored internally using a Hash, so order is predictable.
+</p>
+<p>
+TODO is the above statement true in a 1.9+ ruby world? Is it relevant?
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array[String]</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+A list of attribute file names in fully qualified form, e.g. the
+&quot;nginx&quot; will be given as &quot;nginx::default&quot;.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+410
+411
+412</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 410</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_loaded_attributes identifier id'>loaded_attributes</span>
+  <span class='rubyid_loaded_attributes_hash identifier id'>loaded_attributes_hash</span><span class='dot token'>.</span><span class='rubyid_keys identifier id'>keys</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="loaded_fully_qualified_attribute?-instance_method">
+  
+    #<strong>loaded_fully_qualified_attribute?</strong>(cookbook, attribute_file)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Find out if a given attribute file has been loaded.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>cookbook</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Cookbook name.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attribute_file</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Attribute file name.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+`true` if the recipe has been loaded, `false` otherwise.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+457
+458
+459</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 457</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_loaded_fully_qualified_attribute? fid id'>loaded_fully_qualified_attribute?</span><span class='lparen token'>(</span><span class='rubyid_cookbook identifier id'>cookbook</span><span class='comma token'>,</span> <span class='rubyid_attribute_file identifier id'>attribute_file</span><span class='rparen token'>)</span>
+  <span class='rubyid_loaded_attributes_hash identifier id'>loaded_attributes_hash</span><span class='dot token'>.</span><span class='rubyid_has_key? fid id'>has_key?</span><span class='lparen token'>(</span><span class='dstring node'>&quot;#{cookbook}::#{attribute_file}&quot;</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="loaded_fully_qualified_recipe?-instance_method">
+  
+    #<strong>loaded_fully_qualified_recipe?</strong>(cookbook, recipe)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Find out if a given recipe has been loaded.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>cookbook</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Cookbook name.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>recipe</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Recipe name.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+`true` if the recipe has been loaded, `false` otherwise.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+422
+423
+424</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 422</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_loaded_fully_qualified_recipe? fid id'>loaded_fully_qualified_recipe?</span><span class='lparen token'>(</span><span class='rubyid_cookbook identifier id'>cookbook</span><span class='comma token'>,</span> <span class='rubyid_recipe identifier id'>recipe</span><span class='rparen token'>)</span>
+  <span class='rubyid_loaded_recipes_hash identifier id'>loaded_recipes_hash</span><span class='dot token'>.</span><span class='rubyid_has_key? fid id'>has_key?</span><span class='lparen token'>(</span><span class='dstring node'>&quot;#{cookbook}::#{recipe}&quot;</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="loaded_recipe-instance_method">
+  
+    #<strong>loaded_recipe</strong>(cookbook, recipe)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Mark a given recipe as having been loaded.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>cookbook</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Cookbook name.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>recipe</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Recipe name.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+445
+446
+447</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 445</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_loaded_recipe identifier id'>loaded_recipe</span><span class='lparen token'>(</span><span class='rubyid_cookbook identifier id'>cookbook</span><span class='comma token'>,</span> <span class='rubyid_recipe identifier id'>recipe</span><span class='rparen token'>)</span>
+  <span class='rubyid_loaded_recipes_hash identifier id'>loaded_recipes_hash</span><span class='lbrack token'>[</span><span class='dstring node'>&quot;#{cookbook}::#{recipe}&quot;</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="loaded_recipe?-instance_method">
+  
+    #<strong>loaded_recipe?</strong>(recipe)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Find out if a given recipe has been loaded.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>recipe</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Recipe name. &quot;nginx&quot; and &quot;nginx::default&quot; yield the
+same results.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+`true` if the recipe has been loaded, `false` otherwise.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+434
+435
+436
+437</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 434</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_loaded_recipe? fid id'>loaded_recipe?</span><span class='lparen token'>(</span><span class='rubyid_recipe identifier id'>recipe</span><span class='rparen token'>)</span>
+  <span class='rubyid_cookbook identifier id'>cookbook</span><span class='comma token'>,</span> <span class='rubyid_recipe_name identifier id'>recipe_name</span> <span class='assign token'>=</span> <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Recipe constant id'>Recipe</span><span class='dot token'>.</span><span class='rubyid_parse_recipe_name identifier id'>parse_recipe_name</span><span class='lparen token'>(</span><span class='rubyid_recipe identifier id'>recipe</span><span class='rparen token'>)</span>
+  <span class='rubyid_loaded_fully_qualified_recipe? fid id'>loaded_fully_qualified_recipe?</span><span class='lparen token'>(</span><span class='rubyid_cookbook identifier id'>cookbook</span><span class='comma token'>,</span> <span class='rubyid_recipe_name identifier id'>recipe_name</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="loaded_recipes-instance_method">
+  
+    #<strong>loaded_recipes</strong>  &#x21d2; <tt>Array[String]</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+A list of all recipes that have been loaded.
+</p>
+<p>
+This is stored internally as a Hash, so ordering is predictable.
+</p>
+<p>
+TODO is the above statement true in a 1.9+ ruby world? Is it relevant?
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array[String]</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+A list of recipes in fully qualified form, e.g. the recipe
+&quot;nginx&quot; will be given as &quot;nginx::default&quot;.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#loaded_recipe%3F-instance_method" title="Chef::RunContext#loaded_recipe? (method)">To determine if a particular recipe has been loaded.</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+396
+397
+398</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 396</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_loaded_recipes identifier id'>loaded_recipes</span>
+  <span class='rubyid_loaded_recipes_hash identifier id'>loaded_recipes_hash</span><span class='dot token'>.</span><span class='rubyid_keys identifier id'>keys</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="notifies_before-instance_method">
+  
+    #<strong>notifies_before</strong>(notification)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Adds an before notification to the <tt>before_notification_collection</tt>.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>The</span>
+      
+      
+        <span class='type'>(<tt>Chef::Resource::Notification</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+notification to add.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+205
+206
+207
+208
+209
+210</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 205</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_notifies_before identifier id'>notifies_before</span><span class='lparen token'>(</span><span class='rubyid_notification identifier id'>notification</span><span class='rparen token'>)</span>
+  <span class='comment val'># Note for the future, notification.notifying_resource may be an instance</span>
+  <span class='comment val'># of Chef::Resource::UnresolvedSubscribes when calling {Resource#subscribes}</span>
+  <span class='comment val'># with a string value.</span>
+  <span class='rubyid_before_notification_collection identifier id'>before_notification_collection</span><span class='lbrack token'>[</span><span class='rubyid_notification identifier id'>notification</span><span class='dot token'>.</span><span class='rubyid_notifying_resource identifier id'>notifying_resource</span><span class='dot token'>.</span><span class='rubyid_declared_key identifier id'>declared_key</span><span class='rbrack token'>]</span> <span class='lshft op'>&lt;&lt;</span> <span class='rubyid_notification identifier id'>notification</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="notifies_delayed-instance_method">
+  
+    #<strong>notifies_delayed</strong>(notification)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Adds a delayed notification to the
+<tt>delayed_notification_collection</tt>.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>The</span>
+      
+      
+        <span class='type'>(<tt>Chef::Resource::Notification</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+notification to add.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+229
+230
+231
+232
+233
+234</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 229</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_notifies_delayed identifier id'>notifies_delayed</span><span class='lparen token'>(</span><span class='rubyid_notification identifier id'>notification</span><span class='rparen token'>)</span>
+  <span class='comment val'># Note for the future, notification.notifying_resource may be an instance</span>
+  <span class='comment val'># of Chef::Resource::UnresolvedSubscribes when calling {Resource#subscribes}</span>
+  <span class='comment val'># with a string value.</span>
+  <span class='rubyid_delayed_notification_collection identifier id'>delayed_notification_collection</span><span class='lbrack token'>[</span><span class='rubyid_notification identifier id'>notification</span><span class='dot token'>.</span><span class='rubyid_notifying_resource identifier id'>notifying_resource</span><span class='dot token'>.</span><span class='rubyid_declared_key identifier id'>declared_key</span><span class='rbrack token'>]</span> <span class='lshft op'>&lt;&lt;</span> <span class='rubyid_notification identifier id'>notification</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="notifies_immediately-instance_method">
+  
+    #<strong>notifies_immediately</strong>(notification)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Adds an immediate notification to the
+<tt>immediate_notification_collection</tt>.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>The</span>
+      
+      
+        <span class='type'>(<tt>Chef::Resource::Notification</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+notification to add.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+217
+218
+219
+220
+221
+222</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 217</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_notifies_immediately identifier id'>notifies_immediately</span><span class='lparen token'>(</span><span class='rubyid_notification identifier id'>notification</span><span class='rparen token'>)</span>
+  <span class='comment val'># Note for the future, notification.notifying_resource may be an instance</span>
+  <span class='comment val'># of Chef::Resource::UnresolvedSubscribes when calling {Resource#subscribes}</span>
+  <span class='comment val'># with a string value.</span>
+  <span class='rubyid_immediate_notification_collection identifier id'>immediate_notification_collection</span><span class='lbrack token'>[</span><span class='rubyid_notification identifier id'>notification</span><span class='dot token'>.</span><span class='rubyid_notifying_resource identifier id'>notifying_resource</span><span class='dot token'>.</span><span class='rubyid_declared_key identifier id'>declared_key</span><span class='rbrack token'>]</span> <span class='lshft op'>&lt;&lt;</span> <span class='rubyid_notification identifier id'>notification</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="open_stream-instance_method">
+  
+    #<strong>open_stream</strong>(name: nil, **options) {|stream| ... } &#x21d2; <tt>EventDispatch::EventsOutputStream</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Open a stream object that can be printed into and will dispatch to events
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The name of the stream.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Other options for the stream.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>
+If a block is passed, it will be run and the stream will be closed
+afterwards.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>stream</span>
+      
+      
+        <span class='type'>(<tt>EventDispatch::EventsOutputStream</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The created stream.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>EventDispatch::EventsOutputStream</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The created stream.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 528</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_open_stream identifier id'>open_stream</span><span class='lparen token'>(</span><span class='label val'>name:</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='pow op'>**</span><span class='rubyid_options identifier id'>options</span><span class='rparen token'>)</span>
+  <span class='rubyid_stream identifier id'>stream</span> <span class='assign token'>=</span> <span class='rubyid_EventDispatch constant id'>EventDispatch</span><span class='colon2 op'>::</span><span class='rubyid_EventsOutputStream constant id'>EventsOutputStream</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_events identifier id'>events</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='pow op'>**</span><span class='rubyid_options identifier id'>options</span><span class='rparen token'>)</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_block_given? fid id'>block_given?</span>
+    <span class='rubyid_begin begin kw'>begin</span>
+      <span class='rubyid_yield yield kw'>yield</span> <span class='rubyid_stream identifier id'>stream</span>
+    <span class='rubyid_ensure ensure kw'>ensure</span>
+      <span class='rubyid_stream identifier id'>stream</span><span class='dot token'>.</span><span class='rubyid_close identifier id'>close</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_stream identifier id'>stream</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reboot_requested?-instance_method">
+  
+    #<strong>reboot_requested?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+558
+559
+560</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 558</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_reboot_requested? fid id'>reboot_requested?</span>
+  <span class='rubyid_reboot_info identifier id'>reboot_info</span><span class='dot token'>.</span><span class='rubyid_size identifier id'>size</span> <span class='gt op'>&gt;</span> <span class='integer val'>0</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="request_reboot-instance_method">
+  
+    #<strong>request_reboot</strong>(reboot_info)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+there are options for how to handle multiple calls to these functions:
+</p>
+<ol>
+<li>first call always wins (never change reboot_info once set).
+
+</li>
+<li>last call always wins (happily change reboot_info whenever).
+
+</li>
+<li>raise an exception on the first conflict.
+
+</li>
+<li>disable reboot after this run if anyone ever calls :cancel.
+
+</li>
+<li>raise an exception on any second call.
+
+</li>
+<li>?
+
+</li>
+</ol>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+548
+549
+550
+551</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 548</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_request_reboot identifier id'>request_reboot</span><span class='lparen token'>(</span><span class='rubyid_reboot_info identifier id'>reboot_info</span><span class='rparen token'>)</span>
+  <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_info identifier id'>info</span> <span class='dstring node'>&quot;Changing reboot status from #{self.reboot_info.inspect} to #{reboot_info.inspect}&quot;</span>
+  <span class='rubyid_@reboot_info ivar id'>@reboot_info</span> <span class='assign token'>=</span> <span class='rubyid_reboot_info identifier id'>reboot_info</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="resolve_attribute-instance_method">
+  
+    #<strong>resolve_attribute</strong>(cookbook_name, attr_file_name)  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Look up an attribute filename.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>cookbook_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The cookbook name of the attribute file.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attr_file_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The attribute file&#8217;s name (not path).
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The filename.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Chef::Exceptions::CookbookNotFound</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+If the cookbook could not be found.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Chef::Exceptions::AttributeNotFound</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+If the attribute file could not be found.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>DSL::IncludeAttribute#include_attribute</li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+374
+375
+376
+377
+378
+379
+380
+381
+382</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 374</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_resolve_attribute identifier id'>resolve_attribute</span><span class='lparen token'>(</span><span class='rubyid_cookbook_name identifier id'>cookbook_name</span><span class='comma token'>,</span> <span class='rubyid_attr_file_name identifier id'>attr_file_name</span><span class='rparen token'>)</span>
+  <span class='rubyid_cookbook identifier id'>cookbook</span> <span class='assign token'>=</span> <span class='rubyid_cookbook_collection identifier id'>cookbook_collection</span><span class='lbrack token'>[</span><span class='rubyid_cookbook_name identifier id'>cookbook_name</span><span class='rbrack token'>]</span>
+  <span class='rubyid_raise identifier id'>raise</span> <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Exceptions constant id'>Exceptions</span><span class='colon2 op'>::</span><span class='rubyid_CookbookNotFound constant id'>CookbookNotFound</span><span class='comma token'>,</span> <span class='dstring node'>&quot;could not find cookbook #{cookbook_name} while loading attribute #{name}&quot;</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_cookbook identifier id'>cookbook</span>
+
+  <span class='rubyid_attribute_filename identifier id'>attribute_filename</span> <span class='assign token'>=</span> <span class='rubyid_cookbook identifier id'>cookbook</span><span class='dot token'>.</span><span class='rubyid_attribute_filenames_by_short_filename identifier id'>attribute_filenames_by_short_filename</span><span class='lbrack token'>[</span><span class='rubyid_attr_file_name identifier id'>attr_file_name</span><span class='rbrack token'>]</span>
+  <span class='rubyid_raise identifier id'>raise</span> <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Exceptions constant id'>Exceptions</span><span class='colon2 op'>::</span><span class='rubyid_AttributeNotFound constant id'>AttributeNotFound</span><span class='comma token'>,</span> <span class='dstring node'>&quot;could not find filename for attribute #{attr_file_name} in cookbook #{cookbook_name}&quot;</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_attribute_filename identifier id'>attribute_filename</span>
+
+  <span class='rubyid_attribute_filename identifier id'>attribute_filename</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unreachable_cookbook?-instance_method">
+  
+    #<strong>unreachable_cookbook?</strong>(cookbook_name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Find out whether the given cookbook is in the cookbook dependency graph.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>cookbook_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Cookbook name.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+`true` if the cookbook is reachable, `false` otherwise.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>CookbookCompiler#unreachable_cookbook?</li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+512
+513
+514</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb', line 512</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_unreachable_cookbook? fid id'>unreachable_cookbook?</span><span class='lparen token'>(</span><span class='rubyid_cookbook_name identifier id'>cookbook_name</span><span class='rparen token'>)</span>
+  <span class='rubyid_cookbook_compiler identifier id'>cookbook_compiler</span><span class='dot token'>.</span><span class='rubyid_unreachable_cookbook? fid id'>unreachable_cookbook?</span><span class='lparen token'>(</span><span class='rubyid_cookbook_name identifier id'>cookbook_name</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Sep 19 15:35:26 2016 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.5 (ruby-1.8.7).
+</div>
+
+    </div>
+  </body>
+</html>

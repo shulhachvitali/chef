@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Windows::RegistryHelper
+  
+    &mdash; Documentation by YARD 0.9.5
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Windows::RegistryHelper";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (R)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Windows.html" title="Windows (module)">Windows</a></span></span>
+     &raquo; 
+    <span class="title">RegistryHelper</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="cookbooks_list_link"
+        href="../cookbooks_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="../class_list.html"></iframe>
+
+      <div id="content"><h1>Module: Windows::RegistryHelper
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+  <dl>
+    <dt>Included in:</dt>
+    <dd><span class='object_link'><a href="../Registry.html" title="Registry (module)">Registry</a></span></dd>
+  </dl>
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>windows/libraries/registry_helper.rb</dd>
+  </dl>
+  
+</div>
+
+
+  <h2>Constant Summary</h2>
+  <dl class="constants">
+    
+      <dt id="native_registry_constant-classvariable" class="">@@native_registry_constant =
+        
+      </dt>
+      <dd><pre class="code"><span class='rubyid_ENV constant id'>ENV</span><span class='lbrack token'>[</span><span class='string val'>'PROCESSOR_ARCHITEW6432'</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='string val'>'AMD64'</span> <span class='question op'>?</span> <span class='integer val'>0x0100</span> <span class='colon op'>:</span> <span class='integer val'>0x0200</span>
+</pre></dd>
+    
+  </dl>
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_key-instance_method" title="#create_key (instance method)">#<strong>create_key</strong>(path)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_value-instance_method" title="#delete_value (instance method)">#<strong>delete_value</strong>(path, values)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_hive-instance_method" title="#get_hive (instance method)">#<strong>get_hive</strong>(path)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_hive_name-instance_method" title="#get_hive_name (instance method)">#<strong>get_hive_name</strong>(path)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_reg_path_info-instance_method" title="#get_reg_path_info (instance method)">#<strong>get_reg_path_info</strong>(path)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_user_hive_location-instance_method" title="#get_user_hive_location (instance method)">#<strong>get_user_hive_location</strong>(sid)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_value-instance_method" title="#get_value (instance method)">#<strong>get_value</strong>(path, value)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_values-instance_method" title="#get_values (instance method)">#<strong>get_values</strong>(path)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#hive_loaded%3F-instance_method" title="#hive_loaded? (instance method)">#<strong>hive_loaded?</strong>(path)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#key_exists%3F-instance_method" title="#key_exists? (instance method)">#<strong>key_exists?</strong>(path, load_hive = false)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+TODO: Does not load user registry&#8230;
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_user_hive-instance_method" title="#load_user_hive (instance method)">#<strong>load_user_hive</strong>(hive, reg_path, user_hive)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resolve_user_to_sid-instance_method" title="#resolve_user_to_sid (instance method)">#<strong>resolve_user_to_sid</strong>(username)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#set_value-instance_method" title="#set_value (instance method)">#<strong>set_value</strong>(mode, path, values, type = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unload_hive-instance_method" title="#unload_hive (instance method)">#<strong>unload_hive</strong>(path)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#user_hive%3F-instance_method" title="#user_hive? (instance method)">#<strong>user_hive?</strong>(hive)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#value_exists%3F-instance_method" title="#value_exists? (instance method)">#<strong>value_exists?</strong>(path, value)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="create_key-instance_method">
+  
+    #<strong>create_key</strong>(path)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+179
+180
+181
+182
+183
+184</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/registry_helper.rb', line 179</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_create_key identifier id'>create_key</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='rparen token'>)</span>
+  <span class='rubyid_hive identifier id'>hive</span><span class='comma token'>,</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='comma token'>,</span> <span class='rubyid_hive_name identifier id'>hive_name</span><span class='comma token'>,</span> <span class='rubyid_root_key identifier id'>root_key</span><span class='comma token'>,</span> <span class='rubyid_hive_loaded identifier id'>hive_loaded</span> <span class='assign token'>=</span> <span class='rubyid_get_reg_path_info identifier id'>get_reg_path_info</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='rparen token'>)</span>
+  <span class='rubyid_key identifier id'>key</span> <span class='assign token'>=</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>'\\'</span><span class='rparen token'>)</span>
+  <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Creating registry key #{path}&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_hive identifier id'>hive</span><span class='dot token'>.</span><span class='rubyid_create identifier id'>create</span><span class='lparen token'>(</span><span class='rubyid_key identifier id'>key</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete_value-instance_method">
+  
+    #<strong>delete_value</strong>(path, values)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/registry_helper.rb', line 161</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_delete_value identifier id'>delete_value</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='comma token'>,</span> <span class='rubyid_values identifier id'>values</span><span class='rparen token'>)</span>
+  <span class='rubyid_hive identifier id'>hive</span><span class='comma token'>,</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='comma token'>,</span> <span class='rubyid_hive_name identifier id'>hive_name</span><span class='comma token'>,</span> <span class='rubyid_root_key identifier id'>root_key</span><span class='comma token'>,</span> <span class='rubyid_hive_loaded identifier id'>hive_loaded</span> <span class='assign token'>=</span> <span class='rubyid_get_reg_path_info identifier id'>get_reg_path_info</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='rparen token'>)</span>
+  <span class='rubyid_key identifier id'>key</span> <span class='assign token'>=</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>'\\'</span><span class='rparen token'>)</span>
+  <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Deleting values in #{path}&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_hive identifier id'>hive</span><span class='dot token'>.</span><span class='rubyid_open identifier id'>open</span><span class='lparen token'>(</span><span class='rubyid_key identifier id'>key</span><span class='comma token'>,</span> <span class='colon3 op'>::</span><span class='rubyid_Win32 constant id'>Win32</span><span class='colon2 op'>::</span><span class='rubyid_Registry constant id'>Registry</span><span class='colon2 op'>::</span><span class='rubyid_KEY_ALL_ACCESS constant id'>KEY_ALL_ACCESS</span> <span class='bitor op'>|</span> <span class='rubyid_@@native_registry_constant ivar id'>@@native_registry_constant</span><span class='rparen token'>)</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_reg identifier id'>reg</span><span class='bitor op'>|</span>
+    <span class='rubyid_values identifier id'>values</span><span class='dot token'>.</span><span class='rubyid_each_key identifier id'>each_key</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_key identifier id'>key</span><span class='bitor op'>|</span>
+      <span class='rubyid_name identifier id'>name</span> <span class='assign token'>=</span> <span class='rubyid_key identifier id'>key</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span>
+      <span class='comment val'># Ensure delete operation is idempotent.</span>
+      <span class='rubyid_if if kw'>if</span> <span class='rubyid_value_exists? fid id'>value_exists?</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='comma token'>,</span> <span class='rubyid_key identifier id'>key</span><span class='rparen token'>)</span>
+        <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Deleting value #{name} in #{path}&quot;</span><span class='rparen token'>)</span>
+        <span class='rubyid_reg identifier id'>reg</span><span class='dot token'>.</span><span class='rubyid_delete_value identifier id'>delete_value</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='rparen token'>)</span>
+      <span class='rubyid_else else kw'>else</span>
+        <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Value #{name} in #{path} does not exist, skipping.&quot;</span><span class='rparen token'>)</span>
+      <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_hive-instance_method">
+  
+    #<strong>get_hive</strong>(path)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/registry_helper.rb', line 50</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_get_hive identifier id'>get_hive</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='rparen token'>)</span>
+  <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Getting hive for #{path}&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_reg_path identifier id'>reg_path</span> <span class='assign token'>=</span> <span class='rubyid_path identifier id'>path</span><span class='dot token'>.</span><span class='rubyid_split identifier id'>split</span><span class='lparen token'>(</span><span class='string val'>'\\'</span><span class='rparen token'>)</span>
+  <span class='rubyid_hive_name identifier id'>hive_name</span> <span class='assign token'>=</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='dot token'>.</span><span class='rubyid_shift identifier id'>shift</span>
+
+  <span class='rubyid_hkey identifier id'>hkey</span> <span class='assign token'>=</span> <span class='rubyid_get_hive_name identifier id'>get_hive_name</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='rparen token'>)</span>
+
+  <span class='rubyid_hive identifier id'>hive</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span>
+    <span class='string val'>'HKEY_LOCAL_MACHINE'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='colon3 op'>::</span><span class='rubyid_Win32 constant id'>Win32</span><span class='colon2 op'>::</span><span class='rubyid_Registry constant id'>Registry</span><span class='colon2 op'>::</span><span class='rubyid_HKEY_LOCAL_MACHINE constant id'>HKEY_LOCAL_MACHINE</span><span class='comma token'>,</span>
+    <span class='string val'>'HKEY_USERS'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='colon3 op'>::</span><span class='rubyid_Win32 constant id'>Win32</span><span class='colon2 op'>::</span><span class='rubyid_Registry constant id'>Registry</span><span class='colon2 op'>::</span><span class='rubyid_HKEY_USERS constant id'>HKEY_USERS</span><span class='comma token'>,</span>
+    <span class='string val'>'HKEY_CURRENT_USER'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='colon3 op'>::</span><span class='rubyid_Win32 constant id'>Win32</span><span class='colon2 op'>::</span><span class='rubyid_Registry constant id'>Registry</span><span class='colon2 op'>::</span><span class='rubyid_HKEY_CURRENT_USER constant id'>HKEY_CURRENT_USER</span>
+  <span class='rbrace token'>}</span><span class='lbrack token'>[</span><span class='rubyid_hkey identifier id'>hkey</span><span class='rbrack token'>]</span>
+
+  <span class='rubyid_unless unless kw'>unless</span> <span class='rubyid_hive identifier id'>hive</span>
+    <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Application constant id'>Application</span><span class='dot token'>.</span><span class='rubyid_fatal! fid id'>fatal!</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Unsupported registry hive '#{hive_name}'&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Registry hive resolved to #{hkey}&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_hive identifier id'>hive</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_hive_name-instance_method">
+  
+    #<strong>get_hive_name</strong>(path)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/registry_helper.rb', line 34</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_get_hive_name identifier id'>get_hive_name</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='rparen token'>)</span>
+  <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='string val'>'Resolving registry shortcuts to full names'</span><span class='rparen token'>)</span>
+
+  <span class='rubyid_reg_path identifier id'>reg_path</span> <span class='assign token'>=</span> <span class='rubyid_path identifier id'>path</span><span class='dot token'>.</span><span class='rubyid_split identifier id'>split</span><span class='lparen token'>(</span><span class='string val'>'\\'</span><span class='rparen token'>)</span>
+  <span class='rubyid_hive_name identifier id'>hive_name</span> <span class='assign token'>=</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='dot token'>.</span><span class='rubyid_shift identifier id'>shift</span>
+
+  <span class='rubyid_hkey identifier id'>hkey</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span>
+    <span class='string val'>'HKLM'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'HKEY_LOCAL_MACHINE'</span><span class='comma token'>,</span>
+    <span class='string val'>'HKCU'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'HKEY_CURRENT_USER'</span><span class='comma token'>,</span>
+    <span class='string val'>'HKU'</span>  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'HKEY_USERS'</span>
+  <span class='rbrace token'>}</span><span class='lbrack token'>[</span><span class='rubyid_hive_name identifier id'>hive_name</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='rubyid_hive_name identifier id'>hive_name</span>
+
+  <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Hive resolved to #{hkey}&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_hkey identifier id'>hkey</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_reg_path_info-instance_method">
+  
+    #<strong>get_reg_path_info</strong>(path)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/registry_helper.rb', line 277</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_get_reg_path_info identifier id'>get_reg_path_info</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='rparen token'>)</span>
+  <span class='rubyid_hive identifier id'>hive</span> <span class='assign token'>=</span> <span class='rubyid_get_hive identifier id'>get_hive</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='rparen token'>)</span>
+  <span class='rubyid_reg_path identifier id'>reg_path</span> <span class='assign token'>=</span> <span class='rubyid_path identifier id'>path</span><span class='dot token'>.</span><span class='rubyid_split identifier id'>split</span><span class='lparen token'>(</span><span class='string val'>'\\'</span><span class='rparen token'>)</span>
+  <span class='rubyid_hive_name identifier id'>hive_name</span> <span class='assign token'>=</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='dot token'>.</span><span class='rubyid_shift identifier id'>shift</span>
+  <span class='rubyid_root_key identifier id'>root_key</span> <span class='assign token'>=</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span>
+  <span class='rubyid_hive_loaded identifier id'>hive_loaded</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span>
+
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_user_hive? fid id'>user_hive?</span><span class='lparen token'>(</span><span class='rubyid_hive identifier id'>hive</span><span class='rparen token'>)</span> <span class='andop op'>&amp;&amp;</span> <span class='notop op'>!</span><span class='rubyid_key_exists? fid id'>key_exists?</span><span class='lparen token'>(</span><span class='dstring node'>&quot;#{hive_name}\\#{root_key}&quot;</span><span class='rparen token'>)</span>
+    <span class='rubyid_reg_path identifier id'>reg_path</span><span class='comma token'>,</span> <span class='rubyid_hive_loaded identifier id'>hive_loaded</span> <span class='assign token'>=</span> <span class='rubyid_load_user_hive identifier id'>load_user_hive</span><span class='lparen token'>(</span><span class='rubyid_hive identifier id'>hive</span><span class='comma token'>,</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='comma token'>,</span> <span class='rubyid_root_key identifier id'>root_key</span><span class='rparen token'>)</span>
+    <span class='rubyid_root_key identifier id'>root_key</span> <span class='assign token'>=</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span>
+    <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Resolved user (#{path}) to (#{reg_path.join('/')})&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='lbrack token'>[</span><span class='rubyid_hive identifier id'>hive</span><span class='comma token'>,</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='comma token'>,</span> <span class='rubyid_hive_name identifier id'>hive_name</span><span class='comma token'>,</span> <span class='rubyid_root_key identifier id'>root_key</span><span class='comma token'>,</span> <span class='rubyid_hive_loaded identifier id'>hive_loaded</span><span class='rbrack token'>]</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_user_hive_location-instance_method">
+  
+    #<strong>get_user_hive_location</strong>(sid)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+235
+236
+237
+238
+239
+240
+241
+242
+243</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/registry_helper.rb', line 235</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_get_user_hive_location identifier id'>get_user_hive_location</span><span class='lparen token'>(</span><span class='rubyid_sid identifier id'>sid</span><span class='rparen token'>)</span>
+  <span class='rubyid_reg_key identifier id'>reg_key</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\ProfileList\\#{sid}&quot;</span>
+  <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Looking for profile at #{reg_key}&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_key_exists? fid id'>key_exists?</span><span class='lparen token'>(</span><span class='rubyid_reg_key identifier id'>reg_key</span><span class='rparen token'>)</span>
+    <span class='rubyid_return return kw'>return</span> <span class='rubyid_get_value identifier id'>get_value</span><span class='lparen token'>(</span><span class='rubyid_reg_key identifier id'>reg_key</span><span class='comma token'>,</span> <span class='string val'>'ProfileImagePath'</span><span class='rparen token'>)</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_return return kw'>return</span> <span class='rubyid_nil nil kw'>nil</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_value-instance_method">
+  
+    #<strong>get_value</strong>(path, value)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/registry_helper.rb', line 129</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_get_value identifier id'>get_value</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='comma token'>,</span> <span class='rubyid_value identifier id'>value</span><span class='rparen token'>)</span>
+  <span class='rubyid_hive identifier id'>hive</span><span class='comma token'>,</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='comma token'>,</span> <span class='rubyid_hive_name identifier id'>hive_name</span><span class='comma token'>,</span> <span class='rubyid_root_key identifier id'>root_key</span><span class='comma token'>,</span> <span class='rubyid_hive_loaded identifier id'>hive_loaded</span> <span class='assign token'>=</span> <span class='rubyid_get_reg_path_info identifier id'>get_reg_path_info</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='rparen token'>)</span>
+  <span class='rubyid_key identifier id'>key</span> <span class='assign token'>=</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>'\\'</span><span class='rparen token'>)</span>
+
+  <span class='rubyid_hive identifier id'>hive</span><span class='dot token'>.</span><span class='rubyid_open identifier id'>open</span><span class='lparen token'>(</span><span class='rubyid_key identifier id'>key</span><span class='comma token'>,</span> <span class='colon3 op'>::</span><span class='rubyid_Win32 constant id'>Win32</span><span class='colon2 op'>::</span><span class='rubyid_Registry constant id'>Registry</span><span class='colon2 op'>::</span><span class='rubyid_KEY_ALL_ACCESS constant id'>KEY_ALL_ACCESS</span> <span class='bitor op'>|</span> <span class='rubyid_@@native_registry_constant ivar id'>@@native_registry_constant</span><span class='rparen token'>)</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_reg identifier id'>reg</span><span class='bitor op'>|</span>
+    <span class='rubyid_begin begin kw'>begin</span>
+      <span class='rubyid_return return kw'>return</span> <span class='rubyid_reg identifier id'>reg</span><span class='lbrack token'>[</span><span class='rubyid_value identifier id'>value</span><span class='rbrack token'>]</span>
+    <span class='rubyid_rescue rescue kw'>rescue</span>
+      <span class='rubyid_return return kw'>return</span> <span class='rubyid_nil nil kw'>nil</span>
+    <span class='rubyid_ensure ensure kw'>ensure</span>
+      <span class='rubyid_ensure_hive_unloaded identifier id'>ensure_hive_unloaded</span><span class='lparen token'>(</span><span class='rubyid_hive_loaded identifier id'>hive_loaded</span><span class='rparen token'>)</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_values-instance_method">
+  
+    #<strong>get_values</strong>(path)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/registry_helper.rb', line 144</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_get_values identifier id'>get_values</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='rparen token'>)</span>
+  <span class='rubyid_hive identifier id'>hive</span><span class='comma token'>,</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='comma token'>,</span> <span class='rubyid_hive_name identifier id'>hive_name</span><span class='comma token'>,</span> <span class='rubyid_root_key identifier id'>root_key</span><span class='comma token'>,</span> <span class='rubyid_hive_loaded identifier id'>hive_loaded</span> <span class='assign token'>=</span> <span class='rubyid_get_reg_path_info identifier id'>get_reg_path_info</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='rparen token'>)</span>
+  <span class='rubyid_key identifier id'>key</span> <span class='assign token'>=</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>'\\'</span><span class='rparen token'>)</span>
+  <span class='rubyid_hive identifier id'>hive</span><span class='dot token'>.</span><span class='rubyid_open identifier id'>open</span><span class='lparen token'>(</span><span class='rubyid_key identifier id'>key</span><span class='comma token'>,</span> <span class='colon3 op'>::</span><span class='rubyid_Win32 constant id'>Win32</span><span class='colon2 op'>::</span><span class='rubyid_Registry constant id'>Registry</span><span class='colon2 op'>::</span><span class='rubyid_KEY_ALL_ACCESS constant id'>KEY_ALL_ACCESS</span> <span class='bitor op'>|</span> <span class='rubyid_@@native_registry_constant ivar id'>@@native_registry_constant</span><span class='rparen token'>)</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_reg identifier id'>reg</span><span class='bitor op'>|</span>
+    <span class='rubyid_values identifier id'>values</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+    <span class='rubyid_begin begin kw'>begin</span>
+      <span class='rubyid_reg identifier id'>reg</span><span class='dot token'>.</span><span class='rubyid_each_value identifier id'>each_value</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_data identifier id'>data</span><span class='bitor op'>|</span>
+        <span class='rubyid_values identifier id'>values</span> <span class='lshft op'>&lt;&lt;</span> <span class='lbrack token'>[</span><span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_data identifier id'>data</span><span class='rbrack token'>]</span>
+      <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_rescue rescue kw'>rescue</span>
+    <span class='rubyid_ensure ensure kw'>ensure</span>
+      <span class='rubyid_ensure_hive_unloaded identifier id'>ensure_hive_unloaded</span><span class='lparen token'>(</span><span class='rubyid_hive_loaded identifier id'>hive_loaded</span><span class='rparen token'>)</span>
+    <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_values identifier id'>values</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="hive_loaded?-instance_method">
+  
+    #<strong>hive_loaded?</strong>(path)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/registry_helper.rb', line 260</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_hive_loaded? fid id'>hive_loaded?</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='rparen token'>)</span>
+  <span class='rubyid_hive identifier id'>hive</span> <span class='assign token'>=</span> <span class='rubyid_get_hive identifier id'>get_hive</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='rparen token'>)</span>
+  <span class='rubyid_reg_path identifier id'>reg_path</span> <span class='assign token'>=</span> <span class='rubyid_path identifier id'>path</span><span class='dot token'>.</span><span class='rubyid_split identifier id'>split</span><span class='lparen token'>(</span><span class='string val'>'\\'</span><span class='rparen token'>)</span>
+  <span class='rubyid_hive_name identifier id'>hive_name</span> <span class='assign token'>=</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='dot token'>.</span><span class='rubyid_shift identifier id'>shift</span>
+  <span class='rubyid_user_hive identifier id'>user_hive</span> <span class='assign token'>=</span> <span class='rubyid_path identifier id'>path</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span>
+
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_user_hive? fid id'>user_hive?</span><span class='lparen token'>(</span><span class='rubyid_hive identifier id'>hive</span><span class='rparen token'>)</span>
+    <span class='rubyid_return return kw'>return</span> <span class='rubyid_key_exists? fid id'>key_exists?</span><span class='lparen token'>(</span><span class='dstring node'>&quot;#{hive_name}\\#{user_hive}&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_return return kw'>return</span> <span class='rubyid_true true kw'>true</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="key_exists?-instance_method">
+  
+    #<strong>key_exists?</strong>(path, load_hive = false)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+TODO: Does not load user registry&#8230;
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/registry_helper.rb', line 212</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_key_exists? fid id'>key_exists?</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='comma token'>,</span> <span class='rubyid_load_hive identifier id'>load_hive</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span><span class='rparen token'>)</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_load_hive identifier id'>load_hive</span>
+    <span class='rubyid_hive identifier id'>hive</span><span class='comma token'>,</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='comma token'>,</span> <span class='rubyid_hive_name identifier id'>hive_name</span><span class='comma token'>,</span> <span class='rubyid_root_key identifier id'>root_key</span><span class='comma token'>,</span> <span class='rubyid_hive_loaded identifier id'>hive_loaded</span> <span class='assign token'>=</span> <span class='rubyid_get_reg_path_info identifier id'>get_reg_path_info</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='rparen token'>)</span>
+    <span class='rubyid_key identifier id'>key</span> <span class='assign token'>=</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>'\\'</span><span class='rparen token'>)</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_hive identifier id'>hive</span> <span class='assign token'>=</span> <span class='rubyid_get_hive identifier id'>get_hive</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='rparen token'>)</span>
+    <span class='rubyid_reg_path identifier id'>reg_path</span> <span class='assign token'>=</span> <span class='rubyid_path identifier id'>path</span><span class='dot token'>.</span><span class='rubyid_split identifier id'>split</span><span class='lparen token'>(</span><span class='string val'>'\\'</span><span class='rparen token'>)</span>
+    <span class='rubyid_hive_name identifier id'>hive_name</span> <span class='assign token'>=</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='dot token'>.</span><span class='rubyid_shift identifier id'>shift</span>
+    <span class='rubyid_root_key identifier id'>root_key</span> <span class='assign token'>=</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span>
+    <span class='rubyid_key identifier id'>key</span> <span class='assign token'>=</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>'\\'</span><span class='rparen token'>)</span>
+    <span class='rubyid_hive_loaded identifier id'>hive_loaded</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_begin begin kw'>begin</span>
+    <span class='rubyid_hive identifier id'>hive</span><span class='dot token'>.</span><span class='rubyid_open identifier id'>open</span><span class='lparen token'>(</span><span class='rubyid_key identifier id'>key</span><span class='comma token'>,</span> <span class='colon3 op'>::</span><span class='rubyid_Win32 constant id'>Win32</span><span class='colon2 op'>::</span><span class='rubyid_Registry constant id'>Registry</span><span class='colon2 op'>::</span><span class='rubyid_Constants constant id'>Constants</span><span class='colon2 op'>::</span><span class='rubyid_KEY_READ constant id'>KEY_READ</span> <span class='bitor op'>|</span> <span class='rubyid_@@native_registry_constant ivar id'>@@native_registry_constant</span><span class='rparen token'>)</span>
+    <span class='rubyid_return return kw'>return</span> <span class='rubyid_true true kw'>true</span>
+  <span class='rubyid_rescue rescue kw'>rescue</span>
+    <span class='rubyid_return return kw'>return</span> <span class='rubyid_false false kw'>false</span>
+  <span class='rubyid_ensure ensure kw'>ensure</span>
+    <span class='rubyid_ensure_hive_unloaded identifier id'>ensure_hive_unloaded</span><span class='lparen token'>(</span><span class='rubyid_hive_loaded identifier id'>hive_loaded</span><span class='rparen token'>)</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load_user_hive-instance_method">
+  
+    #<strong>load_user_hive</strong>(hive, reg_path, user_hive)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/registry_helper.rb', line 293</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_load_user_hive identifier id'>load_user_hive</span><span class='lparen token'>(</span><span class='rubyid_hive identifier id'>hive</span><span class='comma token'>,</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='comma token'>,</span> <span class='rubyid_user_hive identifier id'>user_hive</span><span class='rparen token'>)</span>
+  <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Reg Path #{reg_path}&quot;</span><span class='rparen token'>)</span>
+  <span class='comment val'># See if the hive is loaded. Logged in users will have a key that is named their SID</span>
+  <span class='comment val'># if the user has specified the a path by SID and the user is logged in, this function</span>
+  <span class='comment val'># should not be executed.</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_user_hive? fid id'>user_hive?</span><span class='lparen token'>(</span><span class='rubyid_hive identifier id'>hive</span><span class='rparen token'>)</span> <span class='andop op'>&amp;&amp;</span> <span class='notop op'>!</span><span class='rubyid_key_exists? fid id'>key_exists?</span><span class='lparen token'>(</span><span class='dstring node'>&quot;HKU\\#{user_hive}&quot;</span><span class='rparen token'>)</span>
+    <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='string val'>'The user is not logged in and has not been specified by SID'</span><span class='rparen token'>)</span>
+    <span class='rubyid_sid identifier id'>sid</span> <span class='assign token'>=</span> <span class='rubyid_resolve_user_to_sid identifier id'>resolve_user_to_sid</span><span class='lparen token'>(</span><span class='rubyid_user_hive identifier id'>user_hive</span><span class='rparen token'>)</span>
+    <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='dstring node'>&quot;User SID resolved to (#{sid})&quot;</span><span class='rparen token'>)</span>
+    <span class='comment val'># Now that the user has been resolved to a SID, check and see if the hive exists.</span>
+    <span class='comment val'># If this exists by SID, the user is logged in and we should use that key.</span>
+    <span class='comment val'># TODO: Replace the username with the sid and send it back because the username</span>
+    <span class='comment val'># does not exist as the key location.</span>
+    <span class='rubyid_load_reg identifier id'>load_reg</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span>
+    <span class='rubyid_if if kw'>if</span> <span class='rubyid_key_exists? fid id'>key_exists?</span><span class='lparen token'>(</span><span class='dstring node'>&quot;HKU\\#{sid}&quot;</span><span class='rparen token'>)</span>
+      <span class='rubyid_reg_path identifier id'>reg_path</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_sid identifier id'>sid</span> <span class='comment val'># use the active profile (user is logged on)</span>
+      <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='dstring node'>&quot;HKEY_USERS Mapped: #{user_hive} -&gt; #{sid}&quot;</span><span class='rparen token'>)</span>
+    <span class='rubyid_else else kw'>else</span>
+      <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='string val'>'User is not logged in'</span><span class='rparen token'>)</span>
+      <span class='rubyid_load_reg identifier id'>load_reg</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span>
+    <span class='rubyid_end end kw'>end</span>
+
+    <span class='comment val'># The user is not logged in, so we should load the registry from disk</span>
+    <span class='rubyid_if if kw'>if</span> <span class='rubyid_load_reg identifier id'>load_reg</span>
+      <span class='rubyid_profile_path identifier id'>profile_path</span> <span class='assign token'>=</span> <span class='rubyid_get_user_hive_location identifier id'>get_user_hive_location</span><span class='lparen token'>(</span><span class='rubyid_sid identifier id'>sid</span><span class='rparen token'>)</span>
+      <span class='rubyid_unless unless kw'>unless</span> <span class='rubyid_profile_path identifier id'>profile_path</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span>
+        <span class='rubyid_ntuser_dat identifier id'>ntuser_dat</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;#{profile_path}\\NTUSER.DAT&quot;</span>
+        <span class='rubyid_if if kw'>if</span> <span class='colon3 op'>::</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_exist? fid id'>exist?</span><span class='lparen token'>(</span><span class='rubyid_ntuser_dat identifier id'>ntuser_dat</span><span class='rparen token'>)</span>
+          <span class='rubyid_priv identifier id'>priv</span> <span class='assign token'>=</span> <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_WindowsPrivileged constant id'>WindowsPrivileged</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
+          <span class='rubyid_if if kw'>if</span> <span class='rubyid_priv identifier id'>priv</span><span class='dot token'>.</span><span class='rubyid_reg_load_key identifier id'>reg_load_key</span><span class='lparen token'>(</span><span class='rubyid_sid identifier id'>sid</span><span class='comma token'>,</span> <span class='rubyid_ntuser_dat identifier id'>ntuser_dat</span><span class='rparen token'>)</span>
+            <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='dstring node'>&quot;RegLoadKey(#{sid}, #{user_hive}, #{ntuser_dat})&quot;</span><span class='rparen token'>)</span>
+            <span class='rubyid_reg_path identifier id'>reg_path</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_sid identifier id'>sid</span>
+          <span class='rubyid_else else kw'>else</span>
+            <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Failed RegLoadKey(#{sid}, #{user_hive}, #{ntuser_dat})&quot;</span><span class='rparen token'>)</span>
+          <span class='rubyid_end end kw'>end</span>
+        <span class='rubyid_end end kw'>end</span>
+      <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='lbrack token'>[</span><span class='rubyid_reg_path identifier id'>reg_path</span><span class='comma token'>,</span> <span class='rubyid_load_reg identifier id'>load_reg</span><span class='rbrack token'>]</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="resolve_user_to_sid-instance_method">
+  
+    #<strong>resolve_user_to_sid</strong>(username)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/registry_helper.rb', line 245</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_resolve_user_to_sid identifier id'>resolve_user_to_sid</span><span class='lparen token'>(</span><span class='rubyid_username identifier id'>username</span><span class='rparen token'>)</span>
+  <span class='rubyid_user_query identifier id'>user_query</span> <span class='assign token'>=</span> <span class='rubyid_execute_wmi_query identifier id'>execute_wmi_query</span><span class='lparen token'>(</span><span class='dstring node'>&quot;select * from Win32_UserAccount where Name='#{username}'&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_sid identifier id'>sid</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span>
+
+  <span class='rubyid_user_query identifier id'>user_query</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_user identifier id'>user</span><span class='bitor op'>|</span>
+    <span class='rubyid_sid identifier id'>sid</span> <span class='assign token'>=</span> <span class='rubyid_wmi_object_property identifier id'>wmi_object_property</span><span class='lparen token'>(</span><span class='rubyid_user identifier id'>user</span><span class='comma token'>,</span> <span class='string val'>'sid'</span><span class='rparen token'>)</span>
+    <span class='rubyid_break break kw'>break</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Resolved user SID to #{sid}&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_sid identifier id'>sid</span>
+<span class='rubyid_rescue rescue kw'>rescue</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_nil nil kw'>nil</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="set_value-instance_method">
+  
+    #<strong>set_value</strong>(mode, path, values, type = nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/registry_helper.rb', line 83</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_set_value identifier id'>set_value</span><span class='lparen token'>(</span><span class='rubyid_mode identifier id'>mode</span><span class='comma token'>,</span> <span class='rubyid_path identifier id'>path</span><span class='comma token'>,</span> <span class='rubyid_values identifier id'>values</span><span class='comma token'>,</span> <span class='rubyid_type identifier id'>type</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='rubyid_hive identifier id'>hive</span><span class='comma token'>,</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='comma token'>,</span> <span class='rubyid_hive_name identifier id'>hive_name</span><span class='comma token'>,</span> <span class='rubyid_root_key identifier id'>root_key</span><span class='comma token'>,</span> <span class='rubyid_hive_loaded identifier id'>hive_loaded</span> <span class='assign token'>=</span> <span class='rubyid_get_reg_path_info identifier id'>get_reg_path_info</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='rparen token'>)</span>
+  <span class='rubyid_key_name identifier id'>key_name</span> <span class='assign token'>=</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>'\\'</span><span class='rparen token'>)</span>
+
+  <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Creating #{path}&quot;</span><span class='rparen token'>)</span>
+
+  <span class='rubyid_create_key identifier id'>create_key</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='rparen token'>)</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_key_exists? fid id'>key_exists?</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='comma token'>,</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+
+  <span class='rubyid_hive identifier id'>hive</span><span class='dot token'>.</span><span class='rubyid_send identifier id'>send</span><span class='lparen token'>(</span><span class='rubyid_mode identifier id'>mode</span><span class='comma token'>,</span> <span class='rubyid_key_name identifier id'>key_name</span><span class='comma token'>,</span> <span class='colon3 op'>::</span><span class='rubyid_Win32 constant id'>Win32</span><span class='colon2 op'>::</span><span class='rubyid_Registry constant id'>Registry</span><span class='colon2 op'>::</span><span class='rubyid_KEY_ALL_ACCESS constant id'>KEY_ALL_ACCESS</span> <span class='bitor op'>|</span> <span class='rubyid_@@native_registry_constant ivar id'>@@native_registry_constant</span><span class='rparen token'>)</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_reg identifier id'>reg</span><span class='bitor op'>|</span>
+    <span class='rubyid_changed_something identifier id'>changed_something</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span>
+    <span class='rubyid_values identifier id'>values</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_k identifier id'>k</span><span class='comma token'>,</span> <span class='rubyid_val identifier id'>val</span><span class='bitor op'>|</span>
+      <span class='rubyid_key identifier id'>key</span> <span class='assign token'>=</span> <span class='rubyid_k identifier id'>k</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span> <span class='comment val'># wtf. avoid &quot;can't modify frozen string&quot; in win32/registry.rb</span>
+      <span class='rubyid_cur_val identifier id'>cur_val</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span>
+      <span class='rubyid_begin begin kw'>begin</span>
+        <span class='rubyid_cur_val identifier id'>cur_val</span> <span class='assign token'>=</span> <span class='rubyid_reg identifier id'>reg</span><span class='lbrack token'>[</span><span class='rubyid_key identifier id'>key</span><span class='rbrack token'>]</span>
+      <span class='rubyid_rescue rescue kw'>rescue</span>
+        <span class='comment val'># subkey does not exist (ok)</span>
+      <span class='rubyid_end end kw'>end</span>
+
+      <span class='rubyid_next next kw'>next</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_cur_val identifier id'>cur_val</span> <span class='neq op'>!=</span> <span class='rubyid_val identifier id'>val</span>
+
+      <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='dstring node'>&quot;setting #{key}=#{val}&quot;</span><span class='rparen token'>)</span>
+
+      <span class='rubyid_type identifier id'>type</span> <span class='assign token'>=</span> <span class='symbol val'>:string</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_type identifier id'>type</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span>
+
+      <span class='rubyid_reg_type identifier id'>reg_type</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span>
+        <span class='label val'>binary:</span> <span class='colon3 op'>::</span><span class='rubyid_Win32 constant id'>Win32</span><span class='colon2 op'>::</span><span class='rubyid_Registry constant id'>Registry</span><span class='colon2 op'>::</span><span class='rubyid_REG_BINARY constant id'>REG_BINARY</span><span class='comma token'>,</span>
+        <span class='label val'>string:</span> <span class='colon3 op'>::</span><span class='rubyid_Win32 constant id'>Win32</span><span class='colon2 op'>::</span><span class='rubyid_Registry constant id'>Registry</span><span class='colon2 op'>::</span><span class='rubyid_REG_SZ constant id'>REG_SZ</span><span class='comma token'>,</span>
+        <span class='label val'>multi_string:</span> <span class='colon3 op'>::</span><span class='rubyid_Win32 constant id'>Win32</span><span class='colon2 op'>::</span><span class='rubyid_Registry constant id'>Registry</span><span class='colon2 op'>::</span><span class='rubyid_REG_MULTI_SZ constant id'>REG_MULTI_SZ</span><span class='comma token'>,</span>
+        <span class='label val'>expand_string:</span> <span class='colon3 op'>::</span><span class='rubyid_Win32 constant id'>Win32</span><span class='colon2 op'>::</span><span class='rubyid_Registry constant id'>Registry</span><span class='colon2 op'>::</span><span class='rubyid_REG_EXPAND_SZ constant id'>REG_EXPAND_SZ</span><span class='comma token'>,</span>
+        <span class='label val'>dword:</span> <span class='colon3 op'>::</span><span class='rubyid_Win32 constant id'>Win32</span><span class='colon2 op'>::</span><span class='rubyid_Registry constant id'>Registry</span><span class='colon2 op'>::</span><span class='rubyid_REG_DWORD constant id'>REG_DWORD</span><span class='comma token'>,</span>
+        <span class='label val'>dword_big_endian:</span> <span class='colon3 op'>::</span><span class='rubyid_Win32 constant id'>Win32</span><span class='colon2 op'>::</span><span class='rubyid_Registry constant id'>Registry</span><span class='colon2 op'>::</span><span class='rubyid_REG_DWORD_BIG_ENDIAN constant id'>REG_DWORD_BIG_ENDIAN</span><span class='comma token'>,</span>
+        <span class='label val'>qword:</span> <span class='colon3 op'>::</span><span class='rubyid_Win32 constant id'>Win32</span><span class='colon2 op'>::</span><span class='rubyid_Registry constant id'>Registry</span><span class='colon2 op'>::</span><span class='rubyid_REG_QWORD constant id'>REG_QWORD</span>
+      <span class='rbrace token'>}</span><span class='lbrack token'>[</span><span class='rubyid_type identifier id'>type</span><span class='rbrack token'>]</span>
+
+      <span class='rubyid_reg identifier id'>reg</span><span class='dot token'>.</span><span class='rubyid_write identifier id'>write</span><span class='lparen token'>(</span><span class='rubyid_key identifier id'>key</span><span class='comma token'>,</span> <span class='rubyid_reg_type identifier id'>reg_type</span><span class='comma token'>,</span> <span class='rubyid_val identifier id'>val</span><span class='rparen token'>)</span>
+
+      <span class='rubyid_ensure_hive_unloaded identifier id'>ensure_hive_unloaded</span><span class='lparen token'>(</span><span class='rubyid_hive_loaded identifier id'>hive_loaded</span><span class='rparen token'>)</span>
+
+      <span class='rubyid_changed_something identifier id'>changed_something</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span>
+    <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_return return kw'>return</span> <span class='rubyid_changed_something identifier id'>changed_something</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_false false kw'>false</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unload_hive-instance_method">
+  
+    #<strong>unload_hive</strong>(path)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/registry_helper.rb', line 71</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_unload_hive identifier id'>unload_hive</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='rparen token'>)</span>
+  <span class='rubyid_hive identifier id'>hive</span> <span class='assign token'>=</span> <span class='rubyid_get_hive identifier id'>get_hive</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='rparen token'>)</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_hive identifier id'>hive</span> <span class='eq op'>==</span> <span class='colon3 op'>::</span><span class='rubyid_Win32 constant id'>Win32</span><span class='colon2 op'>::</span><span class='rubyid_Registry constant id'>Registry</span><span class='colon2 op'>::</span><span class='rubyid_HKEY_USERS constant id'>HKEY_USERS</span>
+    <span class='rubyid_reg_path identifier id'>reg_path</span> <span class='assign token'>=</span> <span class='rubyid_path identifier id'>path</span><span class='dot token'>.</span><span class='rubyid_split identifier id'>split</span><span class='lparen token'>(</span><span class='string val'>'\\'</span><span class='rparen token'>)</span>
+    <span class='rubyid_priv identifier id'>priv</span> <span class='assign token'>=</span> <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_WindowsPrivileged constant id'>WindowsPrivileged</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
+    <span class='rubyid_begin begin kw'>begin</span>
+      <span class='rubyid_priv identifier id'>priv</span><span class='dot token'>.</span><span class='rubyid_reg_unload_key identifier id'>reg_unload_key</span><span class='lparen token'>(</span><span class='rubyid_reg_path identifier id'>reg_path</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+    <span class='rubyid_rescue rescue kw'>rescue</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="user_hive?-instance_method">
+  
+    #<strong>user_hive?</strong>(hive)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+273
+274
+275</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/registry_helper.rb', line 273</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_user_hive? fid id'>user_hive?</span><span class='lparen token'>(</span><span class='rubyid_hive identifier id'>hive</span><span class='rparen token'>)</span>
+  <span class='rubyid_hive identifier id'>hive</span> <span class='eq op'>==</span> <span class='colon3 op'>::</span><span class='rubyid_Win32 constant id'>Win32</span><span class='colon2 op'>::</span><span class='rubyid_Registry constant id'>Registry</span><span class='colon2 op'>::</span><span class='rubyid_HKEY_USERS constant id'>HKEY_USERS</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="value_exists?-instance_method">
+  
+    #<strong>value_exists?</strong>(path, value)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/registry_helper.rb', line 186</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_value_exists? fid id'>value_exists?</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='comma token'>,</span> <span class='rubyid_value identifier id'>value</span><span class='rparen token'>)</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_key_exists? fid id'>key_exists?</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='comma token'>,</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+
+    <span class='rubyid_hive identifier id'>hive</span><span class='comma token'>,</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='comma token'>,</span> <span class='rubyid_hive_name identifier id'>hive_name</span><span class='comma token'>,</span> <span class='rubyid_root_key identifier id'>root_key</span><span class='comma token'>,</span> <span class='rubyid_hive_loaded identifier id'>hive_loaded</span> <span class='assign token'>=</span> <span class='rubyid_get_reg_path_info identifier id'>get_reg_path_info</span><span class='lparen token'>(</span><span class='rubyid_path identifier id'>path</span><span class='rparen token'>)</span>
+    <span class='rubyid_key identifier id'>key</span> <span class='assign token'>=</span> <span class='rubyid_reg_path identifier id'>reg_path</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>'\\'</span><span class='rparen token'>)</span>
+
+    <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Attempting to open #{key}&quot;</span><span class='rparen token'>)</span>
+    <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Native Constant #{@@native_registry_constant}&quot;</span><span class='rparen token'>)</span>
+    <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Hive #{hive}&quot;</span><span class='rparen token'>)</span>
+
+    <span class='rubyid_hive identifier id'>hive</span><span class='dot token'>.</span><span class='rubyid_open identifier id'>open</span><span class='lparen token'>(</span><span class='rubyid_key identifier id'>key</span><span class='comma token'>,</span> <span class='colon3 op'>::</span><span class='rubyid_Win32 constant id'>Win32</span><span class='colon2 op'>::</span><span class='rubyid_Registry constant id'>Registry</span><span class='colon2 op'>::</span><span class='rubyid_KEY_READ constant id'>KEY_READ</span> <span class='bitor op'>|</span> <span class='rubyid_@@native_registry_constant ivar id'>@@native_registry_constant</span><span class='rparen token'>)</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_reg identifier id'>reg</span><span class='bitor op'>|</span>
+      <span class='rubyid_begin begin kw'>begin</span>
+        <span class='rubyid_rtn_value identifier id'>rtn_value</span> <span class='assign token'>=</span> <span class='rubyid_reg identifier id'>reg</span><span class='lbrack token'>[</span><span class='rubyid_value identifier id'>value</span><span class='rbrack token'>]</span>
+        <span class='rubyid_return return kw'>return</span> <span class='rubyid_true true kw'>true</span>
+      <span class='rubyid_rescue rescue kw'>rescue</span>
+        <span class='rubyid_return return kw'>return</span> <span class='rubyid_false false kw'>false</span>
+      <span class='rubyid_ensure ensure kw'>ensure</span>
+        <span class='rubyid_ensure_hive_unloaded identifier id'>ensure_hive_unloaded</span><span class='lparen token'>(</span><span class='rubyid_hive_loaded identifier id'>hive_loaded</span><span class='rparen token'>)</span>
+      <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_false false kw'>false</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Sep 19 15:35:18 2016 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.5 (ruby-1.8.7).
+</div>
+
+    </div>
+  </body>
+</html>

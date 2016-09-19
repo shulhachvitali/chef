@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Chef::Runner
+  
+    &mdash; Documentation by YARD 0.9.5
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Chef::Runner";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (R)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Chef.html" title="Chef (class)">Chef</a></span></span>
+     &raquo; 
+    <span class="title">Runner</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="cookbooks_list_link"
+        href="../cookbooks_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="../class_list.html"></iframe>
+
+      <div id="content"><h1>Class: Chef::Runner
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Chef::Runner</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="Mixin/ParamsValidate.html" title="Chef::Mixin::ParamsValidate (module)">Mixin::ParamsValidate</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>compat_resource/files/lib/chef_compat/monkeypatches/chef/runner.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <h2>Chef::Runner</h2>
+<p>
+This class is responsible for executing the steps in a Chef run.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#run_context-instance_method" title="#run_context (instance method)">#<strong>run_context</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute run_context.
+</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#converge-instance_method" title="#converge (instance method)">#<strong>converge</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Iterates over the <tt>resource_collection</tt> in the <tt>run_context</tt>
+calling <tt>run_action</tt> for each resource in turn.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delayed_actions-instance_method" title="#delayed_actions (instance method)">#<strong>delayed_actions</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#events-instance_method" title="#events (instance method)">#<strong>events</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(run_context)  &#x21d2; Runner </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+A new instance of Runner.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#run_action-instance_method" title="#run_action (instance method)">#<strong>run_action</strong>(resource, action, notification_type = nil, notifying_resource = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Determine the appropriate provider for the given resource, then execute it.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(run_context)  &#x21d2; <tt><span class='object_link'><a href="" title="Chef::Runner (class)">Runner</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns a new instance of Runner
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+44
+45
+46</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/runner.rb', line 44</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='rubyid_run_context identifier id'>run_context</span><span class='rparen token'>)</span>
+  <span class='rubyid_@run_context ivar id'>@run_context</span> <span class='assign token'>=</span> <span class='rubyid_run_context identifier id'>run_context</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="run_context-instance_method">
+  
+    #<strong>run_context</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute run_context
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/runner.rb', line 40</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_run_context identifier id'>run_context</span>
+  <span class='rubyid_@run_context ivar id'>@run_context</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="converge-instance_method">
+  
+    #<strong>converge</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Iterates over the <tt>resource_collection</tt> in the <tt>run_context</tt>
+calling <tt>run_action</tt> for each resource in turn.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/runner.rb', line 98</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_converge identifier id'>converge</span>
+  <span class='comment val'># Resolve all lazy/forward references in notifications</span>
+  <span class='rubyid_run_context identifier id'>run_context</span><span class='dot token'>.</span><span class='rubyid_resource_collection identifier id'>resource_collection</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_resource identifier id'>resource</span><span class='bitor op'>|</span>
+    <span class='rubyid_resource identifier id'>resource</span><span class='dot token'>.</span><span class='rubyid_resolve_notification_references identifier id'>resolve_notification_references</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='comment val'># Execute each resource.</span>
+  <span class='rubyid_run_context identifier id'>run_context</span><span class='dot token'>.</span><span class='rubyid_resource_collection identifier id'>resource_collection</span><span class='dot token'>.</span><span class='rubyid_execute_each_resource identifier id'>execute_each_resource</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_resource identifier id'>resource</span><span class='bitor op'>|</span>
+    <span class='rubyid_Array constant id'>Array</span><span class='lparen token'>(</span><span class='rubyid_resource identifier id'>resource</span><span class='dot token'>.</span><span class='rubyid_action identifier id'>action</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_action identifier id'>action</span><span class='bitor op'>|</span> <span class='rubyid_run_action identifier id'>run_action</span><span class='lparen token'>(</span><span class='rubyid_resource identifier id'>resource</span><span class='comma token'>,</span> <span class='rubyid_action identifier id'>action</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_Exception constant id'>Exception</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_e identifier id'>e</span>
+  <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_info identifier id'>info</span> <span class='string val'>&quot;Running queued delayed notifications before re-raising exception&quot;</span>
+  <span class='rubyid_run_delayed_notifications identifier id'>run_delayed_notifications</span><span class='lparen token'>(</span><span class='rubyid_e identifier id'>e</span><span class='rparen token'>)</span>
+<span class='rubyid_else else kw'>else</span>
+  <span class='rubyid_run_delayed_notifications identifier id'>run_delayed_notifications</span><span class='lparen token'>(</span><span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='rubyid_true true kw'>true</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delayed_actions-instance_method">
+  
+    #<strong>delayed_actions</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+48
+49
+50</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/runner.rb', line 48</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_delayed_actions identifier id'>delayed_actions</span>
+  <span class='rubyid_@run_context ivar id'>@run_context</span><span class='dot token'>.</span><span class='rubyid_delayed_actions identifier id'>delayed_actions</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="events-instance_method">
+  
+    #<strong>events</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+52
+53
+54</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/runner.rb', line 52</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_events identifier id'>events</span>
+  <span class='rubyid_@run_context ivar id'>@run_context</span><span class='dot token'>.</span><span class='rubyid_events identifier id'>events</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="run_action-instance_method">
+  
+    #<strong>run_action</strong>(resource, action, notification_type = nil, notifying_resource = nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Determine the appropriate provider for the given resource, then execute it.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/monkeypatches/chef/runner.rb', line 58</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_run_action identifier id'>run_action</span><span class='lparen token'>(</span><span class='rubyid_resource identifier id'>resource</span><span class='comma token'>,</span> <span class='rubyid_action identifier id'>action</span><span class='comma token'>,</span> <span class='rubyid_notification_type identifier id'>notification_type</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='rubyid_notifying_resource identifier id'>notifying_resource</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='comment val'># If there are any before notifications, why-run the resource</span>
+  <span class='comment val'># and notify anyone who needs notifying</span>
+  <span class='rubyid_before_notifications identifier id'>before_notifications</span> <span class='assign token'>=</span> <span class='rubyid_run_context identifier id'>run_context</span><span class='dot token'>.</span><span class='rubyid_before_notifications identifier id'>before_notifications</span><span class='lparen token'>(</span><span class='rubyid_resource identifier id'>resource</span><span class='rparen token'>)</span> <span class='orop op'>||</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+  <span class='rubyid_unless unless kw'>unless</span> <span class='rubyid_before_notifications identifier id'>before_notifications</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+    <span class='rubyid_forced_why_run identifier id'>forced_why_run</span> <span class='rubyid_do do kw'>do</span>
+      <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_info identifier id'>info</span><span class='lparen token'>(</span><span class='dstring node'>&quot;#{resource} running why-run #{action} action to support before action&quot;</span><span class='rparen token'>)</span>
+      <span class='rubyid_resource identifier id'>resource</span><span class='dot token'>.</span><span class='rubyid_run_action identifier id'>run_action</span><span class='lparen token'>(</span><span class='rubyid_action identifier id'>action</span><span class='comma token'>,</span> <span class='rubyid_notification_type identifier id'>notification_type</span><span class='comma token'>,</span> <span class='rubyid_notifying_resource identifier id'>notifying_resource</span><span class='rparen token'>)</span>
+    <span class='rubyid_end end kw'>end</span>
+
+    <span class='rubyid_if if kw'>if</span> <span class='rubyid_resource identifier id'>resource</span><span class='dot token'>.</span><span class='rubyid_updated_by_last_action? fid id'>updated_by_last_action?</span>
+      <span class='rubyid_before_notifications identifier id'>before_notifications</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_notification identifier id'>notification</span><span class='bitor op'>|</span>
+        <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_info identifier id'>info</span><span class='lparen token'>(</span><span class='dstring node'>&quot;#{resource} sending #{notification.action} action to #{notification.resource} (before)&quot;</span><span class='rparen token'>)</span>
+        <span class='rubyid_run_action identifier id'>run_action</span><span class='lparen token'>(</span><span class='rubyid_notification identifier id'>notification</span><span class='dot token'>.</span><span class='rubyid_resource identifier id'>resource</span><span class='comma token'>,</span> <span class='rubyid_notification identifier id'>notification</span><span class='dot token'>.</span><span class='rubyid_action identifier id'>action</span><span class='comma token'>,</span> <span class='symbol val'>:before</span><span class='comma token'>,</span> <span class='rubyid_resource identifier id'>resource</span><span class='rparen token'>)</span>
+      <span class='rubyid_end end kw'>end</span>
+      <span class='rubyid_resource identifier id'>resource</span><span class='dot token'>.</span><span class='rubyid_updated_by_last_action identifier id'>updated_by_last_action</span><span class='lparen token'>(</span><span class='rubyid_false false kw'>false</span><span class='rparen token'>)</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='comment val'># Actually run the action for realsies</span>
+  <span class='rubyid_resource identifier id'>resource</span><span class='dot token'>.</span><span class='rubyid_run_action identifier id'>run_action</span><span class='lparen token'>(</span><span class='rubyid_action identifier id'>action</span><span class='comma token'>,</span> <span class='rubyid_notification_type identifier id'>notification_type</span><span class='comma token'>,</span> <span class='rubyid_notifying_resource identifier id'>notifying_resource</span><span class='rparen token'>)</span>
+
+  <span class='comment val'># Execute any immediate and queue up any delayed notifications</span>
+  <span class='comment val'># associated with the resource, but only if it was updated *this time*</span>
+  <span class='comment val'># we ran an action on it.</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_resource identifier id'>resource</span><span class='dot token'>.</span><span class='rubyid_updated_by_last_action? fid id'>updated_by_last_action?</span>
+    <span class='rubyid_run_context identifier id'>run_context</span><span class='dot token'>.</span><span class='rubyid_immediate_notifications identifier id'>immediate_notifications</span><span class='lparen token'>(</span><span class='rubyid_resource identifier id'>resource</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_notification identifier id'>notification</span><span class='bitor op'>|</span>
+      <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_info identifier id'>info</span><span class='lparen token'>(</span><span class='dstring node'>&quot;#{resource} sending #{notification.action} action to #{notification.resource} (immediate)&quot;</span><span class='rparen token'>)</span>
+      <span class='rubyid_run_action identifier id'>run_action</span><span class='lparen token'>(</span><span class='rubyid_notification identifier id'>notification</span><span class='dot token'>.</span><span class='rubyid_resource identifier id'>resource</span><span class='comma token'>,</span> <span class='rubyid_notification identifier id'>notification</span><span class='dot token'>.</span><span class='rubyid_action identifier id'>action</span><span class='comma token'>,</span> <span class='symbol val'>:immediate</span><span class='comma token'>,</span> <span class='rubyid_resource identifier id'>resource</span><span class='rparen token'>)</span>
+    <span class='rubyid_end end kw'>end</span>
+
+    <span class='rubyid_run_context identifier id'>run_context</span><span class='dot token'>.</span><span class='rubyid_delayed_notifications identifier id'>delayed_notifications</span><span class='lparen token'>(</span><span class='rubyid_resource identifier id'>resource</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_notification identifier id'>notification</span><span class='bitor op'>|</span>
+      <span class='comment val'># send the notification to the run_context of the receiving resource</span>
+      <span class='rubyid_notification identifier id'>notification</span><span class='dot token'>.</span><span class='rubyid_resource identifier id'>resource</span><span class='dot token'>.</span><span class='rubyid_run_context identifier id'>run_context</span><span class='dot token'>.</span><span class='rubyid_add_delayed_action identifier id'>add_delayed_action</span><span class='lparen token'>(</span><span class='rubyid_notification identifier id'>notification</span><span class='rparen token'>)</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Sep 19 15:35:27 2016 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.5 (ruby-1.8.7).
+</div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: ChefCompat::CopiedFromChef::Chef::Mixin::Properties::ClassMethods
+  
+    &mdash; Documentation by YARD 0.9.5
+  
+</title>
+
+  <link rel="stylesheet" href="../../../../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "ChefCompat::CopiedFromChef::Chef::Mixin::Properties::ClassMethods";
+  relpath = '../../../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../../../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../../../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../../../ChefCompat.html" title="ChefCompat (module)">ChefCompat</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../../../CopiedFromChef.html" title="ChefCompat::CopiedFromChef (module)">CopiedFromChef</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../../Chef.html" title="ChefCompat::CopiedFromChef::Chef (class)">Chef</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Mixin.html" title="ChefCompat::CopiedFromChef::Chef::Mixin (module)">Mixin</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Properties.html" title="ChefCompat::CopiedFromChef::Chef::Mixin::Properties (module)">Properties</a></span></span>
+     &raquo; 
+    <span class="title">ClassMethods</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="cookbooks_list_link"
+        href="../../../../../cookbooks_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="../../../../../class_list.html"></iframe>
+
+      <div id="content"><h1>Module: ChefCompat::CopiedFromChef::Chef::Mixin::Properties::ClassMethods
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>compat_resource/files/lib/chef_compat/copied_from_chef/chef/mixin/properties.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#identity_properties-instance_method" title="#identity_properties (instance method)">#<strong>identity_properties</strong>(*names)  &#x21d2; Array&lt;Property&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Set the identity of this resource to a particular set of properties.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#included-instance_method" title="#included (instance method)">#<strong>included</strong>(other)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#lazy-instance_method" title="#lazy (instance method)">#<strong>lazy</strong>(&amp;block)  &#x21d2; Chef::DelayedEvaluator </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Create a lazy value for assignment to a default value.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#properties-instance_method" title="#properties (instance method)">#<strong>properties</strong>(include_superclass = true)  &#x21d2; Hash&lt;Symbol,Property&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+The list of properties defined on this resource.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#property-instance_method" title="#property (instance method)">#<strong>property</strong>(name, type = NOT_PASSED, **options)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Create a property on this resource class.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#property_type-instance_method" title="#property_type (instance method)">#<strong>property_type</strong>(**options)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Create a reusable property type that can be used in multiple properties in
+different resources.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#state_properties-instance_method" title="#state_properties (instance method)">#<strong>state_properties</strong>(*names)  &#x21d2; Array&lt;Property&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Get or set the list of desired state properties for this resource.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="identity_properties-instance_method">
+  
+    #<strong>identity_properties</strong>(*names)  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="../../Property.html" title="ChefCompat::CopiedFromChef::Chef::Property (class)">Property</a></span>&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Set the identity of this resource to a particular set of properties.
+</p>
+<p>
+This drives #identity, which returns data that uniquely refers to a given
+resource on the given node (in such a way that it can be correlated across
+Chef runs).
+</p>
+<p>
+This method is unnecessary when declaring properties with `property`;
+properties can be added to identity during declaration with `identity:
+true`.
+</p>
+<p>
+```ruby property :x, identity: true # part of identity property :y # not
+part of identity ```
+</p>
+<p>
+If no properties are marked as identity, &quot;name&quot; is considered the
+identity.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>names</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;Symbol&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+A list of property names to set as the identity.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../../Property.html" title="ChefCompat::CopiedFromChef::Chef::Property (class)">Property</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+All identity properties.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/mixin/properties.rb', line 258</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_identity_properties identifier id'>identity_properties</span><span class='lparen token'>(</span><span class='mult op'>*</span><span class='rubyid_names identifier id'>names</span><span class='rparen token'>)</span>
+  <span class='rubyid_if if kw'>if</span> <span class='notop op'>!</span><span class='rubyid_names identifier id'>names</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+    <span class='rubyid_names identifier id'>names</span> <span class='assign token'>=</span> <span class='rubyid_names identifier id'>names</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_name identifier id'>name</span><span class='bitor op'>|</span> <span class='rubyid_name identifier id'>name</span><span class='dot token'>.</span><span class='rubyid_to_sym identifier id'>to_sym</span> <span class='rbrace token'>}</span>
+
+    <span class='comment val'># Add or change properties that are not part of the identity.</span>
+    <span class='rubyid_names identifier id'>names</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_name identifier id'>name</span><span class='bitor op'>|</span>
+      <span class='rubyid_property identifier id'>property</span> <span class='assign token'>=</span> <span class='rubyid_properties identifier id'>properties</span><span class='lbrack token'>[</span><span class='rubyid_name identifier id'>name</span><span class='rbrack token'>]</span>
+      <span class='rubyid_if if kw'>if</span> <span class='notop op'>!</span><span class='rubyid_property identifier id'>property</span>
+        <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_property identifier id'>property</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='label val'>instance_variable_name:</span> <span class='rubyid_false false kw'>false</span><span class='comma token'>,</span> <span class='label val'>identity:</span> <span class='rubyid_true true kw'>true</span>
+      <span class='rubyid_elsif elsif kw'>elsif</span> <span class='notop op'>!</span><span class='rubyid_property identifier id'>property</span><span class='dot token'>.</span><span class='rubyid_identity? fid id'>identity?</span>
+        <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_property identifier id'>property</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='label val'>identity:</span> <span class='rubyid_true true kw'>true</span>
+      <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_end end kw'>end</span>
+
+    <span class='comment val'># If identity_properties *excludes* something which is currently part of</span>
+    <span class='comment val'># the identity, mark it as identity: false.</span>
+    <span class='rubyid_properties identifier id'>properties</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_property identifier id'>property</span><span class='bitor op'>|</span>
+      <span class='rubyid_if if kw'>if</span> <span class='rubyid_property identifier id'>property</span><span class='dot token'>.</span><span class='rubyid_identity? fid id'>identity?</span> <span class='andop op'>&amp;&amp;</span> <span class='notop op'>!</span><span class='rubyid_names identifier id'>names</span><span class='dot token'>.</span><span class='rubyid_include? fid id'>include?</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='rparen token'>)</span>
+
+        <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_property identifier id'>property</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='label val'>identity:</span> <span class='rubyid_false false kw'>false</span>
+      <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_result identifier id'>result</span> <span class='assign token'>=</span> <span class='rubyid_properties identifier id'>properties</span><span class='dot token'>.</span><span class='rubyid_values identifier id'>values</span><span class='dot token'>.</span><span class='rubyid_select identifier id'>select</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_property identifier id'>property</span><span class='bitor op'>|</span> <span class='rubyid_property identifier id'>property</span><span class='dot token'>.</span><span class='rubyid_identity? fid id'>identity?</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_result identifier id'>result</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span> <span class='rubyid_properties identifier id'>properties</span><span class='lbrack token'>[</span><span class='symbol val'>:name</span><span class='rbrack token'>]</span> <span class='rbrack token'>]</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_result identifier id'>result</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+  <span class='rubyid_result identifier id'>result</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="included-instance_method">
+  
+    #<strong>included</strong>(other)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+287
+288
+289</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/mixin/properties.rb', line 287</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_included identifier id'>included</span><span class='lparen token'>(</span><span class='rubyid_other identifier id'>other</span><span class='rparen token'>)</span>
+  <span class='rubyid_other identifier id'>other</span><span class='dot token'>.</span><span class='rubyid_extend identifier id'>extend</span> <span class='rubyid_ClassMethods constant id'>ClassMethods</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="lazy-instance_method">
+  
+    #<strong>lazy</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="../../DelayedEvaluator.html" title="ChefCompat::CopiedFromChef::Chef::DelayedEvaluator (class)">Chef::DelayedEvaluator</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Create a lazy value for assignment to a default value.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>block</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The block to run when the value is retrieved.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../DelayedEvaluator.html" title="ChefCompat::CopiedFromChef::Chef::DelayedEvaluator (class)">Chef::DelayedEvaluator</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The lazy value
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+176
+177
+178</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/mixin/properties.rb', line 176</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_lazy identifier id'>lazy</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='rubyid_block identifier id'>block</span><span class='rparen token'>)</span>
+  <span class='rubyid_DelayedEvaluator constant id'>DelayedEvaluator</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='rubyid_block identifier id'>block</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="properties-instance_method">
+  
+    #<strong>properties</strong>(include_superclass = true)  &#x21d2; <tt>Hash&lt;Symbol,<span class='object_link'><a href="../../Property.html" title="ChefCompat::CopiedFromChef::Chef::Property (class)">Property</a></span>&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+The list of properties defined on this resource.
+</p>
+<p>
+Everything defined with `property` is in this list.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>include_superclass</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+`true` to include properties defined on superclasses; `false` or `nil` to
+return the list of properties directly on this class.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash&lt;Symbol,<span class='object_link'><a href="../../Property.html" title="ChefCompat::CopiedFromChef::Chef::Property (class)">Property</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The list of property names and types.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41
+42
+43
+44
+45
+46
+47</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/mixin/properties.rb', line 39</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_properties identifier id'>properties</span><span class='lparen token'>(</span><span class='rubyid_include_superclass identifier id'>include_superclass</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_include_superclass identifier id'>include_superclass</span>
+    <span class='rubyid_result identifier id'>result</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+    <span class='rubyid_ancestors identifier id'>ancestors</span><span class='dot token'>.</span><span class='rubyid_reverse_each identifier id'>reverse_each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_c identifier id'>c</span><span class='bitor op'>|</span> <span class='rubyid_result identifier id'>result</span><span class='dot token'>.</span><span class='rubyid_merge! fid id'>merge!</span><span class='lparen token'>(</span><span class='rubyid_c identifier id'>c</span><span class='dot token'>.</span><span class='rubyid_properties identifier id'>properties</span><span class='lparen token'>(</span><span class='rubyid_false false kw'>false</span><span class='rparen token'>)</span><span class='rparen token'>)</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_c identifier id'>c</span><span class='dot token'>.</span><span class='rubyid_respond_to? fid id'>respond_to?</span><span class='lparen token'>(</span><span class='symbol val'>:properties</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span>
+    <span class='rubyid_result identifier id'>result</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_@properties ivar id'>@properties</span> <span class='opasgn op'>||=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="property-instance_method">
+  
+    #<strong>property</strong>(name, type = NOT_PASSED, **options)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Create a property on this resource class.
+</p>
+<p>
+If a superclass has this property, or if this property has already been
+defined by this resource, this will <b>override</b> the previous value.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>
+Bare property
+</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='rubyid_property identifier id'>property</span> <span class='symbol val'>:x</span>
+</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>
+With just a type
+</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='rubyid_property identifier id'>property</span> <span class='symbol val'>:x</span><span class='comma token'>,</span> <span class='rubyid_String constant id'>String</span>
+</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>
+With just options
+</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='rubyid_property identifier id'>property</span> <span class='symbol val'>:x</span><span class='comma token'>,</span> <span class='label val'>default:</span> <span class='string val'>'hi'</span>
+</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>
+With type and options
+</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='rubyid_property identifier id'>property</span> <span class='symbol val'>:x</span><span class='comma token'>,</span> <span class='rubyid_String constant id'>String</span><span class='comma token'>,</span> <span class='label val'>default:</span> <span class='string val'>'hi'</span>
+</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The name of the property.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>type</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>, <tt>Array&lt;Object&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>NOT_PASSED</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The type(s) of this property. If present, this is prepended to the `is`
+validation option.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash&lt;Symbol,Object&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Validation options. @option options [Object,Array] :is An object, or list
+of
+</p>
+<pre class="code ruby18"><code class="ruby18">
+  objects, that must match the value using Ruby's `===` operator
+  (`options[:is].any? { |v| v === value }`).
+</code></pre>
+<p>
+@option options [Object,Array] :equal_to An object, or list
+</p>
+<pre class="code ruby18"><code class="ruby18">
+  of objects, that must be equal to the value using Ruby's `==`
+  operator (`options[:is].any? { |v| v == value }`)
+</code></pre>
+<p>
+@option options [Regexp,Array&lt;Regexp&gt;] :regex An object, or
+</p>
+<pre class="code ruby18"><code class="ruby18">
+  list of objects, that must match the value with `regex.match(value)`.
+</code></pre>
+<p>
+@option options [Class,Array&lt;Class&gt;] :kind_of A class, or
+</p>
+<pre class="code ruby18"><code class="ruby18">
+  list of classes, that the value must be an instance of.
+</code></pre>
+<p>
+@option options [Hash&lt;String,Proc&gt;] :callbacks A hash of
+</p>
+<pre class="code ruby18"><code class="ruby18">
+  messages -&gt; procs, all of which match the value. The proc must
+  return a truthy or falsey value (true means it matches).
+</code></pre>
+<p>
+@option options [Symbol,Array&lt;Symbol&gt;] :respond_to A method
+</p>
+<pre class="code ruby18"><code class="ruby18">
+  name, or list of method names, the value must respond to.
+</code></pre>
+<p>
+@option options [Symbol,Array&lt;Symbol&gt;] :cannot_be A property,
+</p>
+<pre class="code ruby18"><code class="ruby18">
+  or a list of properties, that the value cannot have (such as `:nil` or
+  `:empty`). The method with a questionmark at the end is called on the
+  value (e.g. `value.empty?`). If the value does not have this method,
+  it is considered valid (i.e. if you don't respond to `empty?` we
+  assume you are not empty).
+</code></pre>
+<p>
+@option options [Proc] :coerce A proc which will be called to
+</p>
+<pre class="code ruby18"><code class="ruby18">
+  transform the user input to canonical form. The value is passed in,
+  and the transformed value returned as output. Lazy values will *not*
+  be passed to this method until after they are evaluated. Called in the
+  context of the resource (meaning you can access other properties).
+</code></pre>
+<p>
+@option options [Boolean] :required `true` if this property
+</p>
+<pre class="code ruby18"><code class="ruby18">
+  must be present; `false` otherwise. This is checked after the resource
+  is fully initialized.
+</code></pre>
+<p>
+@option options [Boolean] :name_property `true` if this
+</p>
+<pre class="code ruby18"><code class="ruby18">
+  property defaults to the same value as `name`. Equivalent to
+  `default: lazy { name }`, except that #property_is_set? will
+  return `true` if the property is set *or* if `name` is set.
+</code></pre>
+<p>
+@option options [Boolean] :name_attribute Same as `name_property`. @option
+options [Object] :default The value this property
+</p>
+<pre class="code ruby18"><code class="ruby18">
+  will return if the user does not set one. If this is `lazy`, it will
+  be run in the context of the instance (and able to access other
+  properties).
+</code></pre>
+<p>
+@option options [Boolean] :desired_state `true` if this property is
+</p>
+<pre class="code ruby18"><code class="ruby18">
+  part of desired state. Defaults to `true`.
+</code></pre>
+<p>
+@option options [Boolean] :identity `true` if this property
+</p>
+<pre class="code ruby18"><code class="ruby18">
+  is part of object identity. Defaults to `false`.
+</code></pre>
+<p>
+@option options [Boolean] :sensitive `true` if this property could
+</p>
+<pre class="code ruby18"><code class="ruby18">
+  contain sensitive information and whose value should be redacted
+  in any resource reporting / auditing output. Defaults to `false`.
+</code></pre>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/mixin/properties.rb', line 117</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_property identifier id'>property</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_type identifier id'>type</span> <span class='assign token'>=</span> <span class='rubyid_NOT_PASSED constant id'>NOT_PASSED</span><span class='comma token'>,</span> <span class='pow op'>**</span><span class='rubyid_options identifier id'>options</span><span class='rparen token'>)</span>
+  <span class='rubyid_name identifier id'>name</span> <span class='assign token'>=</span> <span class='rubyid_name identifier id'>name</span><span class='dot token'>.</span><span class='rubyid_to_sym identifier id'>to_sym</span>
+
+  <span class='rubyid_options identifier id'>options</span> <span class='assign token'>=</span> <span class='rubyid_options identifier id'>options</span><span class='dot token'>.</span><span class='rubyid_inject identifier id'>inject</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_memo identifier id'>memo</span><span class='comma token'>,</span> <span class='lparen token'>(</span><span class='rubyid_key identifier id'>key</span><span class='comma token'>,</span> <span class='rubyid_value identifier id'>value</span><span class='rparen token'>)</span><span class='bitor op'>|</span> <span class='rubyid_memo identifier id'>memo</span><span class='lbrack token'>[</span><span class='rubyid_key identifier id'>key</span><span class='dot token'>.</span><span class='rubyid_to_sym identifier id'>to_sym</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_value identifier id'>value</span><span class='semicolon token'>;</span> <span class='rubyid_memo identifier id'>memo</span> <span class='rbrace token'>}</span>
+
+  <span class='rubyid_options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:instance_variable_name</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='symbol val'>:&quot;@#{name}&quot;</span> <span class='rubyid_if if_mod kw'>if</span> <span class='notop op'>!</span><span class='rubyid_options identifier id'>options</span><span class='dot token'>.</span><span class='rubyid_has_key? fid id'>has_key?</span><span class='lparen token'>(</span><span class='symbol val'>:instance_variable_name</span><span class='rparen token'>)</span>
+  <span class='rubyid_options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:name</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_name identifier id'>name</span>
+  <span class='rubyid_options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:declared_in</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_self self kw'>self</span>
+
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_type identifier id'>type</span> <span class='eq op'>==</span> <span class='rubyid_NOT_PASSED constant id'>NOT_PASSED</span>
+    <span class='comment val'># If a type is not passed, the property derives from the</span>
+    <span class='comment val'># superclass property (if any)</span>
+    <span class='rubyid_if if kw'>if</span> <span class='rubyid_properties identifier id'>properties</span><span class='dot token'>.</span><span class='rubyid_has_key? fid id'>has_key?</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='rparen token'>)</span>
+      <span class='rubyid_property identifier id'>property</span> <span class='assign token'>=</span> <span class='rubyid_properties identifier id'>properties</span><span class='lbrack token'>[</span><span class='rubyid_name identifier id'>name</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_derive identifier id'>derive</span><span class='lparen token'>(</span><span class='pow op'>**</span><span class='rubyid_options identifier id'>options</span><span class='rparen token'>)</span>
+    <span class='rubyid_else else kw'>else</span>
+      <span class='rubyid_property identifier id'>property</span> <span class='assign token'>=</span> <span class='rubyid_property_type identifier id'>property_type</span><span class='lparen token'>(</span><span class='pow op'>**</span><span class='rubyid_options identifier id'>options</span><span class='rparen token'>)</span>
+    <span class='rubyid_end end kw'>end</span>
+
+  <span class='comment val'># If a Property is specified, derive a new one from that.</span>
+  <span class='rubyid_elsif elsif kw'>elsif</span> <span class='rubyid_type identifier id'>type</span><span class='dot token'>.</span><span class='rubyid_is_a? fid id'>is_a?</span><span class='lparen token'>(</span><span class='rubyid_Property constant id'>Property</span><span class='rparen token'>)</span> <span class='orop op'>||</span> <span class='lparen token'>(</span><span class='rubyid_type identifier id'>type</span><span class='dot token'>.</span><span class='rubyid_is_a? fid id'>is_a?</span><span class='lparen token'>(</span><span class='rubyid_Class constant id'>Class</span><span class='rparen token'>)</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_type identifier id'>type</span> <span class='leq op'>&lt;=</span> <span class='rubyid_Property constant id'>Property</span><span class='rparen token'>)</span>
+    <span class='rubyid_property identifier id'>property</span> <span class='assign token'>=</span> <span class='rubyid_type identifier id'>type</span><span class='dot token'>.</span><span class='rubyid_derive identifier id'>derive</span><span class='lparen token'>(</span><span class='pow op'>**</span><span class='rubyid_options identifier id'>options</span><span class='rparen token'>)</span>
+
+  <span class='comment val'># If a primitive type was passed, combine it with &quot;is&quot;</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_if if kw'>if</span> <span class='rubyid_options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:is</span><span class='rbrack token'>]</span>
+      <span class='rubyid_options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:is</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='lparen token'>(</span><span class='lbrack token'>[</span> <span class='rubyid_type identifier id'>type</span> <span class='rbrack token'>]</span> <span class='plus op'>+</span> <span class='lbrack token'>[</span> <span class='rubyid_options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:is</span><span class='rbrack token'>]</span> <span class='rbrack token'>]</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_flatten identifier id'>flatten</span><span class='lparen token'>(</span><span class='integer val'>1</span><span class='rparen token'>)</span>
+    <span class='rubyid_else else kw'>else</span>
+      <span class='rubyid_options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:is</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_type identifier id'>type</span>
+    <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_property identifier id'>property</span> <span class='assign token'>=</span> <span class='rubyid_property_type identifier id'>property_type</span><span class='lparen token'>(</span><span class='pow op'>**</span><span class='rubyid_options identifier id'>options</span><span class='rparen token'>)</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_local_properties identifier id'>local_properties</span> <span class='assign token'>=</span> <span class='rubyid_properties identifier id'>properties</span><span class='lparen token'>(</span><span class='rubyid_false false kw'>false</span><span class='rparen token'>)</span>
+  <span class='rubyid_local_properties identifier id'>local_properties</span><span class='lbrack token'>[</span><span class='rubyid_name identifier id'>name</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_property identifier id'>property</span>
+
+  <span class='rubyid_property identifier id'>property</span><span class='dot token'>.</span><span class='rubyid_emit_dsl identifier id'>emit_dsl</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="property_type-instance_method">
+  
+    #<strong>property_type</strong>(**options)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Create a reusable property type that can be used in multiple properties in
+different resources.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='rubyid_property_type identifier id'>property_type</span><span class='lparen token'>(</span><span class='label val'>default:</span> <span class='string val'>'hi'</span><span class='rparen token'>)</span>
+</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash&lt;Symbol,Object&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Validation options. see #property for the list of options.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+165
+166
+167</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/mixin/properties.rb', line 165</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_property_type identifier id'>property_type</span><span class='lparen token'>(</span><span class='pow op'>**</span><span class='rubyid_options identifier id'>options</span><span class='rparen token'>)</span>
+  <span class='rubyid_Property constant id'>Property</span><span class='dot token'>.</span><span class='rubyid_derive identifier id'>derive</span><span class='lparen token'>(</span><span class='pow op'>**</span><span class='rubyid_options identifier id'>options</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="state_properties-instance_method">
+  
+    #<strong>state_properties</strong>(*names)  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="../../Property.html" title="ChefCompat::CopiedFromChef::Chef::Property (class)">Property</a></span>&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Get or set the list of desired state properties for this resource.
+</p>
+<p>
+State properties are properties that describe the desired state of the
+system, such as file permissions or ownership. In general, state properties
+are properties that could be populated by examining the state of the system
+(e.g., File.stat can tell you the permissions on an existing file).
+Contrarily, properties that are not &quot;state properties&quot; usually
+modify the way Chef itself behaves, for example by providing additional
+options for a package manager to use when installing a package.
+</p>
+<p>
+This list is used by the Chef client auditing system to extract information
+from resources to describe changes made to the system.
+</p>
+<p>
+This method is unnecessary when declaring properties with `property`;
+properties are added to state_properties by default, and can be turned off
+with `desired_state: false`.
+</p>
+<p>
+```ruby property :x # part of desired state property :y, desired_state:
+false # not part of desired state ```
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>names</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;Symbol&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+A list of property names to set as desired state.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../../Property.html" title="ChefCompat::CopiedFromChef::Chef::Property (class)">Property</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+All properties in desired state.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/mixin/properties.rb', line 209</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_state_properties identifier id'>state_properties</span><span class='lparen token'>(</span><span class='mult op'>*</span><span class='rubyid_names identifier id'>names</span><span class='rparen token'>)</span>
+  <span class='rubyid_if if kw'>if</span> <span class='notop op'>!</span><span class='rubyid_names identifier id'>names</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+    <span class='rubyid_names identifier id'>names</span> <span class='assign token'>=</span> <span class='rubyid_names identifier id'>names</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_name identifier id'>name</span><span class='bitor op'>|</span> <span class='rubyid_name identifier id'>name</span><span class='dot token'>.</span><span class='rubyid_to_sym identifier id'>to_sym</span> <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_uniq identifier id'>uniq</span>
+
+    <span class='rubyid_local_properties identifier id'>local_properties</span> <span class='assign token'>=</span> <span class='rubyid_properties identifier id'>properties</span><span class='lparen token'>(</span><span class='rubyid_false false kw'>false</span><span class='rparen token'>)</span>
+    <span class='comment val'># Add new properties to the list.</span>
+    <span class='rubyid_names identifier id'>names</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_name identifier id'>name</span><span class='bitor op'>|</span>
+      <span class='rubyid_property identifier id'>property</span> <span class='assign token'>=</span> <span class='rubyid_properties identifier id'>properties</span><span class='lbrack token'>[</span><span class='rubyid_name identifier id'>name</span><span class='rbrack token'>]</span>
+      <span class='rubyid_if if kw'>if</span> <span class='notop op'>!</span><span class='rubyid_property identifier id'>property</span>
+        <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_property identifier id'>property</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='label val'>instance_variable_name:</span> <span class='rubyid_false false kw'>false</span><span class='comma token'>,</span> <span class='label val'>desired_state:</span> <span class='rubyid_true true kw'>true</span>
+      <span class='rubyid_elsif elsif kw'>elsif</span> <span class='notop op'>!</span><span class='rubyid_property identifier id'>property</span><span class='dot token'>.</span><span class='rubyid_desired_state? fid id'>desired_state?</span>
+        <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_property identifier id'>property</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='label val'>desired_state:</span> <span class='rubyid_true true kw'>true</span>
+      <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_end end kw'>end</span>
+
+    <span class='comment val'># If state_attrs *excludes* something which is currently desired state,</span>
+    <span class='comment val'># mark it as desired_state: false.</span>
+    <span class='rubyid_local_properties identifier id'>local_properties</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_property identifier id'>property</span><span class='bitor op'>|</span>
+      <span class='rubyid_if if kw'>if</span> <span class='rubyid_property identifier id'>property</span><span class='dot token'>.</span><span class='rubyid_desired_state? fid id'>desired_state?</span> <span class='andop op'>&amp;&amp;</span> <span class='notop op'>!</span><span class='rubyid_names identifier id'>names</span><span class='dot token'>.</span><span class='rubyid_include? fid id'>include?</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='rparen token'>)</span>
+        <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_property identifier id'>property</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='label val'>desired_state:</span> <span class='rubyid_false false kw'>false</span>
+      <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_properties identifier id'>properties</span><span class='dot token'>.</span><span class='rubyid_values identifier id'>values</span><span class='dot token'>.</span><span class='rubyid_select identifier id'>select</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_property identifier id'>property</span><span class='bitor op'>|</span> <span class='rubyid_property identifier id'>property</span><span class='dot token'>.</span><span class='rubyid_desired_state? fid id'>desired_state?</span> <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Sep 19 15:35:20 2016 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.5 (ruby-1.8.7).
+</div>
+
+    </div>
+  </body>
+</html>

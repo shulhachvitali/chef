@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Cookbook Documentation
+  
+    &mdash; Documentation by YARD 0.9.5
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = null;
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="cookbooks_list_link"
+        href="cookbooks_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="class_list.html"></iframe>
+
+      <div id="content">
+
+<div id="filecontents">
+  <h1>Chef Cookbooks Documentation</h1>
+  
+
+<h1>The chef-repo</h1>
+
+<p>All installations require a central workspace known as the chef-repo. This is a place where primitive objects--cookbooks, roles, environments, data bags, and chef-repo configuration files--are stored and managed.</p>
+
+<p>The chef-repo should be kept under version control, such as <a href="http://git-scm.org">git</a>, and then managed as if it were source code.</p>
+
+<h2>Knife Configuration</h2>
+
+<p>Knife is the <a href="https://docs.chef.io/knife.html">command line interface</a> for Chef. The chef-repo contains a .chef directory (which is a hidden directory by default) in which the Knife configuration file (knife.rb) is located. This file contains configuration settings for the chef-repo.</p>
+
+<p>The knife.rb file is automatically created by the starter kit. This file can be customized to support configuration settings used by <a href="https://docs.chef.io/plugin_knife.html">cloud provider options</a> and custom <a href="https://docs.chef.io/plugin_knife_custom.html">knife plugins</a>.</p>
+
+<p>Also located inside the .chef directory are .pem files, which contain private keys used to authenticate requests made to the Chef server. The USERNAME.pem file contains a private key unique to the user (and should never be shared with anyone). The ORGANIZATION-validator.pem file contains a private key that is global to the entire organization (and is used by all nodes and workstations that send requests to the Chef server).</p>
+
+<p>More information about knife.rb configuration options can be found in <a href="https://docs.chef.io/config_rb_knife.html">the documentation for knife</a>.</p>
+
+<h2>Cookbooks</h2>
+
+<p>A cookbook is the fundamental unit of configuration and policy distribution. A sample cookbook can be found in <code>cookbooks/starter</code>. After making changes to any cookbook, you must upload it to the Chef server using knife:</p>
+
+<pre class="code ruby"><code class="ruby">$ knife upload cookbooks/starter
+</code></pre>
+
+<p>For more information about cookbooks, see the example files in the <code>starter</code> cookbook.</p>
+
+<h2>Roles</h2>
+
+<p>Roles provide logical grouping of cookbooks and other roles. A sample role can be found at <code>roles/starter.rb</code>.</p>
+
+<h2>Getting Started</h2>
+
+<p>Now that you have the chef-repo ready to go, check out <a href="https://learn.chef.io/">Learn Chef</a> to proceed with your workstation setup. If you have any questions about Chef you can always ask <a href="https://www.chef.io/support/">our support team</a> for a helping hand.</p>
+
+
+
+<h1>Cookbooks List</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Cookbook</th>
+      <th>Description</th>
+      <th>Version</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+  
+    <tr class="r1">
+      <td><span class='object_link'><a href="chef/java.html" title="chef::java (cookbook)">java</a></span></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+  
+    <tr class="r2">
+      <td><span class='object_link'><a href="chef/jenkins_task.html" title="chef::jenkins_task (cookbook)">jenkins_task</a></span></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+  
+    <tr class="r1">
+      <td><span class='object_link'><a href="chef/test.html" title="chef::test (cookbook)">test</a></span></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+  
+    <tr class="r2">
+      <td><span class='object_link'><a href="chef/tomcat.html" title="chef::tomcat (cookbook)">tomcat</a></span></td>
+      <td>Installs/Configures tomcat</td>
+      <td>0.1.0</td>
+    </tr>
+    
+  
+    <tr class="r1">
+      <td><span class='object_link'><a href="chef/unit.html" title="chef::unit (cookbook)">unit</a></span></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+  
+    <tr class="r2">
+      <td><span class='object_link'><a href="chef/web_nginx.html" title="chef::web_nginx (cookbook)">web_nginx</a></span></td>
+      <td>nginx installation</td>
+      <td>1.0.0</td>
+    </tr>
+    
+  
+    <tr class="r1">
+      <td><span class='object_link'><a href="chef/yum.html" title="chef::yum (cookbook)">yum</a></span></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+  
+  </tbody>
+</table>
+
+</div>
+</div>
+
+      <div id="footer">
+  Generated on Mon Sep 19 20:02:16 2016 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.5 (ruby-2.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

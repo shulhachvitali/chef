@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: ChefCompat::CopiedFromChef::Chef::Provider::AptRepository
+  
+    &mdash; Documentation by YARD 0.9.5
+  
+</title>
+
+  <link rel="stylesheet" href="../../../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "ChefCompat::CopiedFromChef::Chef::Provider::AptRepository";
+  relpath = '../../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../../_index.html">Index (A)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../../ChefCompat.html" title="ChefCompat (module)">ChefCompat</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../../CopiedFromChef.html" title="ChefCompat::CopiedFromChef (module)">CopiedFromChef</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Chef.html" title="ChefCompat::CopiedFromChef::Chef (class)">Chef</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Provider.html" title="ChefCompat::CopiedFromChef::Chef::Provider (class)">Provider</a></span></span>
+     &raquo; 
+    <span class="title">AptRepository</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="cookbooks_list_link"
+        href="../../../../cookbooks_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="../../../../class_list.html"></iframe>
+
+      <div id="content"><h1>Class: ChefCompat::CopiedFromChef::Chef::Provider::AptRepository
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ChefCompat::CopiedFromChef::Chef::Provider::AptRepository</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  <dl>
+      <dt>Extended by:</dt>
+      <dd>Chef::Mixin::Which</dd>
+  </dl>
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd>Chef::Mixin::ShellOut</dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>compat_resource/files/lib/chef_compat/copied_from_chef/chef/provider/apt_repository.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#build_repo-instance_method" title="#build_repo (instance method)">#<strong>build_repo</strong>(uri, distribution, components, trusted, arch, add_src = false)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cookbook_name-instance_method" title="#cookbook_name (instance method)">#<strong>cookbook_name</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#extract_fingerprints_from_cmd-instance_method" title="#extract_fingerprints_from_cmd (instance method)">#<strong>extract_fingerprints_from_cmd</strong>(cmd)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_cookbook_file%3F-instance_method" title="#has_cookbook_file? (instance method)">#<strong>has_cookbook_file?</strong>(fn)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#install_key_from_keyserver-instance_method" title="#install_key_from_keyserver (instance method)">#<strong>install_key_from_keyserver</strong>(key = new_resource.key, keyserver = new_resource.keyserver)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#install_key_from_uri-instance_method" title="#install_key_from_uri (instance method)">#<strong>install_key_from_uri</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#install_ppa_key-instance_method" title="#install_ppa_key (instance method)">#<strong>install_ppa_key</strong>(owner, repo)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#is_key_id%3F-instance_method" title="#is_key_id? (instance method)">#<strong>is_key_id?</strong>(id)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#is_ppa_url%3F-instance_method" title="#is_ppa_url? (instance method)">#<strong>is_ppa_url?</strong>(url)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#key_is_valid%3F-instance_method" title="#key_is_valid? (instance method)">#<strong>key_is_valid?</strong>(cmd, key)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_current_resource-instance_method" title="#load_current_resource (instance method)">#<strong>load_current_resource</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#make_ppa_url-instance_method" title="#make_ppa_url (instance method)">#<strong>make_ppa_url</strong>(ppa)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#no_new_keys%3F-instance_method" title="#no_new_keys? (instance method)">#<strong>no_new_keys?</strong>(file)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#whyrun_supported%3F-instance_method" title="#whyrun_supported? (instance method)">#<strong>whyrun_supported?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="build_repo-instance_method">
+  
+    #<strong>build_repo</strong>(uri, distribution, components, trusted, arch, add_src = false)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/provider/apt_repository.rb', line 246</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_build_repo identifier id'>build_repo</span><span class='lparen token'>(</span><span class='rubyid_uri identifier id'>uri</span><span class='comma token'>,</span> <span class='rubyid_distribution identifier id'>distribution</span><span class='comma token'>,</span> <span class='rubyid_components identifier id'>components</span><span class='comma token'>,</span> <span class='rubyid_trusted identifier id'>trusted</span><span class='comma token'>,</span> <span class='rubyid_arch identifier id'>arch</span><span class='comma token'>,</span> <span class='rubyid_add_src identifier id'>add_src</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span><span class='rparen token'>)</span>
+  <span class='rubyid_uri identifier id'>uri</span> <span class='assign token'>=</span> <span class='rubyid_make_ppa_url identifier id'>make_ppa_url</span><span class='lparen token'>(</span><span class='rubyid_uri identifier id'>uri</span><span class='rparen token'>)</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_is_ppa_url? fid id'>is_ppa_url?</span><span class='lparen token'>(</span><span class='rubyid_uri identifier id'>uri</span><span class='rparen token'>)</span>
+
+  <span class='rubyid_uri identifier id'>uri</span> <span class='assign token'>=</span> <span class='string val'>'&quot;'</span> <span class='plus op'>+</span> <span class='rubyid_uri identifier id'>uri</span> <span class='plus op'>+</span> <span class='string val'>'&quot;'</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_uri identifier id'>uri</span><span class='dot token'>.</span><span class='rubyid_start_with? fid id'>start_with?</span><span class='lparen token'>(</span><span class='string val'>&quot;'&quot;</span><span class='comma token'>,</span> <span class='string val'>'&quot;'</span><span class='rparen token'>)</span>
+  <span class='rubyid_components identifier id'>components</span> <span class='assign token'>=</span> <span class='rubyid_Array constant id'>Array</span><span class='lparen token'>(</span><span class='rubyid_components identifier id'>components</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>&quot; &quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_options identifier id'>options</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+  <span class='rubyid_options identifier id'>options</span> <span class='lshft op'>&lt;&lt;</span> <span class='dstring node'>&quot;arch=#{arch}&quot;</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_arch identifier id'>arch</span>
+  <span class='rubyid_options identifier id'>options</span> <span class='lshft op'>&lt;&lt;</span> <span class='string val'>&quot;trusted=yes&quot;</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_trusted identifier id'>trusted</span>
+  <span class='rubyid_optstr identifier id'>optstr</span> <span class='assign token'>=</span> <span class='rubyid_unless unless kw'>unless</span> <span class='rubyid_options identifier id'>options</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+             <span class='string val'>&quot;[&quot;</span> <span class='plus op'>+</span> <span class='rubyid_options identifier id'>options</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>&quot; &quot;</span><span class='rparen token'>)</span> <span class='plus op'>+</span> <span class='string val'>&quot;]&quot;</span>
+           <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_info identifier id'>info</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span> <span class='rubyid_optstr identifier id'>optstr</span><span class='comma token'>,</span> <span class='rubyid_uri identifier id'>uri</span><span class='comma token'>,</span> <span class='rubyid_distribution identifier id'>distribution</span><span class='comma token'>,</span> <span class='rubyid_components identifier id'>components</span> <span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_compact identifier id'>compact</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>&quot; &quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_repo identifier id'>repo</span> <span class='assign token'>=</span>  <span class='dstring node'>&quot;deb      #{info}\n&quot;</span>
+  <span class='rubyid_repo identifier id'>repo</span> <span class='lshft op'>&lt;&lt;</span> <span class='dstring node'>&quot;deb-src  #{info}\n&quot;</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_add_src identifier id'>add_src</span>
+  <span class='rubyid_repo identifier id'>repo</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="cookbook_name-instance_method">
+  
+    #<strong>cookbook_name</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+154
+155
+156</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/provider/apt_repository.rb', line 154</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_cookbook_name identifier id'>cookbook_name</span>
+  <span class='rubyid_new_resource identifier id'>new_resource</span><span class='dot token'>.</span><span class='rubyid_cookbook identifier id'>cookbook</span> <span class='orop op'>||</span> <span class='rubyid_new_resource identifier id'>new_resource</span><span class='dot token'>.</span><span class='rubyid_cookbook_name identifier id'>cookbook_name</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="extract_fingerprints_from_cmd-instance_method">
+  
+    #<strong>extract_fingerprints_from_cmd</strong>(cmd)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+127
+128
+129
+130
+131
+132
+133
+134
+135</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/provider/apt_repository.rb', line 127</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_extract_fingerprints_from_cmd identifier id'>extract_fingerprints_from_cmd</span><span class='lparen token'>(</span><span class='rubyid_cmd identifier id'>cmd</span><span class='rparen token'>)</span>
+  <span class='rubyid_so identifier id'>so</span> <span class='assign token'>=</span> <span class='rubyid_shell_out identifier id'>shell_out</span><span class='lparen token'>(</span><span class='rubyid_cmd identifier id'>cmd</span><span class='rparen token'>)</span>
+  <span class='rubyid_so identifier id'>so</span><span class='dot token'>.</span><span class='rubyid_run_command identifier id'>run_command</span>
+  <span class='rubyid_so identifier id'>so</span><span class='dot token'>.</span><span class='rubyid_stdout identifier id'>stdout</span><span class='dot token'>.</span><span class='rubyid_split identifier id'>split</span><span class='lparen token'>(</span><span class='regexp val'>/\n/</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_t identifier id'>t</span><span class='bitor op'>|</span>
+    <span class='rubyid_if if kw'>if</span> <span class='rubyid_z identifier id'>z</span> <span class='assign token'>=</span> <span class='rubyid_t identifier id'>t</span><span class='dot token'>.</span><span class='rubyid_match identifier id'>match</span><span class='lparen token'>(</span><span class='regexp val'>/^ +Key fingerprint = ([0-9A-F ]+)/</span><span class='rparen token'>)</span>
+      <span class='rubyid_z identifier id'>z</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_split identifier id'>split</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_end end kw'>end</span><span class='dot token'>.</span><span class='rubyid_compact identifier id'>compact</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_cookbook_file?-instance_method">
+  
+    #<strong>has_cookbook_file?</strong>(fn)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+158
+159
+160</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/provider/apt_repository.rb', line 158</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_has_cookbook_file? fid id'>has_cookbook_file?</span><span class='lparen token'>(</span><span class='rubyid_fn identifier id'>fn</span><span class='rparen token'>)</span>
+  <span class='rubyid_run_context identifier id'>run_context</span><span class='dot token'>.</span><span class='rubyid_has_cookbook_file_in_cookbook? fid id'>has_cookbook_file_in_cookbook?</span><span class='lparen token'>(</span><span class='rubyid_cookbook_name identifier id'>cookbook_name</span><span class='comma token'>,</span> <span class='rubyid_fn identifier id'>fn</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="install_key_from_keyserver-instance_method">
+  
+    #<strong>install_key_from_keyserver</strong>(key = new_resource.key, keyserver = new_resource.keyserver)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/provider/apt_repository.rb', line 198</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_install_key_from_keyserver identifier id'>install_key_from_keyserver</span><span class='lparen token'>(</span><span class='rubyid_key identifier id'>key</span> <span class='assign token'>=</span> <span class='rubyid_new_resource identifier id'>new_resource</span><span class='dot token'>.</span><span class='rubyid_key identifier id'>key</span><span class='comma token'>,</span> <span class='rubyid_keyserver identifier id'>keyserver</span> <span class='assign token'>=</span> <span class='rubyid_new_resource identifier id'>new_resource</span><span class='dot token'>.</span><span class='rubyid_keyserver identifier id'>keyserver</span><span class='rparen token'>)</span>
+  <span class='rubyid_cmd identifier id'>cmd</span> <span class='assign token'>=</span> <span class='string val'>&quot;apt-key adv --recv&quot;</span>
+  <span class='rubyid_cmd identifier id'>cmd</span> <span class='lshft op'>&lt;&lt;</span> <span class='dstring node'>&quot; --keyserver-options http-proxy=#{new_resource.key_proxy}&quot;</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_new_resource identifier id'>new_resource</span><span class='dot token'>.</span><span class='rubyid_key_proxy identifier id'>key_proxy</span>
+  <span class='rubyid_cmd identifier id'>cmd</span> <span class='lshft op'>&lt;&lt;</span> <span class='string val'>&quot; --keyserver &quot;</span>
+  <span class='rubyid_cmd identifier id'>cmd</span> <span class='lshft op'>&lt;&lt;</span> <span class='rubyid_if if kw'>if</span> <span class='rubyid_keyserver identifier id'>keyserver</span><span class='dot token'>.</span><span class='rubyid_start_with? fid id'>start_with?</span><span class='lparen token'>(</span><span class='string val'>&quot;hkp://&quot;</span><span class='rparen token'>)</span>
+           <span class='rubyid_keyserver identifier id'>keyserver</span>
+         <span class='rubyid_else else kw'>else</span>
+           <span class='dstring node'>&quot;hkp://#{keyserver}:80&quot;</span>
+         <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_cmd identifier id'>cmd</span> <span class='lshft op'>&lt;&lt;</span> <span class='dstring node'>&quot; #{key}&quot;</span>
+
+  <span class='rubyid_declare_resource identifier id'>declare_resource</span><span class='lparen token'>(</span><span class='symbol val'>:execute</span><span class='comma token'>,</span> <span class='dstring node'>&quot;install-key #{key}&quot;</span><span class='rparen token'>)</span> <span class='rubyid_do do kw'>do</span>
+    <span class='rubyid_command identifier id'>command</span> <span class='rubyid_cmd identifier id'>cmd</span>
+    <span class='rubyid_sensitive identifier id'>sensitive</span> <span class='rubyid_new_resource identifier id'>new_resource</span><span class='dot token'>.</span><span class='rubyid_sensitive identifier id'>sensitive</span>
+    <span class='rubyid_not_if identifier id'>not_if</span> <span class='rubyid_do do kw'>do</span>
+      <span class='rubyid_present identifier id'>present</span> <span class='assign token'>=</span> <span class='rubyid_extract_fingerprints_from_cmd identifier id'>extract_fingerprints_from_cmd</span><span class='lparen token'>(</span><span class='string val'>&quot;apt-key finger&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_any? fid id'>any?</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_fp identifier id'>fp</span><span class='bitor op'>|</span>
+        <span class='rubyid_fp identifier id'>fp</span><span class='dot token'>.</span><span class='rubyid_end_with? fid id'>end_with?</span> <span class='rubyid_key identifier id'>key</span><span class='dot token'>.</span><span class='rubyid_upcase identifier id'>upcase</span>
+      <span class='rubyid_end end kw'>end</span>
+      <span class='rubyid_present identifier id'>present</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_key_is_valid? fid id'>key_is_valid?</span><span class='lparen token'>(</span><span class='string val'>&quot;apt-key list&quot;</span><span class='comma token'>,</span> <span class='rubyid_key identifier id'>key</span><span class='dot token'>.</span><span class='rubyid_upcase identifier id'>upcase</span><span class='rparen token'>)</span>
+    <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_notifies identifier id'>notifies</span> <span class='symbol val'>:run</span><span class='comma token'>,</span> <span class='string val'>&quot;execute[apt-cache gencaches]&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:immediately</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_raise identifier id'>raise</span> <span class='dstring node'>&quot;The key #{key} is invalid and cannot be used to verify an apt repository.&quot;</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_key_is_valid? fid id'>key_is_valid?</span><span class='lparen token'>(</span><span class='string val'>&quot;apt-key list&quot;</span><span class='comma token'>,</span> <span class='rubyid_key identifier id'>key</span><span class='dot token'>.</span><span class='rubyid_upcase identifier id'>upcase</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="install_key_from_uri-instance_method">
+  
+    #<strong>install_key_from_uri</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/provider/apt_repository.rb', line 168</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_install_key_from_uri identifier id'>install_key_from_uri</span>
+  <span class='rubyid_key_name identifier id'>key_name</span> <span class='assign token'>=</span> <span class='rubyid_new_resource identifier id'>new_resource</span><span class='dot token'>.</span><span class='rubyid_key identifier id'>key</span><span class='dot token'>.</span><span class='rubyid_split identifier id'>split</span><span class='lparen token'>(</span><span class='regexp val'>%r{\/}</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_last identifier id'>last</span>
+  <span class='rubyid_cached_keyfile identifier id'>cached_keyfile</span> <span class='assign token'>=</span> <span class='colon3 op'>::</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Config constant id'>Config</span><span class='lbrack token'>[</span><span class='symbol val'>:file_cache_path</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_key_name identifier id'>key_name</span><span class='rparen token'>)</span>
+  <span class='rubyid_type identifier id'>type</span> <span class='assign token'>=</span> <span class='rubyid_if if kw'>if</span> <span class='rubyid_new_resource identifier id'>new_resource</span><span class='dot token'>.</span><span class='rubyid_key identifier id'>key</span><span class='dot token'>.</span><span class='rubyid_start_with? fid id'>start_with?</span><span class='lparen token'>(</span><span class='string val'>&quot;http&quot;</span><span class='rparen token'>)</span>
+           <span class='symbol val'>:remote_file</span>
+         <span class='rubyid_elsif elsif kw'>elsif</span> <span class='rubyid_has_cookbook_file? fid id'>has_cookbook_file?</span><span class='lparen token'>(</span><span class='rubyid_new_resource identifier id'>new_resource</span><span class='dot token'>.</span><span class='rubyid_key identifier id'>key</span><span class='rparen token'>)</span>
+           <span class='symbol val'>:cookbook_file</span>
+         <span class='rubyid_else else kw'>else</span>
+           <span class='rubyid_raise identifier id'>raise</span> <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Exceptions constant id'>Exceptions</span><span class='colon2 op'>::</span><span class='rubyid_FileNotFound constant id'>FileNotFound</span><span class='comma token'>,</span> <span class='string val'>&quot;Cannot locate key file&quot;</span>
+         <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_declare_resource identifier id'>declare_resource</span><span class='lparen token'>(</span><span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_cached_keyfile identifier id'>cached_keyfile</span><span class='rparen token'>)</span> <span class='rubyid_do do kw'>do</span>
+    <span class='rubyid_source identifier id'>source</span> <span class='rubyid_new_resource identifier id'>new_resource</span><span class='dot token'>.</span><span class='rubyid_key identifier id'>key</span>
+    <span class='rubyid_mode identifier id'>mode</span> <span class='string val'>&quot;0644&quot;</span>
+    <span class='rubyid_sensitive identifier id'>sensitive</span> <span class='rubyid_new_resource identifier id'>new_resource</span><span class='dot token'>.</span><span class='rubyid_sensitive identifier id'>sensitive</span>
+    <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:create</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_raise identifier id'>raise</span> <span class='dstring node'>&quot;The key #{cached_keyfile} is invalid and cannot be used to verify an apt repository.&quot;</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_key_is_valid? fid id'>key_is_valid?</span><span class='lparen token'>(</span><span class='dstring node'>&quot;gpg #{cached_keyfile}&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;&quot;</span><span class='rparen token'>)</span>
+
+  <span class='rubyid_declare_resource identifier id'>declare_resource</span><span class='lparen token'>(</span><span class='symbol val'>:execute</span><span class='comma token'>,</span> <span class='dstring node'>&quot;apt-key add #{cached_keyfile}&quot;</span><span class='rparen token'>)</span> <span class='rubyid_do do kw'>do</span>
+    <span class='rubyid_sensitive identifier id'>sensitive</span> <span class='rubyid_new_resource identifier id'>new_resource</span><span class='dot token'>.</span><span class='rubyid_sensitive identifier id'>sensitive</span>
+    <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:run</span>
+    <span class='rubyid_not_if identifier id'>not_if</span> <span class='rubyid_do do kw'>do</span>
+      <span class='rubyid_no_new_keys? fid id'>no_new_keys?</span><span class='lparen token'>(</span><span class='rubyid_cached_keyfile identifier id'>cached_keyfile</span><span class='rparen token'>)</span>
+    <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_notifies identifier id'>notifies</span> <span class='symbol val'>:run</span><span class='comma token'>,</span> <span class='string val'>&quot;execute[apt-cache gencaches]&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:immediately</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="install_ppa_key-instance_method">
+  
+    #<strong>install_ppa_key</strong>(owner, repo)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+225
+226
+227
+228
+229
+230
+231</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/provider/apt_repository.rb', line 225</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_install_ppa_key identifier id'>install_ppa_key</span><span class='lparen token'>(</span><span class='rubyid_owner identifier id'>owner</span><span class='comma token'>,</span> <span class='rubyid_repo identifier id'>repo</span><span class='rparen token'>)</span>
+  <span class='rubyid_url identifier id'>url</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;https://launchpad.net/api/1.0/~#{owner}/+archive/#{repo}&quot;</span>
+  <span class='rubyid_key_id identifier id'>key_id</span> <span class='assign token'>=</span> <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_HTTP constant id'>HTTP</span><span class='colon2 op'>::</span><span class='rubyid_Simple constant id'>Simple</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_url identifier id'>url</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_get identifier id'>get</span><span class='lparen token'>(</span><span class='string val'>&quot;signing_key_fingerprint&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_delete identifier id'>delete</span><span class='lparen token'>(</span><span class='string val'>'&quot;'</span><span class='rparen token'>)</span>
+  <span class='rubyid_install_key_from_keyserver identifier id'>install_key_from_keyserver</span><span class='lparen token'>(</span><span class='rubyid_key_id identifier id'>key_id</span><span class='comma token'>,</span> <span class='string val'>&quot;keyserver.ubuntu.com&quot;</span><span class='rparen token'>)</span>
+<span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_Net constant id'>Net</span><span class='colon2 op'>::</span><span class='rubyid_HTTPServerException constant id'>HTTPServerException</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_e identifier id'>e</span>
+  <span class='rubyid_raise identifier id'>raise</span> <span class='dstring node'>&quot;Could not access Launchpad ppa API: #{e.message}&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="is_key_id?-instance_method">
+  
+    #<strong>is_key_id?</strong>(id)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+122
+123
+124
+125</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/provider/apt_repository.rb', line 122</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_is_key_id? fid id'>is_key_id?</span><span class='lparen token'>(</span><span class='rubyid_id identifier id'>id</span><span class='rparen token'>)</span>
+  <span class='rubyid_id identifier id'>id</span> <span class='assign token'>=</span> <span class='rubyid_id identifier id'>id</span><span class='lbrack token'>[</span><span class='float val'>2</span><span class='dot2 op'>..</span><span class='integer val'>-1</span><span class='rbrack token'>]</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_id identifier id'>id</span><span class='dot token'>.</span><span class='rubyid_start_with? fid id'>start_with?</span><span class='lparen token'>(</span><span class='string val'>&quot;0x&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_id identifier id'>id</span> <span class='match op'>=~</span> <span class='regexp val'>/^\h+$/</span> <span class='andop op'>&amp;&amp;</span> <span class='lbrack token'>[</span><span class='integer val'>8</span><span class='comma token'>,</span> <span class='integer val'>16</span><span class='comma token'>,</span> <span class='integer val'>40</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_include? fid id'>include?</span><span class='lparen token'>(</span><span class='rubyid_id identifier id'>id</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="is_ppa_url?-instance_method">
+  
+    #<strong>is_ppa_url?</strong>(url)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+233
+234
+235</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/provider/apt_repository.rb', line 233</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_is_ppa_url? fid id'>is_ppa_url?</span><span class='lparen token'>(</span><span class='rubyid_url identifier id'>url</span><span class='rparen token'>)</span>
+  <span class='rubyid_url identifier id'>url</span><span class='dot token'>.</span><span class='rubyid_start_with? fid id'>start_with?</span><span class='lparen token'>(</span><span class='string val'>&quot;ppa:&quot;</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="key_is_valid?-instance_method">
+  
+    #<strong>key_is_valid?</strong>(cmd, key)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/provider/apt_repository.rb', line 137</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_key_is_valid? fid id'>key_is_valid?</span><span class='lparen token'>(</span><span class='rubyid_cmd identifier id'>cmd</span><span class='comma token'>,</span> <span class='rubyid_key identifier id'>key</span><span class='rparen token'>)</span>
+  <span class='rubyid_valid identifier id'>valid</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span>
+
+  <span class='rubyid_so identifier id'>so</span> <span class='assign token'>=</span> <span class='rubyid_shell_out identifier id'>shell_out</span><span class='lparen token'>(</span><span class='rubyid_cmd identifier id'>cmd</span><span class='rparen token'>)</span>
+  <span class='rubyid_so identifier id'>so</span><span class='dot token'>.</span><span class='rubyid_run_command identifier id'>run_command</span>
+  <span class='rubyid_so identifier id'>so</span><span class='dot token'>.</span><span class='rubyid_stdout identifier id'>stdout</span><span class='dot token'>.</span><span class='rubyid_split identifier id'>split</span><span class='lparen token'>(</span><span class='regexp val'>/\n/</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_t identifier id'>t</span><span class='bitor op'>|</span>
+    <span class='rubyid_if if kw'>if</span> <span class='rubyid_t identifier id'>t</span> <span class='match op'>=~</span> <span class='dregexp node'>%r{^\/#{key}.*\[expired: .*\]$}</span>
+      <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span> <span class='dstring node'>&quot;Found expired key: #{t}&quot;</span>
+      <span class='rubyid_valid identifier id'>valid</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span>
+      <span class='rubyid_break break kw'>break</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_debug identifier id'>debug</span> <span class='dstring node'>&quot;key #{key} #{valid ? &quot;is valid&quot; : &quot;is not valid&quot;}&quot;</span>
+  <span class='rubyid_valid identifier id'>valid</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load_current_resource-instance_method">
+  
+    #<strong>load_current_resource</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+55
+56</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/provider/apt_repository.rb', line 55</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_load_current_resource identifier id'>load_current_resource</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="make_ppa_url-instance_method">
+  
+    #<strong>make_ppa_url</strong>(ppa)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+237
+238
+239
+240
+241
+242
+243
+244</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/provider/apt_repository.rb', line 237</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_make_ppa_url identifier id'>make_ppa_url</span><span class='lparen token'>(</span><span class='rubyid_ppa identifier id'>ppa</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_is_ppa_url? fid id'>is_ppa_url?</span><span class='lparen token'>(</span><span class='rubyid_ppa identifier id'>ppa</span><span class='rparen token'>)</span>
+  <span class='rubyid_owner identifier id'>owner</span><span class='comma token'>,</span> <span class='rubyid_repo identifier id'>repo</span> <span class='assign token'>=</span> <span class='rubyid_ppa identifier id'>ppa</span><span class='lbrack token'>[</span><span class='float val'>4</span><span class='dot2 op'>..</span><span class='integer val'>-1</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_split identifier id'>split</span><span class='lparen token'>(</span><span class='string val'>&quot;/&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_repo identifier id'>repo</span> <span class='opasgn op'>||=</span> <span class='string val'>&quot;ppa&quot;</span>
+
+  <span class='rubyid_install_ppa_key identifier id'>install_ppa_key</span><span class='lparen token'>(</span><span class='rubyid_owner identifier id'>owner</span><span class='comma token'>,</span> <span class='rubyid_repo identifier id'>repo</span><span class='rparen token'>)</span>
+  <span class='dstring node'>&quot;http://ppa.launchpad.net/#{owner}/#{repo}/ubuntu&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="no_new_keys?-instance_method">
+  
+    #<strong>no_new_keys?</strong>(file)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+162
+163
+164
+165
+166</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/provider/apt_repository.rb', line 162</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_no_new_keys? fid id'>no_new_keys?</span><span class='lparen token'>(</span><span class='rubyid_file identifier id'>file</span><span class='rparen token'>)</span>
+  <span class='rubyid_installed_keys identifier id'>installed_keys</span> <span class='assign token'>=</span> <span class='rubyid_extract_fingerprints_from_cmd identifier id'>extract_fingerprints_from_cmd</span><span class='lparen token'>(</span><span class='string val'>&quot;apt-key finger&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_proposed_keys identifier id'>proposed_keys</span> <span class='assign token'>=</span> <span class='rubyid_extract_fingerprints_from_cmd identifier id'>extract_fingerprints_from_cmd</span><span class='lparen token'>(</span><span class='dstring node'>&quot;gpg --with-fingerprint #{file}&quot;</span><span class='rparen token'>)</span>
+  <span class='lparen token'>(</span><span class='rubyid_installed_keys identifier id'>installed_keys</span> <span class='bitand op'>&amp;</span> <span class='rubyid_proposed_keys identifier id'>proposed_keys</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_sort identifier id'>sort</span> <span class='eq op'>==</span> <span class='rubyid_proposed_keys identifier id'>proposed_keys</span><span class='dot token'>.</span><span class='rubyid_sort identifier id'>sort</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="whyrun_supported?-instance_method">
+  
+    #<strong>whyrun_supported?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+51
+52
+53</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/provider/apt_repository.rb', line 51</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_whyrun_supported? fid id'>whyrun_supported?</span>
+  <span class='rubyid_true true kw'>true</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Sep 19 15:35:30 2016 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.5 (ruby-1.8.7).
+</div>
+
+    </div>
+  </body>
+</html>

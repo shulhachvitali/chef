@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Chef
+  
+    &mdash; Documentation by YARD 0.9.5
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Chef";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (C)</a> &raquo;
+    
+    
+    <span class="title">Chef</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="cookbooks_list_link"
+        href="cookbooks_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="class_list.html"></iframe>
+
+      <div id="content"><h1>Class: Chef
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Chef</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>windows/libraries/windows_privileged.rb<span class="defines">,<br />
+  java/libraries/helpers.rb,<br /> windows/libraries/feature_base.rb,<br /> windows/libraries/powershell_out.rb,<br /> windows/libraries/windows_package.rb,<br /> windows/libraries/windows_package.rb,<br /> homebrew/libraries/homebrew_package.rb,<br /> compat_resource/files/lib/compat_resource.rb,<br /> build-essential/libraries/xcode_command_line_tools.rb,<br /> build-essential/libraries/xcode_command_line_tools.rb,<br /> build-essential/libraries/xcode_command_line_tools.rb,<br /> compat_resource/files/lib/chef_compat/monkeypatches.rb,<br /> compat_resource/files/lib/chef_compat/monkeypatches/chef.rb,<br /> compat_resource/files/lib/chef_compat/monkeypatches/chef/log.rb,<br /> compat_resource/files/lib/chef_compat/monkeypatches/chef/log.rb,<br /> compat_resource/files/lib/chef_compat/monkeypatches/chef/node.rb,<br /> compat_resource/files/lib/chef_compat/monkeypatches/chef/recipe.rb,<br /> compat_resource/files/lib/chef_compat/monkeypatches/chef/runner.rb,<br /> compat_resource/files/lib/chef_compat/monkeypatches/chef/property.rb,<br /> compat_resource/files/lib/chef_compat/monkeypatches/chef/resource.rb,<br /> compat_resource/files/lib/chef_compat/monkeypatches/chef/exceptions.rb,<br /> compat_resource/files/lib/chef_compat/copied_from_chef/chef/dsl/core.rb,<br /> compat_resource/files/lib/chef_compat/copied_from_chef/chef/provider.rb,<br /> compat_resource/files/lib/chef_compat/copied_from_chef/chef/property.rb,<br /> compat_resource/files/lib/chef_compat/copied_from_chef/chef/resource.rb,<br /> compat_resource/files/lib/chef_compat/monkeypatches/chef/run_context.rb,<br /> compat_resource/files/lib/chef_compat/copied_from_chef/chef/constants.rb,<br /> compat_resource/files/lib/chef_compat/copied_from_chef/chef/dsl/recipe.rb,<br /> compat_resource/files/lib/chef_compat/copied_from_chef/chef/dsl/universal.rb,<br /> compat_resource/files/lib/chef_compat/copied_from_chef/chef/provider/noop.rb,<br /> compat_resource/files/lib/chef_compat/copied_from_chef/chef/resource_builder.rb,<br /> compat_resource/files/lib/chef_compat/copied_from_chef/chef/mixin/properties.rb,<br /> compat_resource/files/lib/chef_compat/copied_from_chef/chef/delayed_evaluator.rb,<br /> compat_resource/files/lib/chef_compat/monkeypatches/chef/mixin/params_validate.rb,<br /> compat_resource/files/lib/chef_compat/copied_from_chef/chef/provider/apt_update.rb,<br /> compat_resource/files/lib/chef_compat/copied_from_chef/chef/resource/apt_update.rb,<br /> compat_resource/files/lib/chef_compat/copied_from_chef/chef/mixin/powershell_out.rb,<br /> compat_resource/files/lib/chef_compat/copied_from_chef/chef/dsl/declare_resource.rb,<br /> compat_resource/files/lib/chef_compat/copied_from_chef/chef/mixin/params_validate.rb,<br /> compat_resource/files/lib/chef_compat/copied_from_chef/chef/resource/action_class.rb,<br /> compat_resource/files/lib/chef_compat/copied_from_chef/chef/mixin/notifying_block.rb,<br /> compat_resource/files/lib/chef_compat/copied_from_chef/chef/resource/yum_repository.rb,<br /> compat_resource/files/lib/chef_compat/copied_from_chef/chef/provider/yum_repository.rb,<br /> compat_resource/files/lib/chef_compat/copied_from_chef/chef/resource/apt_repository.rb,<br /> compat_resource/files/lib/chef_compat/copied_from_chef/chef/provider/apt_repository.rb,<br /> compat_resource/files/lib/chef_compat/copied_from_chef/chef/mixin/lazy_module_include.rb,<br /> compat_resource/files/lib/chef_compat/copied_from_chef/chef/dsl/platform_introspection.rb</span>
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+FIXME: why does this not match the implementation in Chef itself?
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="ChefCompat/CopiedFromChef/Chef.html" title="ChefCompat::CopiedFromChef::Chef (class)">ChefCompat::CopiedFromChef::Chef</a></span></p>
+</div>
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Chef/ChefCompatDeprecation.html" title="Chef::ChefCompatDeprecation (module)">ChefCompatDeprecation</a></span>, <span class='object_link'><a href="Chef/Mixin.html" title="Chef::Mixin (module)">Mixin</a></span>
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Chef/Exceptions.html" title="Chef::Exceptions (class)">Exceptions</a></span>, <span class='object_link'><a href="Chef/Log.html" title="Chef::Log (class)">Log</a></span>, <span class='object_link'><a href="Chef/Node.html" title="Chef::Node (class)">Node</a></span>, <span class='object_link'><a href="Chef/Property.html" title="Chef::Property (class)">Property</a></span>, <span class='object_link'><a href="Chef/Provider.html" title="Chef::Provider (class)">Provider</a></span>, <span class='object_link'><a href="Chef/Recipe.html" title="Chef::Recipe (class)">Recipe</a></span>, <span class='object_link'><a href="Chef/Resource.html" title="Chef::Resource (class)">Resource</a></span>, <span class='object_link'><a href="Chef/ResourceCollection.html" title="Chef::ResourceCollection (class)">ResourceCollection</a></span>, <span class='object_link'><a href="Chef/RunContext.html" title="Chef::RunContext (class)">RunContext</a></span>, <span class='object_link'><a href="Chef/Runner.html" title="Chef::Runner (class)">Runner</a></span>, <span class='object_link'><a href="Chef/WindowsPrivileged.html" title="Chef::WindowsPrivileged (class)">WindowsPrivileged</a></span>
+    
+  
+</p>
+
+  <h2>Constant Summary</h2>
+  <dl class="constants">
+    
+      <dt id="NOT_PASSED-constant" class="">NOT_PASSED =
+        
+      </dt>
+      <dd><pre class="code"><span class='rubyid_Object constant id'>Object</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span> <span class='rubyid_if if_mod kw'>if</span> <span class='notop op'>!</span><span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_NOT_PASSED constant id'>NOT_PASSED</span><span class='rparen token'>)</span>
+</pre></dd>
+    
+  </dl>
+
+
+
+
+
+
+
+
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Sep 19 15:35:21 2016 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.5 (ruby-1.8.7).
+</div>
+
+    </div>
+  </body>
+</html>

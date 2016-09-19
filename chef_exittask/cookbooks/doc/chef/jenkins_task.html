@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Cookbook: jenkins_task
+  
+    &mdash; Documentation by YARD 0.9.5
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "chef::jenkins_task";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (j)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../chef.html" title="chef (chef)">chef</a></span></span>
+     &raquo; 
+    <span class="title">jenkins_task</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="cookbooks_list_link"
+        href="../cookbooks_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="../class_list.html"></iframe>
+
+      <div id="content">
+
+<div id="filecontents">
+  <h1>Cookbook : jenkins_task</h1>
+  
+
+
+
+
+<h1>Cookbook Documentation</h1>
+
+
+
+
+  <h2>Recipes Summary</h2>
+  <ul class="summary">
+    
+      <li>
+        <span class="summary_signature">
+          <strong><a href="#jenkins_task::default">jenkins_task::default</a></strong>
+        </span>
+        <span class="summary_desc"></span>
+      </li>
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="method_details_list">
+  
+
+
+
+  <h2>Recipe Details</h2>
+  
+    <div class="method_details first">
+      <h3 class="signature"><a name="jenkins_task::default">
+        <strong>jenkins_task::default</strong>
+      </a></h3>
+      
+      
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'jenkins_task/recipes/default.rb', line 1</span>
+
+<span class='comment'>#
+</span><span class='comment'># Cookbook Name:: jenkins_task
+</span><span class='comment'># Recipe:: default
+</span><span class='comment'># Install java via yum. Only with epel-repo. Without it java cookbook would be used
+</span><span class='id identifier rubyid_package'>package</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>java-1.7.0-openjdk-devel</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_action'>action</span> <span class='symbol'>:install</span>
+<span class='kw'>end</span>
+
+<span class='comment'># Activation jenkins repository with the rpm key 
+</span><span class='id identifier rubyid_yum_repository'>yum_repository</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>jenkins.repo</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_baseurl'>baseurl</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://pkg.jenkins-ci.org/redhat</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_gpgkey'>gpgkey</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://jenkins-ci.org/redhat/jenkins-ci.org.key</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_action'>action</span> <span class='symbol'>:create</span>
+<span class='kw'>end</span>
+
+
+<span class='comment'>#  description &quot;jenkins repo&quot;, alternative option
+</span><span class='comment'>#  baseurl &quot;http://pkg.jenkins.io/redhat-stable/jenkins.repo&quot;
+</span><span class='comment'>#  gpgkey &#39;http://pkg.jenkins.io/redhat-stable/jenkins.io.key&#39;
+</span><span class='comment'>#  action :create
+</span><span class='comment'># end
+</span>
+<span class='comment'># next steps install jenkins and git via yum
+</span><span class='id identifier rubyid_package'>package</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>jenkins</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_action'>action</span> <span class='symbol'>:install</span>
+<span class='kw'>end</span>
+<span class='id identifier rubyid_package'>package</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>git</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_action'>action</span> <span class='symbol'>:install</span>
+<span class='kw'>end</span>
+
+<span class='comment'># Copying files (jobs, plugins, config) to jenkins home dir 
+</span><span class='id identifier rubyid_remote_directory'>remote_directory</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/var/lib/jenkins</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_files_mode'>files_mode</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>0755</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_files_owner'>files_owner</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>jenkins</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_mode'>mode</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>0755</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_owner'>owner</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>jenkins</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_source'>source</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>jenkins_conf</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span>
+
+<span class='comment'># Main jenkins config
+</span><span class='id identifier rubyid_template'>template</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/etc/sysconfig/jenkins</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_source'>source</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>jenkins.erb</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_owner'>owner</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>jenkins</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_group'>group</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>jenkins</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_mode'>mode</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>0755</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span>
+
+<span class='comment'># Setting and starting jenkins as a service
+</span><span class='id identifier rubyid_service'>service</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>jenkins</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_init_command'>init_command</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/etc/init.d/jenkins</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_supports'>supports</span> <span class='symbol'>:restart</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='symbol'>:status</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='symbol'>:stop</span> <span class='op'>=&gt;</span> <span class='kw'>true</span>
+  <span class='id identifier rubyid_action'>action</span> <span class='lbracket'>[</span> <span class='symbol'>:enable</span><span class='comma'>,</span> <span class='symbol'>:start</span> <span class='rbracket'>]</span>
+<span class='kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+
+    </div>
+  
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+</div>
+
+      <div id="footer">
+  Generated on Mon Sep 19 20:02:16 2016 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.5 (ruby-2.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

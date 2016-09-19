@@ -1,0 +1,2287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Cookbook: java
+  
+    &mdash; Documentation by YARD 0.9.5
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "chef::java";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (j)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../chef_.html" title="chef (chef)">chef</a></span></span>
+     &raquo; 
+    <span class="title">java</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="cookbooks_list_link"
+        href="../cookbooks_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="../class_list.html"></iframe>
+
+      <div id="content">
+
+<div id="filecontents">
+  <h1>Cookbook : java</h1>
+  
+
+
+
+
+<h1>Cookbook Documentation</h1>
+
+
+
+
+  <h2>Recipes Summary</h2>
+  <ul class="summary">
+    
+      <li>
+        <span class="summary_signature">
+          <strong><a href="#java::ibm">java::ibm</a></strong>
+        </span>
+        <span class="summary_desc"></span>
+      </li>
+    
+      <li>
+        <span class="summary_signature">
+          <strong><a href="#java::oracle">java::oracle</a></strong>
+        </span>
+        <span class="summary_desc"></span>
+      </li>
+    
+      <li>
+        <span class="summary_signature">
+          <strong><a href="#java::notify">java::notify</a></strong>
+        </span>
+        <span class="summary_desc"></span>
+      </li>
+    
+      <li>
+        <span class="summary_signature">
+          <strong><a href="#java::ibm_tar">java::ibm_tar</a></strong>
+        </span>
+        <span class="summary_desc"></span>
+      </li>
+    
+      <li>
+        <span class="summary_signature">
+          <strong><a href="#java::openjdk">java::openjdk</a></strong>
+        </span>
+        <span class="summary_desc"></span>
+      </li>
+    
+      <li>
+        <span class="summary_signature">
+          <strong><a href="#java::default">java::default</a></strong>
+        </span>
+        <span class="summary_desc"></span>
+      </li>
+    
+      <li>
+        <span class="summary_signature">
+          <strong><a href="#java::windows">java::windows</a></strong>
+        </span>
+        <span class="summary_desc"></span>
+      </li>
+    
+      <li>
+        <span class="summary_signature">
+          <strong><a href="#java::homebrew">java::homebrew</a></strong>
+        </span>
+        <span class="summary_desc"></span>
+      </li>
+    
+      <li>
+        <span class="summary_signature">
+          <strong><a href="#java::oracle_rpm">java::oracle_rpm</a></strong>
+        </span>
+        <span class="summary_desc"></span>
+      </li>
+    
+      <li>
+        <span class="summary_signature">
+          <strong><a href="#java::oracle_jce">java::oracle_jce</a></strong>
+        </span>
+        <span class="summary_desc"></span>
+      </li>
+    
+      <li>
+        <span class="summary_signature">
+          <strong><a href="#java::oracle_i386">java::oracle_i386</a></strong>
+        </span>
+        <span class="summary_desc"></span>
+      </li>
+    
+      <li>
+        <span class="summary_signature">
+          <strong><a href="#java::set_java_home">java::set_java_home</a></strong>
+        </span>
+        <span class="summary_desc"></span>
+      </li>
+    
+      <li>
+        <span class="summary_signature">
+          <strong><a href="#java::purge_packages">java::purge_packages</a></strong>
+        </span>
+        <span class="summary_desc"></span>
+      </li>
+    
+      <li>
+        <span class="summary_signature">
+          <strong><a href="#java::default_java_symlink">java::default_java_symlink</a></strong>
+        </span>
+        <span class="summary_desc"></span>
+      </li>
+    
+      <li>
+        <span class="summary_signature">
+          <strong><a href="#java::set_attributes_from_version">java::set_attributes_from_version</a></strong>
+        </span>
+        <span class="summary_desc"></span>
+      </li>
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="method_details_list">
+  
+
+
+
+  <h2>Recipe Details</h2>
+  
+    <div class="method_details first">
+      <h3 class="signature"><a name="java::ibm">
+        <strong>java::ibm</strong>
+      </a></h3>
+      
+      
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'java/recipes/ibm.rb', line 1</span>
+
+<span class='comment val'># Author:: Joshua Timberman (&lt;joshua@chef.io&gt;)</span>
+<span class='comment val'># Cookbook Name:: java</span>
+<span class='comment val'># Recipe:: ibm</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Copyright 2013-2015, Chef Software, Inc.</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class='comment val'># you may not use this file except in compliance with the License.</span>
+<span class='comment val'># You may obtain a copy of the License at</span>
+<span class='comment val'>#</span>
+<span class='comment val'>#     http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Unless required by applicable law or agreed to in writing, software</span>
+<span class='comment val'># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class='comment val'># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class='comment val'># See the License for the specific language governing permissions and</span>
+<span class='comment val'># limitations under the License.</span>
+
+<span class='rubyid_require identifier id'>require</span> <span class='string val'>'uri'</span>
+
+<span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'java::notify'</span>
+
+<span class='rubyid_source_url identifier id'>source_url</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'ibm'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'url'</span><span class='rbrack token'>]</span>
+<span class='rubyid_jdk_uri identifier id'>jdk_uri</span> <span class='assign token'>=</span> <span class='colon3 op'>::</span><span class='rubyid_URI constant id'>URI</span><span class='dot token'>.</span><span class='rubyid_parse identifier id'>parse</span><span class='lparen token'>(</span><span class='rubyid_source_url identifier id'>source_url</span><span class='rparen token'>)</span>
+<span class='rubyid_jdk_filename identifier id'>jdk_filename</span> <span class='assign token'>=</span> <span class='colon3 op'>::</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_basename identifier id'>basename</span><span class='lparen token'>(</span><span class='rubyid_jdk_uri identifier id'>jdk_uri</span><span class='dot token'>.</span><span class='rubyid_path identifier id'>path</span><span class='rparen token'>)</span>
+
+<span class='rubyid_unless unless kw'>unless</span> <span class='rubyid_valid_ibm_jdk_uri? fid id'>valid_ibm_jdk_uri?</span><span class='lparen token'>(</span><span class='rubyid_source_url identifier id'>source_url</span><span class='rparen token'>)</span>
+  <span class='rubyid_raise identifier id'>raise</span> <span class='string val'>&quot;You must set the attribute `node['java']['ibm']['url']` to a valid HTTP URI&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='comment val'># &quot;installable package&quot; installer needs rpm on Ubuntu</span>
+<span class='rubyid_package identifier id'>package</span> <span class='string val'>'rpm'</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:install</span>
+  <span class='rubyid_only_if identifier id'>only_if</span> <span class='lbrace token'>{</span> <span class='rubyid_platform_family? fid id'>platform_family?</span><span class='lparen token'>(</span><span class='string val'>'debian'</span><span class='rparen token'>)</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_jdk_filename identifier id'>jdk_filename</span> <span class='nmatch op'>!~</span> <span class='regexp val'>/archive/</span> <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_template identifier id'>template</span> <span class='dstring node'>&quot;#{Chef::Config[:file_cache_path]}/installer.properties&quot;</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_source identifier id'>source</span> <span class='string val'>'ibm_jdk.installer.properties.erb'</span>
+  <span class='rubyid_only_if identifier id'>only_if</span> <span class='lbrace token'>{</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'ibm'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'accept_ibm_download_terms'</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_remote_file identifier id'>remote_file</span> <span class='dstring node'>&quot;#{Chef::Config[:file_cache_path]}/#{jdk_filename}&quot;</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_source identifier id'>source</span> <span class='rubyid_source_url identifier id'>source_url</span>
+  <span class='rubyid_mode identifier id'>mode</span> <span class='integer val'>00755</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'ibm'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'checksum'</span><span class='rbrack token'>]</span>
+    <span class='rubyid_checksum identifier id'>checksum</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'ibm'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'checksum'</span><span class='rbrack token'>]</span>
+    <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:create</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:create_if_missing</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_notifies identifier id'>notifies</span> <span class='symbol val'>:run</span><span class='comma token'>,</span> <span class='string val'>'execute[install-ibm-java]'</span><span class='comma token'>,</span> <span class='symbol val'>:immediately</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_java_alternatives identifier id'>java_alternatives</span> <span class='string val'>'set-java-alternatives'</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_java_location identifier id'>java_location</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'java_home'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_default identifier id'>default</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'set_default'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_case case kw'>case</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk_version'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span>
+  <span class='rubyid_when when kw'>when</span> <span class='string val'>'6'</span>
+    <span class='rubyid_bin_cmds identifier id'>bin_cmds</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'ibm'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'6'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'bin_cmds'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_when when kw'>when</span> <span class='string val'>'7'</span>
+    <span class='rubyid_bin_cmds identifier id'>bin_cmds</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'ibm'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'7'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'bin_cmds'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:nothing</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_execute identifier id'>execute</span> <span class='string val'>'install-ibm-java'</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_cwd identifier id'>cwd</span> <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Config constant id'>Config</span><span class='lbrack token'>[</span><span class='symbol val'>:file_cache_path</span><span class='rbrack token'>]</span>
+  <span class='rubyid_environment identifier id'>environment</span><span class='lparen token'>(</span><span class='string val'>'_JAVA_OPTIONS'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'-Dlax.debug.level=3 -Dlax.debug.all=true'</span><span class='comma token'>,</span>
+              <span class='string val'>'LAX_DEBUG'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'1'</span><span class='rparen token'>)</span>
+  <span class='rubyid_command identifier id'>command</span> <span class='dstring node'>&quot;./#{jdk_filename} -f ./installer.properties -i silent&quot;</span>
+  <span class='rubyid_creates identifier id'>creates</span> <span class='dstring node'>&quot;#{node['java']['java_home']}/jre/bin/java&quot;</span>
+
+  <span class='rubyid_notifies identifier id'>notifies</span> <span class='symbol val'>:set</span><span class='comma token'>,</span> <span class='string val'>'java_alternatives[set-java-alternatives]'</span><span class='comma token'>,</span> <span class='symbol val'>:immediately</span>
+  <span class='rubyid_notifies identifier id'>notifies</span> <span class='symbol val'>:write</span><span class='comma token'>,</span> <span class='string val'>'log[jdk-version-changed]'</span><span class='comma token'>,</span> <span class='symbol val'>:immediately</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'java::set_java_home'</span>
+</pre>
+    </td>
+  </tr>
+</table>
+
+    </div>
+  
+    <div class="method_details ">
+      <h3 class="signature"><a name="java::oracle">
+        <strong>java::oracle</strong>
+      </a></h3>
+      
+      
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'java/recipes/oracle.rb', line 1</span>
+
+<span class='comment val'>#</span>
+<span class='comment val'># Author:: Bryan W. Berry (&lt;bryan.berry@gmail.com&gt;)</span>
+<span class='comment val'># Cookbook Name:: java</span>
+<span class='comment val'># Recipe:: oracle</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Copyright 2011, Bryan w. Berry</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class='comment val'># you may not use this file except in compliance with the License.</span>
+<span class='comment val'># You may obtain a copy of the License at</span>
+<span class='comment val'>#</span>
+<span class='comment val'>#     http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Unless required by applicable law or agreed to in writing, software</span>
+<span class='comment val'># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class='comment val'># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class='comment val'># See the License for the specific language governing permissions and</span>
+<span class='comment val'># limitations under the License.</span>
+
+<span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'java::notify'</span>
+
+<span class='rubyid_unless unless kw'>unless</span> <span class='rubyid_node identifier id'>node</span><span class='dot token'>.</span><span class='rubyid_recipe? fid id'>recipe?</span><span class='lparen token'>(</span><span class='string val'>'java::default'</span><span class='rparen token'>)</span>
+  <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_warn identifier id'>warn</span><span class='lparen token'>(</span><span class='string val'>'Using java::default instead is recommended.'</span><span class='rparen token'>)</span>
+
+  <span class='comment val'># Even if this recipe is included by itself, a safety check is nice...</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'java_home'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span> <span class='orop op'>||</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'java_home'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+    <span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'java::set_attributes_from_version'</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_java_home identifier id'>java_home</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'java_home'</span><span class='rbrack token'>]</span>
+<span class='rubyid_arch identifier id'>arch</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'arch'</span><span class='rbrack token'>]</span>
+
+<span class='rubyid_case case kw'>case</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk_version'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span>
+<span class='rubyid_when when kw'>when</span> <span class='string val'>'6'</span>
+  <span class='rubyid_tarball_url identifier id'>tarball_url</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'6'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_arch identifier id'>arch</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'url'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_tarball_checksum identifier id'>tarball_checksum</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'6'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_arch identifier id'>arch</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'checksum'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_bin_cmds identifier id'>bin_cmds</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'6'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'bin_cmds'</span><span class='rbrack token'>]</span>
+<span class='rubyid_when when kw'>when</span> <span class='string val'>'7'</span>
+  <span class='rubyid_tarball_url identifier id'>tarball_url</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'7'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_arch identifier id'>arch</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'url'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_tarball_checksum identifier id'>tarball_checksum</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'7'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_arch identifier id'>arch</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'checksum'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_bin_cmds identifier id'>bin_cmds</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'7'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'bin_cmds'</span><span class='rbrack token'>]</span>
+<span class='rubyid_when when kw'>when</span> <span class='string val'>'8'</span>
+  <span class='rubyid_tarball_url identifier id'>tarball_url</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'8'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_arch identifier id'>arch</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'url'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_tarball_checksum identifier id'>tarball_checksum</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'8'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_arch identifier id'>arch</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'checksum'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_bin_cmds identifier id'>bin_cmds</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'8'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'bin_cmds'</span><span class='rbrack token'>]</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_if if kw'>if</span> <span class='rubyid_tarball_url identifier id'>tarball_url</span> <span class='match op'>=~</span> <span class='regexp val'>/example.com/</span>
+  <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Application constant id'>Application</span><span class='dot token'>.</span><span class='rubyid_fatal! fid id'>fatal!</span><span class='lparen token'>(</span><span class='string val'>'You must change the download link to your private repository. You can no longer download java directly from http://download.oracle.com without a web broswer'</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'java::set_java_home'</span>
+
+<span class='rubyid_package identifier id'>package</span> <span class='string val'>'tar'</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_not_if identifier id'>not_if</span> <span class='lbrace token'>{</span> <span class='rubyid_platform_family? fid id'>platform_family?</span><span class='lparen token'>(</span><span class='string val'>'mac_os_x'</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_java_ark identifier id'>java_ark</span> <span class='string val'>'jdk'</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_url identifier id'>url</span> <span class='rubyid_tarball_url identifier id'>tarball_url</span>
+  <span class='rubyid_default identifier id'>default</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'set_default'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_checksum identifier id'>checksum</span> <span class='rubyid_tarball_checksum identifier id'>tarball_checksum</span>
+  <span class='rubyid_app_home identifier id'>app_home</span> <span class='rubyid_java_home identifier id'>java_home</span>
+  <span class='rubyid_bin_cmds identifier id'>bin_cmds</span> <span class='rubyid_bin_cmds identifier id'>bin_cmds</span>
+  <span class='rubyid_alternatives_priority identifier id'>alternatives_priority</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'alternatives_priority'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_retries identifier id'>retries</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'ark_retries'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_retry_delay identifier id'>retry_delay</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'ark_retry_delay'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_connect_timeout identifier id'>connect_timeout</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'ark_timeout'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_use_alt_suffix identifier id'>use_alt_suffix</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'use_alt_suffix'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_reset_alternatives identifier id'>reset_alternatives</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'reset_alternatives'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_download_timeout identifier id'>download_timeout</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'ark_download_timeout'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:install</span>
+  <span class='rubyid_notifies identifier id'>notifies</span> <span class='symbol val'>:write</span><span class='comma token'>,</span> <span class='string val'>'log[jdk-version-changed]'</span><span class='comma token'>,</span> <span class='symbol val'>:immediately</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_if if kw'>if</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'set_default'</span><span class='rbrack token'>]</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_platform_family? fid id'>platform_family?</span><span class='lparen token'>(</span><span class='string val'>'debian'</span><span class='rparen token'>)</span>
+  <span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'java::default_java_symlink'</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'java::oracle_jce'</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'oracle'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jce'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'enabled'</span><span class='rbrack token'>]</span>
+</pre>
+    </td>
+  </tr>
+</table>
+
+    </div>
+  
+    <div class="method_details ">
+      <h3 class="signature"><a name="java::notify">
+        <strong>java::notify</strong>
+      </a></h3>
+      
+      
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'java/recipes/notify.rb', line 1</span>
+
+<span class='comment val'>#</span>
+<span class='comment val'># Author:: Eric Helgeson (&lt;eric@agileorbit.com&gt;)</span>
+<span class='comment val'># Cookbook Name:: java</span>
+<span class='comment val'># Recipe:: notify</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Copyright 2008-2015, Chef Software, Inc.</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class='comment val'># you may not use this file except in compliance with the License.</span>
+<span class='comment val'># You may obtain a copy of the License at</span>
+<span class='comment val'>#</span>
+<span class='comment val'>#     http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Unless required by applicable law or agreed to in writing, software</span>
+<span class='comment val'># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class='comment val'># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class='comment val'># See the License for the specific language governing permissions and</span>
+<span class='comment val'># limitations under the License.</span>
+<span class='comment val'>#</span>
+
+<span class='comment val'># This resource is avalible for other recipes to subscribe to so they can be notified</span>
+<span class='comment val'># notified of a JDK change. For example you want to restart a service to take</span>
+<span class='comment val'># advantage of the new JDK</span>
+<span class='comment val'># eg:</span>
+<span class='comment val'># service 'somejavaservice'</span>
+<span class='comment val'>#   action :restart</span>
+<span class='comment val'>#   subscribes :write, 'log[jdk-version-changed]', :delayed</span>
+<span class='comment val'># end</span>
+<span class='rubyid_log identifier id'>log</span> <span class='string val'>'jdk-version-changed'</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_message identifier id'>message</span> <span class='string val'>'A new version of java was installed'</span>
+  <span class='rubyid_level identifier id'>level</span> <span class='symbol val'>:info</span>
+  <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:nothing</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+
+    </div>
+  
+    <div class="method_details ">
+      <h3 class="signature"><a name="java::ibm_tar">
+        <strong>java::ibm_tar</strong>
+      </a></h3>
+      
+      
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'java/recipes/ibm_tar.rb', line 1</span>
+
+<span class='comment val'># Cookbook Name:: java</span>
+<span class='comment val'># Recipe:: ibm_tar</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Copyright 2013-2015, Chef Software, Inc.</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class='comment val'># you may not use this file except in compliance with the License.</span>
+<span class='comment val'># You may obtain a copy of the License at</span>
+<span class='comment val'>#</span>
+<span class='comment val'>#     http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Unless required by applicable law or agreed to in writing, software</span>
+<span class='comment val'># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class='comment val'># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class='comment val'># See the License for the specific language governing permissions and</span>
+<span class='comment val'># limitations under the License.</span>
+
+<span class='rubyid_require identifier id'>require</span> <span class='string val'>'uri'</span>
+
+<span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'java::notify'</span>
+
+<span class='rubyid_source_url identifier id'>source_url</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'ibm'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'url'</span><span class='rbrack token'>]</span>
+<span class='rubyid_jdk_uri identifier id'>jdk_uri</span> <span class='assign token'>=</span> <span class='colon3 op'>::</span><span class='rubyid_URI constant id'>URI</span><span class='dot token'>.</span><span class='rubyid_parse identifier id'>parse</span><span class='lparen token'>(</span><span class='rubyid_source_url identifier id'>source_url</span><span class='rparen token'>)</span>
+<span class='rubyid_jdk_filename identifier id'>jdk_filename</span> <span class='assign token'>=</span> <span class='colon3 op'>::</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_basename identifier id'>basename</span><span class='lparen token'>(</span><span class='rubyid_jdk_uri identifier id'>jdk_uri</span><span class='dot token'>.</span><span class='rubyid_path identifier id'>path</span><span class='rparen token'>)</span>
+
+<span class='rubyid_unless unless kw'>unless</span> <span class='rubyid_valid_ibm_jdk_uri? fid id'>valid_ibm_jdk_uri?</span><span class='lparen token'>(</span><span class='rubyid_source_url identifier id'>source_url</span><span class='rparen token'>)</span>
+  <span class='rubyid_raise identifier id'>raise</span> <span class='string val'>&quot;You must set the attribute `node['java']['ibm']['url']` to a valid URI&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_unless unless kw'>unless</span> <span class='rubyid_jdk_filename identifier id'>jdk_filename</span> <span class='match op'>=~</span> <span class='regexp val'>/\.(tar.gz|tgz)$/</span>
+  <span class='rubyid_raise identifier id'>raise</span> <span class='string val'>&quot;The attribute `node['java']['ibm']['url']` must specify a .tar.gz file&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_remote_file identifier id'>remote_file</span> <span class='dstring node'>&quot;#{Chef::Config[:file_cache_path]}/#{jdk_filename}&quot;</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_source identifier id'>source</span> <span class='rubyid_source_url identifier id'>source_url</span>
+  <span class='rubyid_mode identifier id'>mode</span> <span class='integer val'>00755</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'ibm'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'checksum'</span><span class='rbrack token'>]</span>
+    <span class='rubyid_checksum identifier id'>checksum</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'ibm'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'checksum'</span><span class='rbrack token'>]</span>
+    <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:create</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:create_if_missing</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_notifies identifier id'>notifies</span> <span class='symbol val'>:create</span><span class='comma token'>,</span> <span class='string val'>'directory[create-java-home]'</span><span class='comma token'>,</span> <span class='symbol val'>:immediately</span>
+  <span class='rubyid_notifies identifier id'>notifies</span> <span class='symbol val'>:run</span><span class='comma token'>,</span> <span class='string val'>'execute[untar-ibm-java]'</span><span class='comma token'>,</span> <span class='symbol val'>:immediately</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_directory identifier id'>directory</span> <span class='string val'>'create-java-home'</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_path identifier id'>path</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'java_home'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_mode identifier id'>mode</span> <span class='integer val'>00755</span>
+  <span class='rubyid_recursive identifier id'>recursive</span> <span class='rubyid_true true kw'>true</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_java_alternatives identifier id'>java_alternatives</span> <span class='string val'>'set-java-alternatives'</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_java_location identifier id'>java_location</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'java_home'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_default identifier id'>default</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'set_default'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_case case kw'>case</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk_version'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span>
+  <span class='rubyid_when when kw'>when</span> <span class='string val'>'6'</span>
+    <span class='rubyid_bin_cmds identifier id'>bin_cmds</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'ibm'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'6'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'bin_cmds'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_when when kw'>when</span> <span class='string val'>'7'</span>
+    <span class='rubyid_bin_cmds identifier id'>bin_cmds</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'ibm'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'7'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'bin_cmds'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:nothing</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_execute identifier id'>execute</span> <span class='string val'>'untar-ibm-java'</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_cwd identifier id'>cwd</span> <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Config constant id'>Config</span><span class='lbrack token'>[</span><span class='symbol val'>:file_cache_path</span><span class='rbrack token'>]</span>
+  <span class='rubyid_command identifier id'>command</span> <span class='dstring node'>&quot;tar xzf ./#{jdk_filename} -C #{node['java']['java_home']} --strip 1&quot;</span>
+  <span class='rubyid_notifies identifier id'>notifies</span> <span class='symbol val'>:set</span><span class='comma token'>,</span> <span class='string val'>'java_alternatives[set-java-alternatives]'</span><span class='comma token'>,</span> <span class='symbol val'>:immediately</span>
+  <span class='rubyid_notifies identifier id'>notifies</span> <span class='symbol val'>:write</span><span class='comma token'>,</span> <span class='string val'>'log[jdk-version-changed]'</span><span class='comma token'>,</span> <span class='symbol val'>:immediately</span>
+  <span class='rubyid_creates identifier id'>creates</span> <span class='dstring node'>&quot;#{node['java']['java_home']}/jre/bin/java&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'java::set_java_home'</span>
+</pre>
+    </td>
+  </tr>
+</table>
+
+    </div>
+  
+    <div class="method_details ">
+      <h3 class="signature"><a name="java::openjdk">
+        <strong>java::openjdk</strong>
+      </a></h3>
+      
+      
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'java/recipes/openjdk.rb', line 1</span>
+
+<span class='comment val'># Author:: Bryan W. Berry (&lt;bryan.berry@gmail.com&gt;)</span>
+<span class='comment val'># Author:: Seth Chisamore (&lt;schisamo@chef.io&gt;)</span>
+<span class='comment val'># Author:: Joshua Timberman (&lt;joshua@chef.io&gt;)</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Cookbook Name:: java</span>
+<span class='comment val'># Recipe:: openjdk</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Copyright 2010-2015, Chef Software, Inc.</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class='comment val'># you may not use this file except in compliance with the License.</span>
+<span class='comment val'># You may obtain a copy of the License at</span>
+<span class='comment val'>#</span>
+<span class='comment val'>#     http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Unless required by applicable law or agreed to in writing, software</span>
+<span class='comment val'># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class='comment val'># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class='comment val'># See the License for the specific language governing permissions and</span>
+<span class='comment val'># limitations under the License.</span>
+
+<span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'java::notify'</span>
+
+<span class='rubyid_unless unless kw'>unless</span> <span class='rubyid_node identifier id'>node</span><span class='dot token'>.</span><span class='rubyid_recipe? fid id'>recipe?</span><span class='lparen token'>(</span><span class='string val'>'java::default'</span><span class='rparen token'>)</span>
+  <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_warn identifier id'>warn</span><span class='lparen token'>(</span><span class='string val'>'Using java::default instead is recommended.'</span><span class='rparen token'>)</span>
+
+  <span class='comment val'># Even if this recipe is included by itself, a safety check is nice...</span>
+  <span class='lbrack token'>[</span><span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'openjdk_packages'</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'java_home'</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_v identifier id'>v</span><span class='bitor op'>|</span>
+    <span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'java::set_attributes_from_version'</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_v identifier id'>v</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span> <span class='orop op'>||</span> <span class='rubyid_v identifier id'>v</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_jdk identifier id'>jdk</span> <span class='assign token'>=</span> <span class='rubyid_Opscode constant id'>Opscode</span><span class='colon2 op'>::</span><span class='rubyid_OpenJDK constant id'>OpenJDK</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_node identifier id'>node</span><span class='rparen token'>)</span>
+
+<span class='rubyid_if if kw'>if</span> <span class='rubyid_platform_requires_license_acceptance? fid id'>platform_requires_license_acceptance?</span>
+  <span class='rubyid_file identifier id'>file</span> <span class='string val'>'/opt/local/.dlj_license_accepted'</span> <span class='rubyid_do do kw'>do</span>
+    <span class='rubyid_owner identifier id'>owner</span> <span class='string val'>'root'</span>
+    <span class='rubyid_group identifier id'>group</span> <span class='string val'>'root'</span>
+    <span class='rubyid_mode identifier id'>mode</span> <span class='string val'>'0400'</span>
+    <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:create</span>
+    <span class='rubyid_only_if identifier id'>only_if</span> <span class='lbrace token'>{</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'accept_license_agreement'</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_if if kw'>if</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'platform'</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='string val'>'ubuntu'</span>
+  <span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'apt'</span>
+  <span class='rubyid_apt_repository identifier id'>apt_repository</span> <span class='string val'>'openjdk-r-ppa'</span> <span class='rubyid_do do kw'>do</span>
+    <span class='rubyid_uri identifier id'>uri</span> <span class='string val'>'ppa:openjdk-r'</span>
+    <span class='rubyid_distribution identifier id'>distribution</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'lsb'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'codename'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'openjdk_packages'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_pkg identifier id'>pkg</span><span class='bitor op'>|</span>
+  <span class='rubyid_package identifier id'>package</span> <span class='rubyid_pkg identifier id'>pkg</span> <span class='rubyid_do do kw'>do</span>
+    <span class='rubyid_version identifier id'>version</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'openjdk_version'</span><span class='rbrack token'>]</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'openjdk_version'</span><span class='rbrack token'>]</span>
+    <span class='rubyid_notifies identifier id'>notifies</span> <span class='symbol val'>:write</span><span class='comma token'>,</span> <span class='string val'>'log[jdk-version-changed]'</span><span class='comma token'>,</span> <span class='symbol val'>:immediately</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_java_alternatives identifier id'>java_alternatives</span> <span class='string val'>'set-java-alternatives'</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_java_location identifier id'>java_location</span> <span class='rubyid_jdk identifier id'>jdk</span><span class='dot token'>.</span><span class='rubyid_java_home identifier id'>java_home</span>
+  <span class='rubyid_default identifier id'>default</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'set_default'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_priority identifier id'>priority</span> <span class='rubyid_jdk identifier id'>jdk</span><span class='dot token'>.</span><span class='rubyid_alternatives_priority identifier id'>alternatives_priority</span>
+  <span class='rubyid_case case kw'>case</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk_version'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span>
+  <span class='rubyid_when when kw'>when</span> <span class='string val'>'6'</span>
+    <span class='rubyid_bin_cmds identifier id'>bin_cmds</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'6'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'bin_cmds'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_when when kw'>when</span> <span class='string val'>'7'</span>
+    <span class='rubyid_bin_cmds identifier id'>bin_cmds</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'7'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'bin_cmds'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_when when kw'>when</span> <span class='string val'>'8'</span>
+    <span class='rubyid_bin_cmds identifier id'>bin_cmds</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'8'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'bin_cmds'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:set</span>
+  <span class='rubyid_only_if identifier id'>only_if</span> <span class='lbrace token'>{</span> <span class='rubyid_platform_family? fid id'>platform_family?</span><span class='lparen token'>(</span><span class='string val'>'debian'</span><span class='comma token'>,</span> <span class='string val'>'rhel'</span><span class='comma token'>,</span> <span class='string val'>'fedora'</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_if if kw'>if</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'set_default'</span><span class='rbrack token'>]</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_platform_family? fid id'>platform_family?</span><span class='lparen token'>(</span><span class='string val'>'debian'</span><span class='rparen token'>)</span>
+  <span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'java::default_java_symlink'</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='comment val'># We must include this recipe AFTER updating the alternatives or else JAVA_HOME</span>
+<span class='comment val'># will not point to the correct java.</span>
+<span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'java::set_java_home'</span>
+</pre>
+    </td>
+  </tr>
+</table>
+
+    </div>
+  
+    <div class="method_details ">
+      <h3 class="signature"><a name="java::default">
+        <strong>java::default</strong>
+      </a></h3>
+      
+      
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'java/recipes/default.rb', line 1</span>
+
+<span class='comment val'>#</span>
+<span class='comment val'># Author:: Seth Chisamore (&lt;schisamo@chef.io&gt;)</span>
+<span class='comment val'># Cookbook Name:: java</span>
+<span class='comment val'># Recipe:: default</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Copyright 2008-2015, Chef Software, Inc.</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class='comment val'># you may not use this file except in compliance with the License.</span>
+<span class='comment val'># You may obtain a copy of the License at</span>
+<span class='comment val'>#</span>
+<span class='comment val'>#     http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Unless required by applicable law or agreed to in writing, software</span>
+<span class='comment val'># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class='comment val'># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class='comment val'># See the License for the specific language governing permissions and</span>
+<span class='comment val'># limitations under the License.</span>
+<span class='comment val'>#</span>
+
+<span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'java::set_attributes_from_version'</span>
+<span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='dstring node'>&quot;java::#{node['java']['install_flavor']}&quot;</span>
+</pre>
+    </td>
+  </tr>
+</table>
+
+    </div>
+  
+    <div class="method_details ">
+      <h3 class="signature"><a name="java::windows">
+        <strong>java::windows</strong>
+      </a></h3>
+      
+      
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'java/recipes/windows.rb', line 1</span>
+
+<span class='comment val'>#</span>
+<span class='comment val'># Author:: Kendrick Martin (&lt;kendrick.martin@webtrends.com&gt;)</span>
+<span class='comment val'># Cookbook Name:: java</span>
+<span class='comment val'># Recipe:: windows</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Copyright 2008-2012 Webtrends, Inc.</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class='comment val'># you may not use this file except in compliance with the License.</span>
+<span class='comment val'># You may obtain a copy of the License at</span>
+<span class='comment val'>#</span>
+<span class='comment val'>#     http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Unless required by applicable law or agreed to in writing, software</span>
+<span class='comment val'># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class='comment val'># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class='comment val'># See the License for the specific language governing permissions and</span>
+<span class='comment val'># limitations under the License.</span>
+<span class='comment val'>#</span>
+
+<span class='rubyid_require identifier id'>require</span> <span class='string val'>'uri'</span>
+
+<span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'java::notify'</span>
+
+<span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_fatal identifier id'>fatal</span><span class='lparen token'>(</span><span class='string val'>'No download url set for java installer.'</span><span class='rparen token'>)</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'windows'</span><span class='rbrack token'>]</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'windows'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'url'</span><span class='rbrack token'>]</span>
+
+<span class='rubyid_pkg_checksum identifier id'>pkg_checksum</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'windows'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'checksum'</span><span class='rbrack token'>]</span>
+<span class='rubyid_aws_access_key_id identifier id'>aws_access_key_id</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'windows'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'aws_access_key_id'</span><span class='rbrack token'>]</span>
+<span class='rubyid_aws_secret_access_key identifier id'>aws_secret_access_key</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'windows'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'aws_secret_access_key'</span><span class='rbrack token'>]</span>
+
+<span class='rubyid_uri identifier id'>uri</span> <span class='assign token'>=</span> <span class='colon3 op'>::</span><span class='rubyid_URI constant id'>URI</span><span class='dot token'>.</span><span class='rubyid_parse identifier id'>parse</span><span class='lparen token'>(</span><span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'windows'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'url'</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+<span class='rubyid_cache_file_path identifier id'>cache_file_path</span> <span class='assign token'>=</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Config constant id'>Config</span><span class='lbrack token'>[</span><span class='symbol val'>:file_cache_path</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_basename identifier id'>basename</span><span class='lparen token'>(</span><span class='colon3 op'>::</span><span class='rubyid_URI constant id'>URI</span><span class='dot token'>.</span><span class='rubyid_unescape identifier id'>unescape</span><span class='lparen token'>(</span><span class='rubyid_uri identifier id'>uri</span><span class='dot token'>.</span><span class='rubyid_path identifier id'>path</span><span class='rparen token'>)</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+
+<span class='rubyid_if if kw'>if</span> <span class='rubyid_aws_access_key_id identifier id'>aws_access_key_id</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_aws_secret_access_key identifier id'>aws_secret_access_key</span>
+  <span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'aws::default'</span> <span class='comment val'># install right_aws gem for aws_s3_file</span>
+
+  <span class='rubyid_aws_s3_file identifier id'>aws_s3_file</span> <span class='rubyid_cache_file_path identifier id'>cache_file_path</span> <span class='rubyid_do do kw'>do</span>
+    <span class='rubyid_aws_access_key_id identifier id'>aws_access_key_id</span> <span class='rubyid_aws_access_key_id identifier id'>aws_access_key_id</span>
+    <span class='rubyid_aws_secret_access_key identifier id'>aws_secret_access_key</span> <span class='rubyid_aws_secret_access_key identifier id'>aws_secret_access_key</span>
+    <span class='rubyid_checksum identifier id'>checksum</span> <span class='rubyid_pkg_checksum identifier id'>pkg_checksum</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_pkg_checksum identifier id'>pkg_checksum</span>
+    <span class='rubyid_bucket identifier id'>bucket</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'windows'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'bucket'</span><span class='rbrack token'>]</span>
+    <span class='rubyid_remote_path identifier id'>remote_path</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'windows'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'remote_path'</span><span class='rbrack token'>]</span>
+    <span class='rubyid_backup identifier id'>backup</span> <span class='rubyid_false false kw'>false</span>
+    <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:create</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_else else kw'>else</span>
+  <span class='rubyid_ruby_block identifier id'>ruby_block</span> <span class='string val'>'Enable Accessing cookies'</span> <span class='rubyid_do do kw'>do</span>
+    <span class='rubyid_block identifier id'>block</span> <span class='rubyid_do do kw'>do</span>
+      <span class='comment val'># Chef::REST became Chef::HTTP in chef 11</span>
+      <span class='rubyid_cookie_jar identifier id'>cookie_jar</span> <span class='assign token'>=</span> <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_REST constant id'>REST</span><span class='colon2 op'>::</span><span class='rubyid_CookieJar constant id'>CookieJar</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_REST constant id'>REST</span><span class='colon2 op'>::</span><span class='rubyid_CookieJar constant id'>CookieJar</span><span class='rparen token'>)</span>
+      <span class='rubyid_cookie_jar identifier id'>cookie_jar</span> <span class='assign token'>=</span> <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_HTTP constant id'>HTTP</span><span class='colon2 op'>::</span><span class='rubyid_CookieJar constant id'>CookieJar</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_HTTP constant id'>HTTP</span><span class='colon2 op'>::</span><span class='rubyid_CookieJar constant id'>CookieJar</span><span class='rparen token'>)</span>
+
+      <span class='rubyid_cookie_jar identifier id'>cookie_jar</span><span class='dot token'>.</span><span class='rubyid_instance identifier id'>instance</span><span class='lbrack token'>[</span><span class='dstring node'>&quot;#{uri.host}:#{uri.port}&quot;</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='string val'>'oraclelicense=accept-securebackup-cookie'</span>
+    <span class='rubyid_end end kw'>end</span>
+
+    <span class='rubyid_only_if identifier id'>only_if</span> <span class='lbrace token'>{</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'oracle'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'accept_oracle_download_terms'</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_remote_file identifier id'>remote_file</span> <span class='rubyid_cache_file_path identifier id'>cache_file_path</span> <span class='rubyid_do do kw'>do</span>
+    <span class='rubyid_checksum identifier id'>checksum</span> <span class='rubyid_pkg_checksum identifier id'>pkg_checksum</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_pkg_checksum identifier id'>pkg_checksum</span>
+    <span class='rubyid_source identifier id'>source</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'windows'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'url'</span><span class='rbrack token'>]</span>
+    <span class='rubyid_backup identifier id'>backup</span> <span class='rubyid_false false kw'>false</span>
+    <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:create</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_if if kw'>if</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_attribute? fid id'>attribute?</span><span class='lparen token'>(</span><span class='string val'>'java_home'</span><span class='rparen token'>)</span>
+  <span class='rubyid_java_home_win identifier id'>java_home_win</span> <span class='assign token'>=</span> <span class='rubyid_win_friendly_path identifier id'>win_friendly_path</span><span class='lparen token'>(</span><span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'java_home'</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+  <span class='rubyid_additional_options identifier id'>additional_options</span> <span class='assign token'>=</span> <span class='rubyid_if if kw'>if</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk_version'</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='string val'>'8'</span>
+                         <span class='comment val'># Seems that the jdk 8 EXE installer does not need anymore the /v /qn flags</span>
+                         <span class='dstring node'>&quot;INSTALLDIR=\&quot;#{java_home_win}\&quot;&quot;</span>
+                       <span class='rubyid_else else kw'>else</span>
+                         <span class='comment val'># The jdk 7 EXE installer expects escaped quotes, so we need to double escape</span>
+                         <span class='comment val'># them here. The final string looks like :</span>
+                         <span class='comment val'># /v&quot;/qn INSTALLDIR=\&quot;C:\Program Files\Java\&quot;&quot;</span>
+                         <span class='dstring node'>&quot;/v\&quot;/qn INSTALLDIR=\\\&quot;#{java_home_win}\\\&quot;\&quot;&quot;</span>
+                       <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_env identifier id'>env</span> <span class='string val'>'JAVA_HOME'</span> <span class='rubyid_do do kw'>do</span>
+    <span class='rubyid_value identifier id'>value</span> <span class='rubyid_java_home_win identifier id'>java_home_win</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='comment val'># update path</span>
+  <span class='rubyid_windows_path identifier id'>windows_path</span> <span class='dstring node'>&quot;#{java_home_win}\\bin&quot;</span> <span class='rubyid_do do kw'>do</span>
+    <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:add</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_if if kw'>if</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'windows'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_attribute? fid id'>attribute?</span><span class='lparen token'>(</span><span class='string val'>'public_jre_home'</span><span class='rparen token'>)</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'windows'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'public_jre_home'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_java_publicjre_home_win identifier id'>java_publicjre_home_win</span> <span class='assign token'>=</span> <span class='rubyid_win_friendly_path identifier id'>win_friendly_path</span><span class='lparen token'>(</span><span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'windows'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'public_jre_home'</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+  <span class='rubyid_additional_options identifier id'>additional_options</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;#{additional_options} /INSTALLDIRPUBJRE=\&quot;#{java_publicjre_home_win}\&quot;&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_windows_package identifier id'>windows_package</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'windows'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'package_name'</span><span class='rbrack token'>]</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_source identifier id'>source</span> <span class='rubyid_cache_file_path identifier id'>cache_file_path</span>
+  <span class='rubyid_checksum identifier id'>checksum</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'windows'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'checksum'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:install</span>
+  <span class='rubyid_installer_type identifier id'>installer_type</span> <span class='symbol val'>:custom</span>
+  <span class='rubyid_options identifier id'>options</span> <span class='dstring node'>&quot;/s #{additional_options}&quot;</span>
+  <span class='rubyid_notifies identifier id'>notifies</span> <span class='symbol val'>:write</span><span class='comma token'>,</span> <span class='string val'>'log[jdk-version-changed]'</span><span class='comma token'>,</span> <span class='symbol val'>:immediately</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+
+    </div>
+  
+    <div class="method_details ">
+      <h3 class="signature"><a name="java::homebrew">
+        <strong>java::homebrew</strong>
+      </a></h3>
+      
+      
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1
+2
+3
+4
+5
+6
+7
+8</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'java/recipes/homebrew.rb', line 1</span>
+
+<span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'homebrew'</span>
+<span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'homebrew::cask'</span>
+<span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'java::notify'</span>
+
+<span class='rubyid_homebrew_tap identifier id'>homebrew_tap</span> <span class='string val'>'caskroom/versions'</span>
+<span class='rubyid_homebrew_cask identifier id'>homebrew_cask</span> <span class='dstring node'>&quot;java#{node['java']['jdk_version']}&quot;</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_notifies identifier id'>notifies</span> <span class='symbol val'>:write</span><span class='comma token'>,</span> <span class='string val'>'log[jdk-version-changed]'</span><span class='comma token'>,</span> <span class='symbol val'>:immediately</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+
+    </div>
+  
+    <div class="method_details ">
+      <h3 class="signature"><a name="java::oracle_rpm">
+        <strong>java::oracle_rpm</strong>
+      </a></h3>
+      
+      
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'java/recipes/oracle_rpm.rb', line 1</span>
+
+<span class='comment val'># Author:: Christophe Arguel (&lt;christophe.arguel@free.fr&gt;)</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Cookbook Name:: java</span>
+<span class='comment val'># Recipe:: oracle_rpm</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Copyright 2013, Christophe Arguel &lt;christophe.arguel@free.fr&gt;</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class='comment val'># you may not use this file except in compliance with the License.</span>
+<span class='comment val'># You may obtain a copy of the License at</span>
+<span class='comment val'>#</span>
+<span class='comment val'>#     http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Unless required by applicable law or agreed to in writing, software</span>
+<span class='comment val'># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class='comment val'># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class='comment val'># See the License for the specific language governing permissions and</span>
+<span class='comment val'># limitations under the License.</span>
+
+<span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'java::set_java_home'</span>
+<span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'java::notify'</span>
+
+<span class='rubyid_slave_cmds identifier id'>slave_cmds</span> <span class='assign token'>=</span> <span class='rubyid_case case kw'>case</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'oracle_rpm'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'type'</span><span class='rbrack token'>]</span>
+             <span class='rubyid_when when kw'>when</span> <span class='string val'>'jdk'</span>
+               <span class='dstring node'>%w(appletviewer apt ControlPanel extcheck idlj jar jarsigner javac javadoc javafxpackager javah javap java-rmi.cgi javaws jcmd jconsole jcontrol jdb jhat jinfo jmap jps jrunscript jsadebugd jstack jstat jstatd jvisualvm keytool native2ascii orbd pack200 policytool rmic rmid rmiregistry schemagen serialver servertool tnameserv unpack200 wsgen wsimport xjc)</span>
+
+             <span class='rubyid_when when kw'>when</span> <span class='string val'>'jre'</span>
+               <span class='dstring node'>%w(ControlPanel java_vm javaws jcontrol keytool orbd pack200 policytool rmid rmiregistry servertool tnameserv unpack200)</span>
+
+             <span class='rubyid_else else kw'>else</span>
+               <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Application constant id'>Application</span><span class='dot token'>.</span><span class='rubyid_fatal! fid id'>fatal!</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Unsupported oracle RPM type (#{node['java']['oracle_rpm']['type']})&quot;</span><span class='rparen token'>)</span>
+             <span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_bash identifier id'>bash</span> <span class='string val'>'update-java-alternatives'</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_java_home identifier id'>java_home</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'java_home'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_java_location identifier id'>java_location</span> <span class='assign token'>=</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_java_home identifier id'>java_home</span><span class='comma token'>,</span> <span class='string val'>'bin'</span><span class='comma token'>,</span> <span class='string val'>'java'</span><span class='rparen token'>)</span>
+  <span class='rubyid_slave_lines identifier id'>slave_lines</span> <span class='assign token'>=</span> <span class='rubyid_slave_cmds identifier id'>slave_cmds</span><span class='dot token'>.</span><span class='rubyid_inject identifier id'>inject</span><span class='lparen token'>(</span><span class='string val'>''</span><span class='rparen token'>)</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_slaves identifier id'>slaves</span><span class='comma token'>,</span> <span class='rubyid_cmd identifier id'>cmd</span><span class='bitor op'>|</span>
+    <span class='rubyid_slaves identifier id'>slaves</span> <span class='lshft op'>&lt;&lt;</span> <span class='dstring node'>&quot;--slave /usr/bin/#{cmd} #{cmd} #{File.join(java_home, 'bin', cmd)} \\\n&quot;</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_code identifier id'>code</span> <span class='string val'>&quot;update-alternatives --install /usr/bin/java java \#{java_location} \#{node['java']['alternatives_priority']} \\\n\#{slave_lines} &amp;&amp; \\\nupdate-alternatives --set java \#{java_location}\n&quot;</span><span class='dot token'>.</span><span class='rubyid_gsub identifier id'>gsub</span><span class='lparen token'>(</span><span class='regexp val'>/^\s+/</span><span class='comma token'>,</span> <span class='string val'>''</span><span class='rparen token'>)</span>
+  <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:nothing</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_package_name identifier id'>package_name</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'oracle_rpm'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'package_name'</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'oracle_rpm'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'type'</span><span class='rbrack token'>]</span>
+<span class='rubyid_package identifier id'>package</span> <span class='rubyid_package_name identifier id'>package_name</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:install</span>
+  <span class='rubyid_version identifier id'>version</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'oracle_rpm'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'package_version'</span><span class='rbrack token'>]</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'oracle_rpm'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'package_version'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_notifies identifier id'>notifies</span> <span class='symbol val'>:run</span><span class='comma token'>,</span> <span class='string val'>'bash[update-java-alternatives]'</span><span class='comma token'>,</span> <span class='symbol val'>:immediately</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_platform_family? fid id'>platform_family?</span><span class='lparen token'>(</span><span class='string val'>'rhel'</span><span class='comma token'>,</span> <span class='string val'>'fedora'</span><span class='rparen token'>)</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'set_default'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_notifies identifier id'>notifies</span> <span class='symbol val'>:write</span><span class='comma token'>,</span> <span class='string val'>'log[jdk-version-changed]'</span><span class='comma token'>,</span> <span class='symbol val'>:immediately</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'java::oracle_jce'</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'oracle'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jce'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'enabled'</span><span class='rbrack token'>]</span>
+</pre>
+    </td>
+  </tr>
+</table>
+
+    </div>
+  
+    <div class="method_details ">
+      <h3 class="signature"><a name="java::oracle_jce">
+        <strong>java::oracle_jce</strong>
+      </a></h3>
+      
+      
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'java/recipes/oracle_jce.rb', line 1</span>
+
+<span class='comment val'>#</span>
+<span class='comment val'># Author:: Kyle McGovern (&lt;spion06@gmail.com&gt;)</span>
+<span class='comment val'># Cookbook Name:: java</span>
+<span class='comment val'># Recipe:: oracle_jce</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Copyright 2014, Kyle McGovern</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class='comment val'># you may not use this file except in compliance with the License.</span>
+<span class='comment val'># You may obtain a copy of the License at</span>
+<span class='comment val'>#</span>
+<span class='comment val'># http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Unless required by applicable law or agreed to in writing, software</span>
+<span class='comment val'># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class='comment val'># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class='comment val'># See the License for the specific language governing permissions and</span>
+<span class='comment val'># limitations under the License.</span>
+
+<span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'java::set_attributes_from_version'</span>
+
+<span class='rubyid_jdk_version identifier id'>jdk_version</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk_version'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span>
+<span class='rubyid_jce_url identifier id'>jce_url</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'oracle'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jce'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_jdk_version identifier id'>jdk_version</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'url'</span><span class='rbrack token'>]</span>
+<span class='rubyid_jce_checksum identifier id'>jce_checksum</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'oracle'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jce'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_jdk_version identifier id'>jdk_version</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'checksum'</span><span class='rbrack token'>]</span>
+<span class='rubyid_jce_cookie identifier id'>jce_cookie</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'oracle'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'accept_oracle_download_terms'</span><span class='rbrack token'>]</span> <span class='question op'>?</span> <span class='string val'>'oraclelicense=accept-securebackup-cookie;gpw_e24=http://edelivery.oracle.com'</span> <span class='colon op'>:</span> <span class='string val'>''</span>
+
+<span class='rubyid_directory identifier id'>directory</span> <span class='colon3 op'>::</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'oracle'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jce'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'home'</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_jdk_version identifier id'>jdk_version</span><span class='rparen token'>)</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_mode identifier id'>mode</span> <span class='string val'>'0755'</span>
+  <span class='rubyid_recursive identifier id'>recursive</span> <span class='rubyid_true true kw'>true</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_if if kw'>if</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'os'</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='string val'>'windows'</span>
+  <span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'windows'</span>
+
+  <span class='rubyid_url identifier id'>url</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'oracle'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jce'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_jdk_version identifier id'>jdk_version</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'url'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_zip_checksum identifier id'>zip_checksum</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'oracle'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jce'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_jdk_version identifier id'>jdk_version</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'checksum'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_staging_path identifier id'>staging_path</span> <span class='assign token'>=</span> <span class='colon3 op'>::</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'oracle'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jce'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'home'</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_jdk_version identifier id'>jdk_version</span><span class='rparen token'>)</span>
+  <span class='rubyid_staging_local_policy identifier id'>staging_local_policy</span> <span class='assign token'>=</span> <span class='colon3 op'>::</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_staging_path identifier id'>staging_path</span><span class='comma token'>,</span> <span class='dstring node'>&quot;UnlimitedJCEPolicyJDK#{jdk_version}&quot;</span><span class='comma token'>,</span> <span class='string val'>'local_policy.jar'</span><span class='rparen token'>)</span>
+  <span class='rubyid_staging_export_policy identifier id'>staging_export_policy</span> <span class='assign token'>=</span> <span class='colon3 op'>::</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_staging_path identifier id'>staging_path</span><span class='comma token'>,</span> <span class='dstring node'>&quot;UnlimitedJCEPolicyJDK#{jdk_version}&quot;</span><span class='comma token'>,</span> <span class='string val'>'US_export_policy.jar'</span><span class='rparen token'>)</span>
+  <span class='rubyid_jre_final_path identifier id'>jre_final_path</span> <span class='assign token'>=</span> <span class='colon3 op'>::</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'java_home'</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='string val'>'jre'</span><span class='comma token'>,</span> <span class='string val'>'lib'</span><span class='comma token'>,</span> <span class='string val'>'security'</span><span class='rparen token'>)</span>
+  <span class='rubyid_final_local_policy identifier id'>final_local_policy</span> <span class='assign token'>=</span> <span class='colon3 op'>::</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_jre_final_path identifier id'>jre_final_path</span><span class='comma token'>,</span> <span class='string val'>'local_policy.jar'</span><span class='rparen token'>)</span>
+  <span class='rubyid_final_export_policy identifier id'>final_export_policy</span> <span class='assign token'>=</span> <span class='colon3 op'>::</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_jre_final_path identifier id'>jre_final_path</span><span class='comma token'>,</span> <span class='string val'>'US_export_policy.jar'</span><span class='rparen token'>)</span>
+
+  <span class='rubyid_windows_zipfile identifier id'>windows_zipfile</span> <span class='rubyid_staging_path identifier id'>staging_path</span> <span class='rubyid_do do kw'>do</span>
+    <span class='rubyid_source identifier id'>source</span> <span class='rubyid_url identifier id'>url</span>
+    <span class='rubyid_checksum identifier id'>checksum</span> <span class='rubyid_zip_checksum identifier id'>zip_checksum</span>
+    <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:unzip</span>
+    <span class='rubyid_not_if identifier id'>not_if</span> <span class='lbrace token'>{</span> <span class='colon3 op'>::</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_exist? fid id'>exist?</span> <span class='rubyid_staging_local_policy identifier id'>staging_local_policy</span> <span class='rbrace token'>}</span>
+    <span class='rubyid_notifies identifier id'>notifies</span> <span class='symbol val'>:create</span><span class='comma token'>,</span> <span class='dstring node'>&quot;file[#{final_local_policy}]&quot;</span>
+    <span class='rubyid_notifies identifier id'>notifies</span> <span class='symbol val'>:create</span><span class='comma token'>,</span> <span class='dstring node'>&quot;file[#{final_export_policy}]&quot;</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_file identifier id'>file</span> <span class='rubyid_final_local_policy identifier id'>final_local_policy</span> <span class='rubyid_do do kw'>do</span>
+    <span class='rubyid_rights identifier id'>rights</span> <span class='symbol val'>:full_control</span><span class='comma token'>,</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'windows'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'owner'</span><span class='rbrack token'>]</span>
+    <span class='rubyid_content identifier id'>content</span> <span class='rubyid_lazy identifier id'>lazy</span> <span class='lbrace token'>{</span> <span class='colon3 op'>::</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_read identifier id'>read</span><span class='lparen token'>(</span><span class='rubyid_staging_local_policy identifier id'>staging_local_policy</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span>
+    <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:nothing</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_file identifier id'>file</span> <span class='rubyid_final_export_policy identifier id'>final_export_policy</span> <span class='rubyid_do do kw'>do</span>
+    <span class='rubyid_rights identifier id'>rights</span> <span class='symbol val'>:full_control</span><span class='comma token'>,</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'windows'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'owner'</span><span class='rbrack token'>]</span>
+    <span class='rubyid_content identifier id'>content</span> <span class='rubyid_lazy identifier id'>lazy</span> <span class='lbrace token'>{</span> <span class='colon3 op'>::</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_read identifier id'>read</span><span class='lparen token'>(</span><span class='rubyid_staging_export_policy identifier id'>staging_export_policy</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span>
+    <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:nothing</span>
+  <span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_else else kw'>else</span>
+  <span class='rubyid_package identifier id'>package</span> <span class='string val'>'unzip'</span>
+  <span class='rubyid_package identifier id'>package</span> <span class='string val'>'curl'</span>
+
+  <span class='rubyid_remote_file identifier id'>remote_file</span> <span class='dstring node'>&quot;#{Chef::Config[:file_cache_path]}/jce.zip&quot;</span> <span class='rubyid_do do kw'>do</span>
+    <span class='rubyid_source identifier id'>source</span> <span class='rubyid_jce_url identifier id'>jce_url</span>
+    <span class='rubyid_checksum identifier id'>checksum</span> <span class='rubyid_jce_checksum identifier id'>jce_checksum</span>
+    <span class='rubyid_headers identifier id'>headers</span><span class='lparen token'>(</span>
+      <span class='string val'>'Cookie'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_jce_cookie identifier id'>jce_cookie</span>
+    <span class='rparen token'>)</span>
+    <span class='rubyid_not_if identifier id'>not_if</span> <span class='lbrace token'>{</span> <span class='colon3 op'>::</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_exist? fid id'>exist?</span><span class='lparen token'>(</span><span class='colon3 op'>::</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'oracle'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jce'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'home'</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_jdk_version identifier id'>jdk_version</span><span class='comma token'>,</span> <span class='string val'>'US_export_policy.jar'</span><span class='rparen token'>)</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_execute identifier id'>execute</span> <span class='string val'>'extract jce'</span> <span class='rubyid_do do kw'>do</span>
+    <span class='rubyid_command identifier id'>command</span> <span class='string val'>&quot;rm -rf java_jce\nmkdir java_jce\ncd java_jce\nunzip -o ../jce.zip\nfind -name '*.jar' | xargs -I JCE_JAR mv JCE_JAR \#{node['java']['oracle']['jce']['home']}/\#{jdk_version}/\n&quot;</span>
+    <span class='rubyid_cwd identifier id'>cwd</span> <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Config constant id'>Config</span><span class='lbrack token'>[</span><span class='symbol val'>:file_cache_path</span><span class='rbrack token'>]</span>
+    <span class='rubyid_creates identifier id'>creates</span> <span class='colon3 op'>::</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'oracle'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jce'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'home'</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_jdk_version identifier id'>jdk_version</span><span class='comma token'>,</span> <span class='string val'>'US_export_policy.jar'</span><span class='rparen token'>)</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='dstring node'>%w(local_policy.jar US_export_policy.jar)</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_jar identifier id'>jar</span><span class='bitor op'>|</span>
+    <span class='rubyid_jar_path identifier id'>jar_path</span> <span class='assign token'>=</span> <span class='colon3 op'>::</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'java_home'</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='string val'>'jre'</span><span class='comma token'>,</span> <span class='string val'>'lib'</span><span class='comma token'>,</span> <span class='string val'>'security'</span><span class='comma token'>,</span> <span class='rubyid_jar identifier id'>jar</span><span class='rparen token'>)</span>
+    <span class='comment val'># remove the jars already in the directory</span>
+    <span class='rubyid_file identifier id'>file</span> <span class='rubyid_jar_path identifier id'>jar_path</span> <span class='rubyid_do do kw'>do</span>
+      <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:delete</span>
+      <span class='rubyid_not_if identifier id'>not_if</span> <span class='lbrace token'>{</span> <span class='colon3 op'>::</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_symlink? fid id'>symlink?</span> <span class='rubyid_jar_path identifier id'>jar_path</span> <span class='rbrace token'>}</span>
+    <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_link identifier id'>link</span> <span class='rubyid_jar_path identifier id'>jar_path</span> <span class='rubyid_do do kw'>do</span>
+      <span class='rubyid_to identifier id'>to</span> <span class='colon3 op'>::</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'oracle'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jce'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'home'</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_jdk_version identifier id'>jdk_version</span><span class='comma token'>,</span> <span class='rubyid_jar identifier id'>jar</span><span class='rparen token'>)</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+
+    </div>
+  
+    <div class="method_details ">
+      <h3 class="signature"><a name="java::oracle_i386">
+        <strong>java::oracle_i386</strong>
+      </a></h3>
+      
+      
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'java/recipes/oracle_i386.rb', line 1</span>
+
+<span class='comment val'>#</span>
+<span class='comment val'># Author:: Bryan W. Berry (&lt;bryan.berry@gmail.com&gt;)</span>
+<span class='comment val'># Cookbook Name:: java</span>
+<span class='comment val'># Recipe:: oracle_i386</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Copyright 2010-2015, Chef Software, Inc.</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class='comment val'># you may not use this file except in compliance with the License.</span>
+<span class='comment val'># You may obtain a copy of the License at</span>
+<span class='comment val'>#</span>
+<span class='comment val'>#     http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Unless required by applicable law or agreed to in writing, software</span>
+<span class='comment val'># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class='comment val'># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class='comment val'># See the License for the specific language governing permissions and</span>
+<span class='comment val'># limitations under the License.</span>
+
+<span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'java::notify'</span>
+
+<span class='rubyid_unless unless kw'>unless</span> <span class='rubyid_node identifier id'>node</span><span class='dot token'>.</span><span class='rubyid_recipe? fid id'>recipe?</span><span class='lparen token'>(</span><span class='string val'>'java::default'</span><span class='rparen token'>)</span>
+  <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_warn identifier id'>warn</span><span class='lparen token'>(</span><span class='string val'>'Using java::default instead is recommended.'</span><span class='rparen token'>)</span>
+
+  <span class='comment val'># Even if this recipe is included by itself, a safety check is nice...</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'java_home'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span> <span class='orop op'>||</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'java_home'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+    <span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'java::set_attributes_from_version'</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_java_home identifier id'>java_home</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'java_home'</span><span class='rbrack token'>]</span>
+
+<span class='rubyid_case case kw'>case</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk_version'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span>
+<span class='rubyid_when when kw'>when</span> <span class='string val'>'6'</span>
+  <span class='rubyid_tarball_url identifier id'>tarball_url</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'6'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'i586'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'url'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_tarball_checksum identifier id'>tarball_checksum</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'6'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'i586'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'checksum'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_bin_cmds identifier id'>bin_cmds</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'6'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'bin_cmds'</span><span class='rbrack token'>]</span>
+<span class='rubyid_when when kw'>when</span> <span class='string val'>'7'</span>
+  <span class='rubyid_tarball_url identifier id'>tarball_url</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'7'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'i586'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'url'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_tarball_checksum identifier id'>tarball_checksum</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'7'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'i586'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'checksum'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_bin_cmds identifier id'>bin_cmds</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'7'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'bin_cmds'</span><span class='rbrack token'>]</span>
+<span class='rubyid_when when kw'>when</span> <span class='string val'>'8'</span>
+  <span class='rubyid_tarball_url identifier id'>tarball_url</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'8'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'i586'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'url'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_tarball_checksum identifier id'>tarball_checksum</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'8'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'i586'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'checksum'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_bin_cmds identifier id'>bin_cmds</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'8'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'bin_cmds'</span><span class='rbrack token'>]</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'java::set_java_home'</span>
+
+<span class='rubyid_yum_package identifier id'>yum_package</span> <span class='string val'>'glibc'</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_arch identifier id'>arch</span> <span class='string val'>'i686'</span>
+  <span class='rubyid_only_if identifier id'>only_if</span> <span class='lbrace token'>{</span> <span class='rubyid_platform_family? fid id'>platform_family?</span><span class='lparen token'>(</span><span class='string val'>'rhel'</span><span class='comma token'>,</span> <span class='string val'>'fedora'</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_package identifier id'>package</span> <span class='string val'>'tar'</span>
+
+<span class='rubyid_java_ark identifier id'>java_ark</span> <span class='string val'>'jdk-alt'</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_url identifier id'>url</span> <span class='rubyid_tarball_url identifier id'>tarball_url</span>
+  <span class='rubyid_default identifier id'>default</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'set_default'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_checksum identifier id'>checksum</span> <span class='rubyid_tarball_checksum identifier id'>tarball_checksum</span>
+  <span class='rubyid_app_home identifier id'>app_home</span> <span class='rubyid_java_home identifier id'>java_home</span>
+  <span class='rubyid_bin_cmds identifier id'>bin_cmds</span> <span class='rubyid_bin_cmds identifier id'>bin_cmds</span>
+  <span class='rubyid_retries identifier id'>retries</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'ark_retries'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_retry_delay identifier id'>retry_delay</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'ark_retries'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_use_alt_suffix identifier id'>use_alt_suffix</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'use_alt_suffix'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_reset_alternatives identifier id'>reset_alternatives</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'reset_alternatives'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:install</span>
+  <span class='rubyid_default identifier id'>default</span> <span class='rubyid_false false kw'>false</span>
+  <span class='rubyid_notifies identifier id'>notifies</span> <span class='symbol val'>:write</span><span class='comma token'>,</span> <span class='string val'>'log[jdk-version-changed]'</span><span class='comma token'>,</span> <span class='symbol val'>:immediately</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_if if kw'>if</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'set_default'</span><span class='rbrack token'>]</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_platform_family? fid id'>platform_family?</span><span class='lparen token'>(</span><span class='string val'>'debian'</span><span class='rparen token'>)</span>
+  <span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'java::default_java_symlink'</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_include_recipe identifier id'>include_recipe</span> <span class='string val'>'java::oracle_jce'</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'oracle'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jce'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'enabled'</span><span class='rbrack token'>]</span>
+</pre>
+    </td>
+  </tr>
+</table>
+
+    </div>
+  
+    <div class="method_details ">
+      <h3 class="signature"><a name="java::set_java_home">
+        <strong>java::set_java_home</strong>
+      </a></h3>
+      
+      
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'java/recipes/set_java_home.rb', line 1</span>
+
+<span class='comment val'># Author:: Joshua Timberman (&lt;joshua@chef.io&gt;)</span>
+<span class='comment val'># Cookbook Name:: java</span>
+<span class='comment val'># Recipe:: set_java_home</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Copyright 2013-2015, Chef Software, Inc.</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class='comment val'># you may not use this file except in compliance with the License.</span>
+<span class='comment val'># You may obtain a copy of the License at</span>
+<span class='comment val'>#</span>
+<span class='comment val'>#     http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Unless required by applicable law or agreed to in writing, software</span>
+<span class='comment val'># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class='comment val'># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class='comment val'># See the License for the specific language governing permissions and</span>
+<span class='comment val'># limitations under the License.</span>
+
+<span class='rubyid_ruby_block identifier id'>ruby_block</span> <span class='string val'>'set-env-java-home'</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_block identifier id'>block</span> <span class='rubyid_do do kw'>do</span>
+    <span class='rubyid_ENV constant id'>ENV</span><span class='lbrack token'>[</span><span class='string val'>'JAVA_HOME'</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'java_home'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_not_if identifier id'>not_if</span> <span class='lbrace token'>{</span> <span class='rubyid_ENV constant id'>ENV</span><span class='lbrack token'>[</span><span class='string val'>'JAVA_HOME'</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'java_home'</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_directory identifier id'>directory</span> <span class='string val'>'/etc/profile.d'</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_mode identifier id'>mode</span> <span class='integer val'>00755</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_template identifier id'>template</span> <span class='string val'>'/etc/profile.d/jdk.sh'</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_source identifier id'>source</span> <span class='string val'>'jdk.sh.erb'</span>
+  <span class='rubyid_mode identifier id'>mode</span> <span class='integer val'>00755</span>
+<span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_if if kw'>if</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'set_etc_environment'</span><span class='rbrack token'>]</span> <span class='comment val'># ~FC023 -- Fails unit test to use guard</span>
+  <span class='rubyid_ruby_block identifier id'>ruby_block</span> <span class='string val'>'Set JAVA_HOME in /etc/environment'</span> <span class='rubyid_do do kw'>do</span>
+    <span class='rubyid_block identifier id'>block</span> <span class='rubyid_do do kw'>do</span>
+      <span class='rubyid_file identifier id'>file</span> <span class='assign token'>=</span> <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Util constant id'>Util</span><span class='colon2 op'>::</span><span class='rubyid_FileEdit constant id'>FileEdit</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>'/etc/environment'</span><span class='rparen token'>)</span>
+      <span class='rubyid_file identifier id'>file</span><span class='dot token'>.</span><span class='rubyid_insert_line_if_no_match identifier id'>insert_line_if_no_match</span><span class='lparen token'>(</span><span class='regexp val'>/^JAVA_HOME=/</span><span class='comma token'>,</span> <span class='dstring node'>&quot;JAVA_HOME=#{node['java']['java_home']}&quot;</span><span class='rparen token'>)</span>
+      <span class='rubyid_file identifier id'>file</span><span class='dot token'>.</span><span class='rubyid_search_file_replace_line identifier id'>search_file_replace_line</span><span class='lparen token'>(</span><span class='regexp val'>/^JAVA_HOME=/</span><span class='comma token'>,</span> <span class='dstring node'>&quot;JAVA_HOME=#{node['java']['java_home']}&quot;</span><span class='rparen token'>)</span>
+      <span class='rubyid_file identifier id'>file</span><span class='dot token'>.</span><span class='rubyid_write_file identifier id'>write_file</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+
+    </div>
+  
+    <div class="method_details ">
+      <h3 class="signature"><a name="java::purge_packages">
+        <strong>java::purge_packages</strong>
+      </a></h3>
+      
+      
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'java/recipes/purge_packages.rb', line 1</span>
+
+<span class='comment val'># Cookbook Name:: java</span>
+<span class='comment val'># Recipe:: purge_packages</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class='comment val'># you may not use this file except in compliance with the License.</span>
+<span class='comment val'># You may obtain a copy of the License at</span>
+<span class='comment val'>#</span>
+<span class='comment val'>#     http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Unless required by applicable law or agreed to in writing, software</span>
+<span class='comment val'># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class='comment val'># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class='comment val'># See the License for the specific language governing permissions and</span>
+<span class='comment val'># limitations under the License.</span>
+
+<span class='dstring node'>%w(sun-java6-jdk sun-java6-bin sun-java6-jre)</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_pkg identifier id'>pkg</span><span class='bitor op'>|</span>
+  <span class='rubyid_package identifier id'>package</span> <span class='rubyid_pkg identifier id'>pkg</span> <span class='rubyid_do do kw'>do</span>
+    <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:purge</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+
+    </div>
+  
+    <div class="method_details ">
+      <h3 class="signature"><a name="java::default_java_symlink">
+        <strong>java::default_java_symlink</strong>
+      </a></h3>
+      
+      
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'java/recipes/default_java_symlink.rb', line 1</span>
+
+<span class='comment val'># Cookbook Name:: java</span>
+<span class='comment val'># Recipe:: default_java_symlink</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class='comment val'># you may not use this file except in compliance with the License.</span>
+<span class='comment val'># You may obtain a copy of the License at</span>
+<span class='comment val'>#</span>
+<span class='comment val'>#     http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Unless required by applicable law or agreed to in writing, software</span>
+<span class='comment val'># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class='comment val'># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class='comment val'># See the License for the specific language governing permissions and</span>
+<span class='comment val'># limitations under the License.</span>
+
+<span class='rubyid_link identifier id'>link</span> <span class='string val'>'/usr/lib/jvm/default-java'</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_to identifier id'>to</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'java_home'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_not_if identifier id'>not_if</span> <span class='lbrace token'>{</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'java_home'</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='string val'>'/usr/lib/jvm/default-java'</span> <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+
+    </div>
+  
+    <div class="method_details ">
+      <h3 class="signature"><a name="java::set_attributes_from_version">
+        <strong>java::set_attributes_from_version</strong>
+      </a></h3>
+      
+      
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'java/recipes/set_attributes_from_version.rb', line 1</span>
+
+<span class='comment val'># Cookbook Name:: java</span>
+<span class='comment val'># Recipe:: set_attributes_from_version</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class='comment val'># you may not use this file except in compliance with the License.</span>
+<span class='comment val'># You may obtain a copy of the License at</span>
+<span class='comment val'>#</span>
+<span class='comment val'>#     http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class='comment val'>#</span>
+<span class='comment val'># Unless required by applicable law or agreed to in writing, software</span>
+<span class='comment val'># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class='comment val'># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class='comment val'># See the License for the specific language governing permissions and</span>
+<span class='comment val'># limitations under the License.</span>
+
+<span class='comment val'># Calculate variables that depend on jdk_version</span>
+<span class='comment val'># If you need to override this in an attribute file you must use</span>
+<span class='comment val'># force_default or higher precedence.</span>
+
+<span class='rubyid_case case kw'>case</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'platform_family'</span><span class='rbrack token'>]</span>
+<span class='rubyid_when when kw'>when</span> <span class='string val'>'rhel'</span><span class='comma token'>,</span> <span class='string val'>'fedora'</span>
+  <span class='rubyid_node identifier id'>node</span><span class='dot token'>.</span><span class='rubyid_default identifier id'>default</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'java_home'</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_case case kw'>case</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'install_flavor'</span><span class='rbrack token'>]</span>
+                                      <span class='rubyid_when when kw'>when</span> <span class='string val'>'oracle'</span>
+                                        <span class='string val'>'/usr/lib/jvm/java'</span>
+                                      <span class='rubyid_when when kw'>when</span> <span class='string val'>'oracle_rpm'</span>
+                                        <span class='string val'>'/usr/java/latest'</span>
+                                      <span class='rubyid_else else kw'>else</span>
+                                        <span class='dstring node'>&quot;/usr/lib/jvm/java-1.#{node['java']['jdk_version']}.0&quot;</span>
+                                      <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_node identifier id'>node</span><span class='dot token'>.</span><span class='rubyid_default identifier id'>default</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'openjdk_packages'</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='dstring node'>&quot;java-1.#{node['java']['jdk_version']}.0-openjdk&quot;</span><span class='comma token'>,</span> <span class='dstring node'>&quot;java-1.#{node['java']['jdk_version']}.0-openjdk-devel&quot;</span><span class='rbrack token'>]</span>
+<span class='rubyid_when when kw'>when</span> <span class='string val'>'freebsd'</span>
+  <span class='rubyid_node identifier id'>node</span><span class='dot token'>.</span><span class='rubyid_default identifier id'>default</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'java_home'</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;/usr/local/openjdk#{node['java']['jdk_version']}&quot;</span>
+  <span class='rubyid_jdk_version identifier id'>jdk_version</span> <span class='assign token'>=</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'jdk_version'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_openjdk_package identifier id'>openjdk_package</span> <span class='assign token'>=</span> <span class='rubyid_jdk_version identifier id'>jdk_version</span> <span class='eq op'>==</span> <span class='string val'>'7'</span> <span class='question op'>?</span> <span class='string val'>'openjdk'</span> <span class='colon op'>:</span> <span class='dstring node'>&quot;openjdk#{node['java']['jdk_version']}&quot;</span>
+  <span class='rubyid_node identifier id'>node</span><span class='dot token'>.</span><span class='rubyid_default identifier id'>default</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'openjdk_packages'</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rubyid_openjdk_package identifier id'>openjdk_package</span><span class='rbrack token'>]</span>
+<span class='rubyid_when when kw'>when</span> <span class='string val'>'arch'</span>
+  <span class='rubyid_node identifier id'>node</span><span class='dot token'>.</span><span class='rubyid_default identifier id'>default</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'java_home'</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;/usr/lib/jvm/java-#{node['java']['jdk_version']}-openjdk&quot;</span>
+  <span class='rubyid_node identifier id'>node</span><span class='dot token'>.</span><span class='rubyid_default identifier id'>default</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'openjdk_packages'</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='dstring node'>&quot;openjdk#{node['java']['jdk_version']}&quot;</span><span class='rbrack token'>]</span>
+<span class='rubyid_when when kw'>when</span> <span class='string val'>'debian'</span>
+  <span class='rubyid_node identifier id'>node</span><span class='dot token'>.</span><span class='rubyid_default identifier id'>default</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'java_home'</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;/usr/lib/jvm/java-#{node['java']['jdk_version']}-#{node['java']['install_flavor']}&quot;</span>
+  <span class='comment val'># Newer Debian &amp; Ubuntu adds the architecture to the path</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'platform'</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='string val'>'debian'</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_VersionConstraint constant id'>VersionConstraint</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>'&gt;= 7.0'</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_include? fid id'>include?</span><span class='lparen token'>(</span><span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'platform_version'</span><span class='rbrack token'>]</span><span class='rparen token'>)</span> <span class='orop op'>||</span>
+     <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'platform'</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='string val'>'ubuntu'</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_VersionConstraint constant id'>VersionConstraint</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>'&gt;= 12.04'</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_include? fid id'>include?</span><span class='lparen token'>(</span><span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='string val'>'platform_version'</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+    <span class='rubyid_node identifier id'>node</span><span class='dot token'>.</span><span class='rubyid_default identifier id'>default</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'java_home'</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;#{node['java']['java_home']}-#{node['kernel']['machine'] == 'x86_64' ? 'amd64' : 'i386'}&quot;</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_node identifier id'>node</span><span class='dot token'>.</span><span class='rubyid_default identifier id'>default</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'openjdk_packages'</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='dstring node'>&quot;openjdk-#{node['java']['jdk_version']}-jdk&quot;</span><span class='comma token'>,</span> <span class='dstring node'>&quot;openjdk-#{node['java']['jdk_version']}-jre-headless&quot;</span><span class='rbrack token'>]</span>
+<span class='rubyid_when when kw'>when</span> <span class='string val'>'smartos'</span>
+  <span class='rubyid_node identifier id'>node</span><span class='dot token'>.</span><span class='rubyid_default identifier id'>default</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'java_home'</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='string val'>'/opt/local/java/sun6'</span>
+  <span class='rubyid_node identifier id'>node</span><span class='dot token'>.</span><span class='rubyid_default identifier id'>default</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'openjdk_packages'</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='dstring node'>&quot;sun-jdk#{node['java']['jdk_version']}&quot;</span><span class='comma token'>,</span> <span class='dstring node'>&quot;sun-jre#{node['java']['jdk_version']}&quot;</span><span class='rbrack token'>]</span>
+<span class='rubyid_when when kw'>when</span> <span class='string val'>'windows'</span>
+  <span class='comment val'># Do nothing otherwise we will fall through to the else and set java_home to an invalid path, causing the installer to popup a dialog</span>
+<span class='rubyid_when when kw'>when</span> <span class='string val'>'mac_os_x'</span>
+  <span class='comment val'># Nothing. Homebrew driven.</span>
+<span class='rubyid_else else kw'>else</span>
+  <span class='rubyid_node identifier id'>node</span><span class='dot token'>.</span><span class='rubyid_default identifier id'>default</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'java_home'</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='string val'>'/usr/lib/jvm/default-java'</span>
+  <span class='rubyid_node identifier id'>node</span><span class='dot token'>.</span><span class='rubyid_default identifier id'>default</span><span class='lbrack token'>[</span><span class='string val'>'java'</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>'openjdk_packages'</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='dstring node'>&quot;openjdk-#{node['java']['jdk_version']}-jdk&quot;</span><span class='rbrack token'>]</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+
+    </div>
+  
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+</div>
+
+      <div id="footer">
+  Generated on Mon Sep 19 15:35:31 2016 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.5 (ruby-1.8.7).
+</div>
+
+    </div>
+  </body>
+</html>

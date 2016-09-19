@@ -1,0 +1,23 @@
+HTTP/1.1 302 Found
+Date: Mon, 19 Sep 2016 12:01:23 GMT
+Location: http://192.168.33.135:9080/jenkins/
+Content-Length: 0
+Server: Jetty(9.2.z-SNAPSHOT)
+
+HTTP/1.1 200 OK
+Date: Mon, 19 Sep 2016 12:01:23 GMT
+X-Content-Type-Options: nosniff
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Cache-Control: no-cache,no-store,must-revalidate
+X-Hudson-Theme: default
+Content-Type: text/html;charset=UTF-8
+Set-Cookie: JSESSIONID.e23fb785=j6g0lxb8afny5dxjoljzph6m;Path=/jenkins;HttpOnly
+X-Hudson: 1.395
+X-Jenkins: 2.23
+X-Jenkins-Session: fe6d5717
+X-Frame-Options: sameorigin
+X-Instance-Identity: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsNiQYQluPJLqxVzqvKEXeD0LA1bl3IoatQs3Ke2YdYXyQabsRo7k53DHa2U6P17gINgsDn40EDBMvX+e8pveObR7hxHz3O9bdygdNyjW3cormiLzIXJrbgUR/yRbp00v38vhAPWaXkM6DlYoMHK0w1jWDx4upJosNI5lV49CI3KfuW14OIxjCeI7c3qYEp+SQNfO3Ef8ljRoGT7aMpceSH4eLgAFWNEqJ6ojRE3yeIPwu9YOfTfUR0hTQHTp2min0c+HapgS7jtuvU4Nm38ewg3ONWGO6RMAwrNl4u8XBSfA7mKFSGSE56zIi1WwtV3nn/GSGkCpkGR5yYDH+E00mwIDAQAB
+X-SSH-Endpoint: 192.168.33.135:37611
+Content-Length: 15284
+Server: Jetty(9.2.z-SNAPSHOT)
+
