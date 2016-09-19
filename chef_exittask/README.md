@@ -53,7 +53,7 @@ Yard-chef:
 It has generated documentation, but it is very poor (in cookbooks/doc)
 
 
-
+https://github.com/MNTLab/cm-ansible-2/tree/vitali_shulhach/vagrant/ansible - ansible original task
 
 
 
