@@ -40,7 +40,7 @@ Roles
   }
 
 Results:
-_ _ _ _
+------
 see EXIT_TASK.log
 ------
 
@@ -55,5 +55,16 @@ It has generated documentation, but it is very poor (in cookbooks/doc)
 
 https://github.com/MNTLab/cm-ansible-2/tree/vitali_shulhach/vagrant/ansible - ansible original task
 
-
-
+------
+##Brief summary:
+------
+1. I have used the same vagrant virtual machine as in previous task.
+2. Provision was started as a EXIT_TASK role, witch included 3 cook books: 
+'web_nginx'
+'tomcat'
+'jenkins_task'
+3. Jenkins cookbook installed first, tomcat - second, and nginx was the last one to exclude errors of missing listeners on the binded ports for first two instances.
+4. Modules and job into jenkins was imported as a collection of the files and folders. Pipeline started and built successfully.
+The result is on the [screenshot]( application_success.png )
+5. Kitchen test ended successfully[log]( /.kitchen/logs/default-centos-6.log )
+6. Chef yard generated the [documentation](/doc),but it is very little. 
