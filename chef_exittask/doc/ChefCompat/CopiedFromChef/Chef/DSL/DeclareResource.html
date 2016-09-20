@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: ChefCompat::CopiedFromChef::Chef::DSL::DeclareResource
+  
+    &mdash; Documentation by YARD 0.9.5
+  
+</title>
+
+  <link rel="stylesheet" href="../../../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "ChefCompat::CopiedFromChef::Chef::DSL::DeclareResource";
+  relpath = '../../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../../_index.html">Index (D)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../../ChefCompat.html" title="ChefCompat (module)">ChefCompat</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../../CopiedFromChef.html" title="ChefCompat::CopiedFromChef (module)">CopiedFromChef</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Chef.html" title="ChefCompat::CopiedFromChef::Chef (class)">Chef</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../DSL.html" title="ChefCompat::CopiedFromChef::Chef::DSL (module)">DSL</a></span></span>
+     &raquo; 
+    <span class="title">DeclareResource</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="cookbooks_list_link"
+        href="../../../../cookbooks_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="../../../../class_list.html"></iframe>
+
+      <div id="content"><h1>Module: ChefCompat::CopiedFromChef::Chef::DSL::DeclareResource
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+  <dl>
+    <dt>Included in:</dt>
+    <dd><span class='object_link'><a href="../../../../AptUpdate.html" title="AptUpdate (class)">AptUpdate</a></span>, <span class='object_link'><a href="Core.html" title="ChefCompat::CopiedFromChef::Chef::DSL::Core (module)">Core</a></span></dd>
+  </dl>
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>compat_resource/files/lib/chef_compat/copied_from_chef/chef/dsl/declare_resource.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#build_resource-instance_method" title="#build_resource (instance method)">#<strong>build_resource</strong>(type, name, created_at = nil, run_context: self.run_context, &amp;resource_attrs_block)  &#x21d2; Chef::Resource </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Instantiate a resource of the given <tt>type</tt> with the given
+<tt>name</tt> and attributes as given in the <tt>resource_attrs_block</tt>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#declare_resource-instance_method" title="#declare_resource (instance method)">#<strong>declare_resource</strong>(type, name, created_at = nil, run_context: self.run_context, create_if_missing: false, &amp;resource_attrs_block)  &#x21d2; Chef::Resource </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Instantiates a resource (via #build_resource), then adds it to the resource
+collection.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_resource-instance_method" title="#delete_resource (instance method)">#<strong>delete_resource</strong>(type, name, run_context: self.run_context)  &#x21d2; Chef::Resource </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Lookup a resource in the resource collection by name and delete it.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_resource%21-instance_method" title="#delete_resource! (instance method)">#<strong>delete_resource!</strong>(type, name, run_context: self.run_context)  &#x21d2; Chef::Resource </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Lookup a resource in the resource collection by name and delete it.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#edit_resource-instance_method" title="#edit_resource (instance method)">#<strong>edit_resource</strong>(type, name, created_at = nil, run_context: self.run_context, &amp;resource_attrs_block)  &#x21d2; Chef::Resource </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Lookup a resource in the resource collection by name.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#edit_resource%21-instance_method" title="#edit_resource! (instance method)">#<strong>edit_resource!</strong>(type, name, created_at = nil, run_context: self.run_context, &amp;resource_attrs_block)  &#x21d2; Chef::Resource </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Lookup a resource in the resource collection by name and edit the resource.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_resource-instance_method" title="#find_resource (instance method)">#<strong>find_resource</strong>(type, name, created_at: nil, run_context: self.run_context, &amp;resource_attrs_block)  &#x21d2; Chef::Resource </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Lookup a resource in the resource collection by name.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_resource%21-instance_method" title="#find_resource! (instance method)">#<strong>find_resource!</strong>(type, name, run_context: self.run_context)  &#x21d2; Chef::Resource </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Lookup a resource in the resource collection by name.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#with_run_context-instance_method" title="#with_run_context (instance method)">#<strong>with_run_context</strong>(rc)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Helper for switching run_contexts.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="build_resource-instance_method">
+  
+    #<strong>build_resource</strong>(type, name, created_at = nil, run_context: self.run_context, &amp;resource_attrs_block)  &#x21d2; <tt><span class='object_link'><a href="../Resource.html" title="ChefCompat::CopiedFromChef::Chef::Resource (class)">Chef::Resource</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Instantiate a resource of the given <tt>type</tt> with the given
+<tt>name</tt> and attributes as given in the <tt>resource_attrs_block</tt>.
+</p>
+<p>
+The resource is NOT added to the resource collection.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='rubyid_build_resource identifier id'>build_resource</span><span class='lparen token'>(</span><span class='symbol val'>:file</span><span class='comma token'>,</span> <span class='string val'>'/x/y.txy'</span><span class='comma token'>,</span> <span class='rubyid_caller identifier id'>caller</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span><span class='rparen token'>)</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:delete</span>
+<span class='rubyid_end end kw'>end</span>
+</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>type</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The type of resource (e.g. `:file` or `:package`)
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The name of the resource (e.g. &#8217;/x/y.txt&#8217; or
+&#8216;apache2&#8217;)
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>created_at</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The caller of the resource. Use `caller[0]` to get the caller of your
+function. Defaults to the caller of this function.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>run_context</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../../Chef/RunContext.html" title="Chef::RunContext (class)">Chef::RunContext</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the run_context of the resource collection to operate on
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>resource_attrs_block</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+A block that lets you set attributes of the resource (it is
+instance_eval&#8217;d on the resource instance).
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Resource.html" title="ChefCompat::CopiedFromChef::Chef::Resource (class)">Chef::Resource</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The new resource.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/dsl/declare_resource.rb', line 286</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_build_resource identifier id'>build_resource</span><span class='lparen token'>(</span><span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_created_at identifier id'>created_at</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='label val'>run_context:</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_run_context identifier id'>run_context</span><span class='comma token'>,</span> <span class='bitand op'>&amp;</span><span class='rubyid_resource_attrs_block identifier id'>resource_attrs_block</span><span class='rparen token'>)</span>
+  <span class='rubyid_created_at identifier id'>created_at</span> <span class='opasgn op'>||=</span> <span class='rubyid_caller identifier id'>caller</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span>
+
+  <span class='comment val'># this needs to be lazy in order to avoid circular dependencies since ResourceBuilder</span>
+  <span class='comment val'># will requires the entire provider+resolver universe</span>
+  <span class='rubyid_require identifier id'>require</span> <span class='string val'>&quot;chef_compat/copied_from_chef/chef/resource_builder&quot;</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_ResourceBuilder constant id'>ResourceBuilder</span><span class='rparen token'>)</span>
+
+  <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_ResourceBuilder constant id'>ResourceBuilder</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span>
+    <span class='label val'>type:</span>                <span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span>
+    <span class='label val'>name:</span>                <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span>
+    <span class='label val'>created_at:</span>          <span class='rubyid_created_at identifier id'>created_at</span><span class='comma token'>,</span>
+    <span class='label val'>params:</span>              <span class='rubyid_@params ivar id'>@params</span><span class='comma token'>,</span>
+    <span class='label val'>run_context:</span>         <span class='rubyid_run_context identifier id'>run_context</span><span class='comma token'>,</span>
+    <span class='label val'>cookbook_name:</span>       <span class='rubyid_cookbook_name identifier id'>cookbook_name</span><span class='comma token'>,</span>
+    <span class='label val'>recipe_name:</span>         <span class='rubyid_recipe_name identifier id'>recipe_name</span><span class='comma token'>,</span>
+    <span class='label val'>enclosing_provider:</span>  <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_is_a? fid id'>is_a?</span><span class='lparen token'>(</span><span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Provider constant id'>Provider</span><span class='rparen token'>)</span> <span class='question op'>?</span> <span class='rubyid_self self kw'>self</span> <span class='colon op'>:</span> <span class='rubyid_nil nil kw'>nil</span>
+  <span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_build identifier id'>build</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='rubyid_resource_attrs_block identifier id'>resource_attrs_block</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="declare_resource-instance_method">
+  
+    #<strong>declare_resource</strong>(type, name, created_at = nil, run_context: self.run_context, create_if_missing: false, &amp;resource_attrs_block)  &#x21d2; <tt><span class='object_link'><a href="../Resource.html" title="ChefCompat::CopiedFromChef::Chef::Resource (class)">Chef::Resource</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Instantiates a resource (via #build_resource), then adds it to the resource
+collection. Note that resource classes are looked up directly, so this will
+create the resource you intended even if the method name corresponding to
+that resource has been overridden.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='rubyid_declare_resource identifier id'>declare_resource</span><span class='lparen token'>(</span><span class='symbol val'>:file</span><span class='comma token'>,</span> <span class='string val'>'/x/y.txy'</span><span class='comma token'>,</span> <span class='rubyid_caller identifier id'>caller</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span><span class='rparen token'>)</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:delete</span>
+<span class='rubyid_end end kw'>end</span>
+<span class='comment val'># Equivalent to</span>
+<span class='rubyid_file identifier id'>file</span> <span class='string val'>'/x/y.txt'</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:delete</span>
+<span class='rubyid_end end kw'>end</span>
+</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>type</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The type of resource (e.g. `:file` or `:package`)
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The name of the resource (e.g. &#8217;/x/y.txt&#8217; or
+&#8216;apache2&#8217;)
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>created_at</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The caller of the resource. Use `caller[0]` to get the caller of your
+function. Defaults to the caller of this function.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>run_context</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../../Chef/RunContext.html" title="Chef::RunContext (class)">Chef::RunContext</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the run_context of the resource collection to operate on
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>resource_attrs_block</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+A block that lets you set attributes of the resource (it is
+instance_eval&#8217;d on the resource instance).
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Resource.html" title="ChefCompat::CopiedFromChef::Chef::Resource (class)">Chef::Resource</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The new resource.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/dsl/declare_resource.rb', line 250</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_declare_resource identifier id'>declare_resource</span><span class='lparen token'>(</span><span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_created_at identifier id'>created_at</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='label val'>run_context:</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_run_context identifier id'>run_context</span><span class='comma token'>,</span> <span class='label val'>create_if_missing:</span> <span class='rubyid_false false kw'>false</span><span class='comma token'>,</span> <span class='bitand op'>&amp;</span><span class='rubyid_resource_attrs_block identifier id'>resource_attrs_block</span><span class='rparen token'>)</span>
+  <span class='rubyid_created_at identifier id'>created_at</span> <span class='opasgn op'>||=</span> <span class='rubyid_caller identifier id'>caller</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span>
+
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_create_if_missing identifier id'>create_if_missing</span>
+    <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Log constant id'>Log</span><span class='dot token'>.</span><span class='rubyid_deprecation identifier id'>deprecation</span> <span class='string val'>&quot;build_resource with a create_if_missing flag is deprecated, use edit_resource instead&quot;</span>
+    <span class='comment val'># midly goofy since we call edit_resource only to re-call ourselves, but that's why its deprecated...</span>
+    <span class='rubyid_return return kw'>return</span> <span class='rubyid_edit_resource identifier id'>edit_resource</span><span class='lparen token'>(</span><span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_created_at identifier id'>created_at</span><span class='comma token'>,</span> <span class='label val'>run_context:</span> <span class='rubyid_run_context identifier id'>run_context</span><span class='comma token'>,</span> <span class='bitand op'>&amp;</span><span class='rubyid_resource_attrs_block identifier id'>resource_attrs_block</span><span class='rparen token'>)</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_resource identifier id'>resource</span> <span class='assign token'>=</span> <span class='rubyid_build_resource identifier id'>build_resource</span><span class='lparen token'>(</span><span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_created_at identifier id'>created_at</span><span class='comma token'>,</span> <span class='bitand op'>&amp;</span><span class='rubyid_resource_attrs_block identifier id'>resource_attrs_block</span><span class='rparen token'>)</span>
+
+  <span class='rubyid_run_context identifier id'>run_context</span><span class='dot token'>.</span><span class='rubyid_resource_collection identifier id'>resource_collection</span><span class='dot token'>.</span><span class='rubyid_insert identifier id'>insert</span><span class='lparen token'>(</span><span class='rubyid_resource identifier id'>resource</span><span class='comma token'>,</span> <span class='label val'>resource_type:</span> <span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='label val'>instance_name:</span> <span class='rubyid_name identifier id'>name</span><span class='rparen token'>)</span>
+  <span class='rubyid_resource identifier id'>resource</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete_resource-instance_method">
+  
+    #<strong>delete_resource</strong>(type, name, run_context: self.run_context)  &#x21d2; <tt><span class='object_link'><a href="../Resource.html" title="ChefCompat::CopiedFromChef::Chef::Resource (class)">Chef::Resource</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Lookup a resource in the resource collection by name and delete it. Returns
+nil if the resource is not found and should not fail.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='rubyid_delete_resource identifier id'>delete_resource</span><span class='lparen token'>(</span><span class='symbol val'>:template</span><span class='comma token'>,</span> <span class='string val'>'/x/y.txy'</span><span class='rparen token'>)</span>
+</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>type</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The type of resource (e.g. `:file` or `:package`)
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The name of the resource (e.g. &#8217;/x/y.txt&#8217; or
+&#8216;apache2&#8217;)
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>run_context</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../../Chef/RunContext.html" title="Chef::RunContext (class)">Chef::RunContext</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the run_context of the resource collection to operate on
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Resource.html" title="ChefCompat::CopiedFromChef::Chef::Resource (class)">Chef::Resource</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The resource
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+114
+115
+116
+117
+118</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/dsl/declare_resource.rb', line 114</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_delete_resource identifier id'>delete_resource</span><span class='lparen token'>(</span><span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='label val'>run_context:</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_run_context identifier id'>run_context</span><span class='rparen token'>)</span>
+  <span class='rubyid_delete_resource! fid id'>delete_resource!</span><span class='lparen token'>(</span><span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='label val'>run_context:</span> <span class='rubyid_run_context identifier id'>run_context</span><span class='rparen token'>)</span>
+<span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Exceptions constant id'>Exceptions</span><span class='colon2 op'>::</span><span class='rubyid_ResourceNotFound constant id'>ResourceNotFound</span>
+  <span class='rubyid_nil nil kw'>nil</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete_resource!-instance_method">
+  
+    #<strong>delete_resource!</strong>(type, name, run_context: self.run_context)  &#x21d2; <tt><span class='object_link'><a href="../Resource.html" title="ChefCompat::CopiedFromChef::Chef::Resource (class)">Chef::Resource</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Lookup a resource in the resource collection by name and delete it. This
+will raise Chef::Exceptions::ResourceNotFound if the resource is not found.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='rubyid_delete_resource! fid id'>delete_resource!</span><span class='lparen token'>(</span><span class='symbol val'>:template</span><span class='comma token'>,</span> <span class='string val'>'/x/y.txy'</span><span class='rparen token'>)</span>
+</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>type</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The type of resource (e.g. `:file` or `:package`)
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The name of the resource (e.g. &#8217;/x/y.txt&#8217; or
+&#8216;apache2&#8217;)
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>run_context</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../../Chef/RunContext.html" title="Chef::RunContext (class)">Chef::RunContext</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the run_context of the resource collection to operate on
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Resource.html" title="ChefCompat::CopiedFromChef::Chef::Resource (class)">Chef::Resource</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The resource
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/dsl/declare_resource.rb', line 90</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_delete_resource! fid id'>delete_resource!</span><span class='lparen token'>(</span><span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='label val'>run_context:</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_run_context identifier id'>run_context</span><span class='rparen token'>)</span>
+  <span class='rubyid_run_context identifier id'>run_context</span><span class='dot token'>.</span><span class='rubyid_resource_collection identifier id'>resource_collection</span><span class='dot token'>.</span><span class='rubyid_delete identifier id'>delete</span><span class='lparen token'>(</span><span class='dstring node'>&quot;#{type}[#{name}]&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_tap identifier id'>tap</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_resource identifier id'>resource</span><span class='bitor op'>|</span>
+    <span class='comment val'># Purge any pending notifications too. This will not raise an exception</span>
+    <span class='comment val'># if there are no notifications.</span>
+    <span class='rubyid_if if kw'>if</span> <span class='rubyid_resource identifier id'>resource</span>
+      <span class='rubyid_run_context identifier id'>run_context</span><span class='dot token'>.</span><span class='rubyid_before_notification_collection identifier id'>before_notification_collection</span><span class='dot token'>.</span><span class='rubyid_delete identifier id'>delete</span><span class='lparen token'>(</span><span class='rubyid_resource identifier id'>resource</span><span class='dot token'>.</span><span class='rubyid_declared_key identifier id'>declared_key</span><span class='rparen token'>)</span>
+      <span class='rubyid_run_context identifier id'>run_context</span><span class='dot token'>.</span><span class='rubyid_immediate_notification_collection identifier id'>immediate_notification_collection</span><span class='dot token'>.</span><span class='rubyid_delete identifier id'>delete</span><span class='lparen token'>(</span><span class='rubyid_resource identifier id'>resource</span><span class='dot token'>.</span><span class='rubyid_declared_key identifier id'>declared_key</span><span class='rparen token'>)</span>
+      <span class='rubyid_run_context identifier id'>run_context</span><span class='dot token'>.</span><span class='rubyid_delayed_notification_collection identifier id'>delayed_notification_collection</span><span class='dot token'>.</span><span class='rubyid_delete identifier id'>delete</span><span class='lparen token'>(</span><span class='rubyid_resource identifier id'>resource</span><span class='dot token'>.</span><span class='rubyid_declared_key identifier id'>declared_key</span><span class='rparen token'>)</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="edit_resource-instance_method">
+  
+    #<strong>edit_resource</strong>(type, name, created_at = nil, run_context: self.run_context, &amp;resource_attrs_block)  &#x21d2; <tt><span class='object_link'><a href="../Resource.html" title="ChefCompat::CopiedFromChef::Chef::Resource (class)">Chef::Resource</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Lookup a resource in the resource collection by name. If it exists, return
+it. If it does not exist, create it. This is a useful function for
+accumulator patterns. In CRUD terminology this is an &quot;upsert&quot;
+operation and is used to assert that the resource must exist with the
+specified properties.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='rubyid_resource identifier id'>resource</span> <span class='assign token'>=</span> <span class='rubyid_edit_resource identifier id'>edit_resource</span><span class='lparen token'>(</span><span class='symbol val'>:template</span><span class='comma token'>,</span> <span class='string val'>'/x/y.txy'</span><span class='rparen token'>)</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_source identifier id'>source</span> <span class='string val'>&quot;y.txy.erb&quot;</span>
+  <span class='rubyid_variables identifier id'>variables</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+<span class='rubyid_resource identifier id'>resource</span><span class='dot token'>.</span><span class='rubyid_variables identifier id'>variables</span><span class='dot token'>.</span><span class='rubyid_merge! fid id'>merge!</span><span class='lparen token'>(</span><span class='lbrace token'>{</span> <span class='label val'>home:</span> <span class='string val'>&quot;/home/klowns&quot;</span>  <span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>type</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The type of resource (e.g. `:file` or `:package`)
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The name of the resource (e.g. &#8217;/x/y.txt&#8217; or
+&#8216;apache2&#8217;)
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>created_at</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The caller of the resource. Use `caller[0]` to get the caller of your
+function. Defaults to the caller of this function.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>run_context</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../../Chef/RunContext.html" title="Chef::RunContext (class)">Chef::RunContext</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the run_context of the resource collection to operate on
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>resource_attrs_block</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+A block that lets you set attributes of the resource (it is
+instance_eval&#8217;d on the resource instance).
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Resource.html" title="ChefCompat::CopiedFromChef::Chef::Resource (class)">Chef::Resource</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The updated or created resource
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+166
+167
+168
+169
+170</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/dsl/declare_resource.rb', line 166</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_edit_resource identifier id'>edit_resource</span><span class='lparen token'>(</span><span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_created_at identifier id'>created_at</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='label val'>run_context:</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_run_context identifier id'>run_context</span><span class='comma token'>,</span> <span class='bitand op'>&amp;</span><span class='rubyid_resource_attrs_block identifier id'>resource_attrs_block</span><span class='rparen token'>)</span>
+  <span class='rubyid_edit_resource! fid id'>edit_resource!</span><span class='lparen token'>(</span><span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_created_at identifier id'>created_at</span><span class='comma token'>,</span> <span class='label val'>run_context:</span> <span class='rubyid_run_context identifier id'>run_context</span><span class='comma token'>,</span> <span class='bitand op'>&amp;</span><span class='rubyid_resource_attrs_block identifier id'>resource_attrs_block</span><span class='rparen token'>)</span>
+<span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Exceptions constant id'>Exceptions</span><span class='colon2 op'>::</span><span class='rubyid_ResourceNotFound constant id'>ResourceNotFound</span>
+  <span class='rubyid_declare_resource identifier id'>declare_resource</span><span class='lparen token'>(</span><span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_created_at identifier id'>created_at</span><span class='comma token'>,</span> <span class='label val'>run_context:</span> <span class='rubyid_run_context identifier id'>run_context</span><span class='comma token'>,</span> <span class='bitand op'>&amp;</span><span class='rubyid_resource_attrs_block identifier id'>resource_attrs_block</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="edit_resource!-instance_method">
+  
+    #<strong>edit_resource!</strong>(type, name, created_at = nil, run_context: self.run_context, &amp;resource_attrs_block)  &#x21d2; <tt><span class='object_link'><a href="../Resource.html" title="ChefCompat::CopiedFromChef::Chef::Resource (class)">Chef::Resource</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Lookup a resource in the resource collection by name and edit the resource.
+If the resource is not found this will raise
+Chef::Exceptions::ResourceNotFound. This is the correct API to use for
+&quot;chef_rewind&quot; functionality.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='rubyid_edit_resource! fid id'>edit_resource!</span><span class='lparen token'>(</span><span class='symbol val'>:template</span><span class='comma token'>,</span> <span class='string val'>'/x/y.txy'</span><span class='rparen token'>)</span> <span class='rubyid_do do kw'>do</span>
+  <span class='label val'>cookbook_name:</span> <span class='rubyid_cookbook_name identifier id'>cookbook_name</span>
+<span class='rubyid_end end kw'>end</span>
+</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>type</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The type of resource (e.g. `:file` or `:package`)
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The name of the resource (e.g. &#8217;/x/y.txt&#8217; or
+&#8216;apache2&#8217;)
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>run_context</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../../Chef/RunContext.html" title="Chef::RunContext (class)">Chef::RunContext</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the run_context of the resource collection to operate on
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>resource_attrs_block</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+A block that lets you set attributes of the resource (it is
+instance_eval&#8217;d on the resource instance).
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Resource.html" title="ChefCompat::CopiedFromChef::Chef::Resource (class)">Chef::Resource</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The updated resource
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+137
+138
+139
+140
+141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/dsl/declare_resource.rb', line 137</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_edit_resource! fid id'>edit_resource!</span><span class='lparen token'>(</span><span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_created_at identifier id'>created_at</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='label val'>run_context:</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_run_context identifier id'>run_context</span><span class='comma token'>,</span> <span class='bitand op'>&amp;</span><span class='rubyid_resource_attrs_block identifier id'>resource_attrs_block</span><span class='rparen token'>)</span>
+  <span class='rubyid_resource identifier id'>resource</span> <span class='assign token'>=</span> <span class='rubyid_find_resource! fid id'>find_resource!</span><span class='lparen token'>(</span><span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='label val'>run_context:</span> <span class='rubyid_run_context identifier id'>run_context</span><span class='rparen token'>)</span>
+  <span class='rubyid_resource identifier id'>resource</span><span class='dot token'>.</span><span class='rubyid_instance_eval identifier id'>instance_eval</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='rubyid_resource_attrs_block identifier id'>resource_attrs_block</span><span class='rparen token'>)</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_block_given? fid id'>block_given?</span>
+  <span class='rubyid_resource identifier id'>resource</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_resource-instance_method">
+  
+    #<strong>find_resource</strong>(type, name, created_at: nil, run_context: self.run_context, &amp;resource_attrs_block)  &#x21d2; <tt><span class='object_link'><a href="../Resource.html" title="ChefCompat::CopiedFromChef::Chef::Resource (class)">Chef::Resource</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Lookup a resource in the resource collection by name. If the resource is
+not found the will be no exception raised and the call will return nil. If
+a block is given and no resource is found it will create the resource using
+the block, if the resource is found then the block will not be applied. The
+block version is similar to create_if_missing
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='rubyid_if if kw'>if</span> <span class='lparen token'>(</span> <span class='rubyid_find_resource identifier id'>find_resource</span><span class='lparen token'>(</span><span class='symbol val'>:template</span><span class='comma token'>,</span> <span class='string val'>'/x/y.txy'</span><span class='rparen token'>)</span> <span class='rparen token'>)</span>
+  <span class='comment val'># do something</span>
+<span class='rubyid_else else kw'>else</span>
+  <span class='comment val'># don't worry about the error</span>
+<span class='rubyid_end end kw'>end</span>
+</code></pre>
+    
+      
+      <pre class="example code"><code><span class='comment val'># this API can be used to return a resource from an outer run context, and will only create</span>
+<span class='comment val'># an action :nothing service if one does not already exist.</span>
+<span class='rubyid_resource identifier id'>resource</span> <span class='assign token'>=</span> <span class='rubyid_with_run_context identifier id'>with_run_context</span><span class='lparen token'>(</span><span class='symbol val'>:root</span><span class='rparen token'>)</span> <span class='rubyid_do do kw'>do</span>
+  <span class='rubyid_find_resource identifier id'>find_resource</span><span class='lparen token'>(</span><span class='symbol val'>:service</span><span class='comma token'>,</span> <span class='string val'>'whatever'</span><span class='rparen token'>)</span> <span class='rubyid_do do kw'>do</span>
+    <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:nothing</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>type</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The type of resource (e.g. `:file` or `:package`)
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The name of the resource (e.g. &#8217;/x/y.txt&#8217; or
+&#8216;apache2&#8217;)
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>run_context</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../../Chef/RunContext.html" title="Chef::RunContext (class)">Chef::RunContext</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the run_context of the resource collection to operate on
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Resource.html" title="ChefCompat::CopiedFromChef::Chef::Resource (class)">Chef::Resource</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The updated resource
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+217
+218
+219
+220
+221
+222
+223</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/dsl/declare_resource.rb', line 217</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_find_resource identifier id'>find_resource</span><span class='lparen token'>(</span><span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='label val'>created_at:</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='label val'>run_context:</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_run_context identifier id'>run_context</span><span class='comma token'>,</span> <span class='bitand op'>&amp;</span><span class='rubyid_resource_attrs_block identifier id'>resource_attrs_block</span><span class='rparen token'>)</span>
+  <span class='rubyid_find_resource! fid id'>find_resource!</span><span class='lparen token'>(</span><span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='label val'>run_context:</span> <span class='rubyid_run_context identifier id'>run_context</span><span class='rparen token'>)</span>
+<span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Exceptions constant id'>Exceptions</span><span class='colon2 op'>::</span><span class='rubyid_ResourceNotFound constant id'>ResourceNotFound</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_block_given? fid id'>block_given?</span>
+    <span class='rubyid_declare_resource identifier id'>declare_resource</span><span class='lparen token'>(</span><span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_created_at identifier id'>created_at</span><span class='comma token'>,</span> <span class='label val'>run_context:</span> <span class='rubyid_run_context identifier id'>run_context</span><span class='comma token'>,</span> <span class='bitand op'>&amp;</span><span class='rubyid_resource_attrs_block identifier id'>resource_attrs_block</span><span class='rparen token'>)</span>
+  <span class='rubyid_end end kw'>end</span> <span class='comment val'># returns nil otherwise</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_resource!-instance_method">
+  
+    #<strong>find_resource!</strong>(type, name, run_context: self.run_context)  &#x21d2; <tt><span class='object_link'><a href="../Resource.html" title="ChefCompat::CopiedFromChef::Chef::Resource (class)">Chef::Resource</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Lookup a resource in the resource collection by name. If the resource is
+not found this will raise Chef::Exceptions::ResourceNotFound. This API is
+identical to the resources() call and while it is a synonym it is not
+intended to deprecate that call.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='rubyid_resource identifier id'>resource</span> <span class='assign token'>=</span> <span class='rubyid_find_resource! fid id'>find_resource!</span><span class='lparen token'>(</span><span class='symbol val'>:template</span><span class='comma token'>,</span> <span class='string val'>'/x/y.txy'</span><span class='rparen token'>)</span>
+</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>type</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The type of resource (e.g. `:file` or `:package`)
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The name of the resource (e.g. &#8217;/x/y.txt&#8217; or
+&#8216;apache2&#8217;)
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>run_context</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../../Chef/RunContext.html" title="Chef::RunContext (class)">Chef::RunContext</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the run_context of the resource collection to operate on
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Resource.html" title="ChefCompat::CopiedFromChef::Chef::Resource (class)">Chef::Resource</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The updated resource
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+185
+186
+187
+188</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/dsl/declare_resource.rb', line 185</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_find_resource! fid id'>find_resource!</span><span class='lparen token'>(</span><span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='label val'>run_context:</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_run_context identifier id'>run_context</span><span class='rparen token'>)</span>
+  <span class='rubyid_raise identifier id'>raise</span> <span class='rubyid_ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>&quot;find_resource! does not take a block&quot;</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_block_given? fid id'>block_given?</span>
+  <span class='rubyid_run_context identifier id'>run_context</span><span class='dot token'>.</span><span class='rubyid_resource_collection identifier id'>resource_collection</span><span class='dot token'>.</span><span class='rubyid_find identifier id'>find</span><span class='lparen token'>(</span><span class='rubyid_type identifier id'>type</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_name identifier id'>name</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="with_run_context-instance_method">
+  
+    #<strong>with_run_context</strong>(rc)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Helper for switching run_contexts. Allows for using :parent or :root in
+place of passing the run_context. Executes the block in the run_context.
+Returns the return value of the passed block.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='comment val'># creates/returns a 'service[foo]' resource in the root run_context</span>
+<span class='rubyid_resource identifier id'>resource</span> <span class='assign token'>=</span> <span class='rubyid_with_run_context identifier id'>with_run_context</span><span class='lparen token'>(</span><span class='symbol val'>:root</span><span class='rparen token'>)</span>
+  <span class='rubyid_edit_resource identifier id'>edit_resource</span><span class='lparen token'>(</span><span class='symbol val'>:service</span><span class='comma token'>,</span> <span class='string val'>&quot;foo&quot;</span><span class='rparen token'>)</span> <span class='rubyid_do do kw'>do</span>
+    <span class='rubyid_action identifier id'>action</span> <span class='symbol val'>:nothing</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>rc</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../../Chef/RunContext.html" title="Chef::RunContext (class)">Chef::RunContext</a></span></tt>, <tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Either :root, :parent or a Chef::RunContext
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>
+return value of the block
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/dsl/declare_resource.rb', line 59</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_with_run_context identifier id'>with_run_context</span><span class='lparen token'>(</span><span class='rubyid_rc identifier id'>rc</span><span class='rparen token'>)</span>
+  <span class='rubyid_raise identifier id'>raise</span> <span class='rubyid_ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>&quot;with_run_context is useless without a block&quot;</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_block_given? fid id'>block_given?</span>
+  <span class='rubyid_old_run_context identifier id'>old_run_context</span> <span class='assign token'>=</span> <span class='rubyid_@run_context ivar id'>@run_context</span>
+  <span class='rubyid_@run_context ivar id'>@run_context</span> <span class='assign token'>=</span>
+    <span class='rubyid_case case kw'>case</span> <span class='rubyid_rc identifier id'>rc</span>
+    <span class='rubyid_when when kw'>when</span> <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_RunContext constant id'>RunContext</span>
+      <span class='rubyid_rc identifier id'>rc</span>
+    <span class='rubyid_when when kw'>when</span> <span class='symbol val'>:root</span>
+      <span class='rubyid_Chef constant id'>Chef</span><span class='dot token'>.</span><span class='rubyid_run_context identifier id'>run_context</span>
+    <span class='rubyid_when when kw'>when</span> <span class='symbol val'>:parent</span>
+      <span class='rubyid_run_context identifier id'>run_context</span><span class='dot token'>.</span><span class='rubyid_parent_run_context identifier id'>parent_run_context</span>
+    <span class='rubyid_else else kw'>else</span>
+      <span class='rubyid_raise identifier id'>raise</span> <span class='rubyid_ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>&quot;bad argument to run_context helper, must be :root, :parent, or a Chef::RunContext&quot;</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_yield yield kw'>yield</span>
+<span class='rubyid_ensure ensure kw'>ensure</span>
+  <span class='rubyid_@run_context ivar id'>@run_context</span> <span class='assign token'>=</span> <span class='rubyid_old_run_context identifier id'>old_run_context</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Sep 19 15:35:20 2016 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.5 (ruby-1.8.7).
+</div>
+
+    </div>
+  </body>
+</html>

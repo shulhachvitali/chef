@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: ChefCompat::CopiedFromChef::Chef::DSL::PlatformIntrospection
+  
+    &mdash; Documentation by YARD 0.9.5
+  
+</title>
+
+  <link rel="stylesheet" href="../../../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "ChefCompat::CopiedFromChef::Chef::DSL::PlatformIntrospection";
+  relpath = '../../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../../_index.html">Index (P)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../../ChefCompat.html" title="ChefCompat (module)">ChefCompat</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../../CopiedFromChef.html" title="ChefCompat::CopiedFromChef (module)">CopiedFromChef</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Chef.html" title="ChefCompat::CopiedFromChef::Chef (class)">Chef</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../DSL.html" title="ChefCompat::CopiedFromChef::Chef::DSL (module)">DSL</a></span></span>
+     &raquo; 
+    <span class="title">PlatformIntrospection</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="cookbooks_list_link"
+        href="../../../../cookbooks_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="../../../../class_list.html"></iframe>
+
+      <div id="content"><h1>Module: ChefCompat::CopiedFromChef::Chef::DSL::PlatformIntrospection
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+  <dl>
+    <dt>Included in:</dt>
+    <dd><span class='object_link'><a href="Universal.html" title="ChefCompat::CopiedFromChef::Chef::DSL::Universal (module)">Universal</a></span></dd>
+  </dl>
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>compat_resource/files/lib/chef_compat/copied_from_chef/chef/dsl/platform_introspection.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <h2>Chef::DSL::PlatformIntrospection</h2>
+<p>
+Provides the DSL for platform-dependent switch logic, such as
+#value_for_platform.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="PlatformIntrospection/PlatformDependentValue.html" title="ChefCompat::CopiedFromChef::Chef::DSL::PlatformIntrospection::PlatformDependentValue (class)">PlatformDependentValue</a></span>, <span class='object_link'><a href="PlatformIntrospection/PlatformFamilyDependentValue.html" title="ChefCompat::CopiedFromChef::Chef::DSL::PlatformIntrospection::PlatformFamilyDependentValue (class)">PlatformFamilyDependentValue</a></span>
+    
+  
+</p>
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#docker%3F-instance_method" title="#docker? (instance method)">#<strong>docker?</strong>(node = run_context.nil?? nil:run_context.node)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Shamelessly stolen from
+https://github.com/sethvargo/chef-sugar/blob/master/lib/chef/sugar/docker.rb
+Given a node object, returns whether the node is a docker container.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#platform%3F-instance_method" title="#platform? (instance method)">#<strong>platform?</strong>(*args)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Given a list of platforms, returns true if the current recipe is being run
+on a node with that platform, false otherwise.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#platform_family%3F-instance_method" title="#platform_family? (instance method)">#<strong>platform_family?</strong>(*args)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Given a list of platform families, returns true if the current recipe is
+being run on a node within that platform family, false otherwise.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#value_for_platform-instance_method" title="#value_for_platform (instance method)">#<strong>value_for_platform</strong>(platform_hash)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Given a hash similar to the one we use for Platforms, select a value from
+the hash.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#value_for_platform_family-instance_method" title="#value_for_platform_family (instance method)">#<strong>value_for_platform_family</strong>(platform_family_hash)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Given a hash mapping platform families to values, select a value from the
+hash.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="docker?-instance_method">
+  
+    #<strong>docker?</strong>(node = run_context.nil?? nil:run_context.node)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Shamelessly stolen from
+https://github.com/sethvargo/chef-sugar/blob/master/lib/chef/sugar/docker.rb
+Given a node object, returns whether the node is a docker container.
+</p>
+<h3>Parameters</h3>
+<table>
+<tr><td valign="top">node:</td><td>[Chef::Node] The node to check.
+
+</td></tr>
+</table>
+<h3>Returns</h3>
+<table>
+<tr><td valign="top">true:</td><td>if the current node is a docker container
+
+</td></tr>
+<tr><td valign="top">false:</td><td>if the current node is not a docker container
+
+</td></tr>
+</table>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+277
+278
+279
+280
+281
+282</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/dsl/platform_introspection.rb', line 277</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_docker? fid id'>docker?</span><span class='lparen token'>(</span><span class='rubyid_node identifier id'>node</span> <span class='assign token'>=</span> <span class='rubyid_run_context identifier id'>run_context</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span> <span class='integer val'>? </span><span class='rubyid_nil nil kw'>nil</span> <span class='colon op'>:</span> <span class='rubyid_run_context identifier id'>run_context</span><span class='dot token'>.</span><span class='rubyid_node identifier id'>node</span><span class='rparen token'>)</span>
+  <span class='comment val'># Using &quot;File.exist?('/.dockerinit') || File.exist?('/.dockerenv')&quot; makes Travis sad,</span>
+  <span class='comment val'># and that makes us sad too.</span>
+  <span class='rubyid_node identifier id'>node</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='symbol val'>:virtualization</span><span class='rbrack token'>]</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='symbol val'>:virtualization</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:systems</span><span class='rbrack token'>]</span> <span class='andop op'>&amp;&amp;</span>
+    <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='symbol val'>:virtualization</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:systems</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:docker</span><span class='rbrack token'>]</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='symbol val'>:virtualization</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:systems</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:docker</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='string val'>&quot;guest&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="platform?-instance_method">
+  
+    #<strong>platform?</strong>(*args)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Given a list of platforms, returns true if the current recipe is being run
+on a node with that platform, false otherwise.
+</p>
+<h3>Parameters</h3>
+<table>
+<tr><td valign="top">args:</td><td>A list of platforms. Each platform can be in string or symbol format.
+
+</td></tr>
+</table>
+<h3>Returns</h3>
+<table>
+<tr><td valign="top">true:</td><td>If the current platform is in the list
+
+</td></tr>
+<tr><td valign="top">false:</td><td>If the current platform is not in the list
+
+</td></tr>
+</table>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+178
+179
+180
+181
+182
+183
+184
+185
+186</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/dsl/platform_introspection.rb', line 178</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_platform? fid id'>platform?</span><span class='lparen token'>(</span><span class='mult op'>*</span><span class='rubyid_args identifier id'>args</span><span class='rparen token'>)</span>
+  <span class='rubyid_has_platform identifier id'>has_platform</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span>
+
+  <span class='rubyid_args identifier id'>args</span><span class='dot token'>.</span><span class='rubyid_flatten identifier id'>flatten</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_platform identifier id'>platform</span><span class='bitor op'>|</span>
+    <span class='rubyid_has_platform identifier id'>has_platform</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_platform identifier id'>platform</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span> <span class='eq op'>==</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='symbol val'>:platform</span><span class='rbrack token'>]</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_has_platform identifier id'>has_platform</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="platform_family?-instance_method">
+  
+    #<strong>platform_family?</strong>(*args)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Given a list of platform families, returns true if the current recipe is
+being run on a node within that platform family, false otherwise.
+</p>
+<h3>Parameters</h3>
+<table>
+<tr><td valign="top">args:</td><td>A list of platform families. Each platform family can be in string or
+symbol format.
+
+</td></tr>
+</table>
+<h3>Returns</h3>
+<table>
+<tr><td valign="top">true:</td><td>if the current node platform family is in the list.
+
+</td></tr>
+<tr><td valign="top">false:</td><td>if the current node platform family is not in the list.
+
+</td></tr>
+</table>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+262
+263
+264
+265
+266</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/dsl/platform_introspection.rb', line 262</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_platform_family? fid id'>platform_family?</span><span class='lparen token'>(</span><span class='mult op'>*</span><span class='rubyid_args identifier id'>args</span><span class='rparen token'>)</span>
+  <span class='rubyid_args identifier id'>args</span><span class='dot token'>.</span><span class='rubyid_flatten identifier id'>flatten</span><span class='dot token'>.</span><span class='rubyid_any? fid id'>any?</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_platform_family identifier id'>platform_family</span><span class='bitor op'>|</span>
+    <span class='rubyid_platform_family identifier id'>platform_family</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span> <span class='eq op'>==</span> <span class='rubyid_node identifier id'>node</span><span class='lbrack token'>[</span><span class='symbol val'>:platform_family</span><span class='rbrack token'>]</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="value_for_platform-instance_method">
+  
+    #<strong>value_for_platform</strong>(platform_hash)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Given a hash similar to the one we use for Platforms, select a value from
+the hash. Supports per platform defaults, along with a single base default.
+Arrays may be passed as hash keys and will be expanded.
+</p>
+<h3>Parameters</h3>
+<table>
+<tr><td valign="top">platform_hash:</td><td>A platform-style hash.
+
+</td></tr>
+</table>
+<h3>Returns</h3>
+<table>
+<tr><td valign="top">value:</td><td>Whatever the most specific value of the hash is.
+
+</td></tr>
+</table>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+165
+166
+167</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/dsl/platform_introspection.rb', line 165</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_value_for_platform identifier id'>value_for_platform</span><span class='lparen token'>(</span><span class='rubyid_platform_hash identifier id'>platform_hash</span><span class='rparen token'>)</span>
+  <span class='rubyid_PlatformDependentValue constant id'>PlatformDependentValue</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_platform_hash identifier id'>platform_hash</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_value_for_node identifier id'>value_for_node</span><span class='lparen token'>(</span><span class='rubyid_node identifier id'>node</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="value_for_platform_family-instance_method">
+  
+    #<strong>value_for_platform_family</strong>(platform_family_hash)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Given a hash mapping platform families to values, select a value from the
+hash. Supports a single base default if platform family is not in the map.
+Arrays may be passed as hash keys and will be expanded
+</p>
+<h3>Parameters</h3>
+<table>
+<tr><td valign="top">platform_family_hash:</td><td>A hash in the form { platform_family_name =&gt; value }
+
+</td></tr>
+</table>
+<h3>Returns</h3>
+<table>
+<tr><td valign="top">value:</td><td>Whatever the most specific value of the hash is.
+
+</td></tr>
+</table>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+249
+250
+251</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'compat_resource/files/lib/chef_compat/copied_from_chef/chef/dsl/platform_introspection.rb', line 249</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_value_for_platform_family identifier id'>value_for_platform_family</span><span class='lparen token'>(</span><span class='rubyid_platform_family_hash identifier id'>platform_family_hash</span><span class='rparen token'>)</span>
+  <span class='rubyid_PlatformFamilyDependentValue constant id'>PlatformFamilyDependentValue</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_platform_family_hash identifier id'>platform_family_hash</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_value_for_node identifier id'>value_for_node</span><span class='lparen token'>(</span><span class='rubyid_node identifier id'>node</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Sep 19 15:35:21 2016 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.5 (ruby-1.8.7).
+</div>
+
+    </div>
+  </body>
+</html>

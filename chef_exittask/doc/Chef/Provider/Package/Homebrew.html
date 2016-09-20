@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Chef::Provider::Package::Homebrew
+  
+    &mdash; Documentation by YARD 0.9.5
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Chef::Provider::Package::Homebrew";
+  relpath = '../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../_index.html">Index (H)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../Chef.html" title="Chef (class)">Chef</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Provider.html" title="Chef::Provider (class)">Provider</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Package.html" title="Chef::Provider::Package (class)">Package</a></span></span>
+     &raquo; 
+    <span class="title">Homebrew</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="cookbooks_list_link"
+        href="../../../cookbooks_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="../../../class_list.html"></iframe>
+
+      <div id="content"><h1>Class: Chef::Provider::Package::Homebrew
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Package.html" title="Chef::Provider::Package (class)">Chef::Provider::Package</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Package.html" title="Chef::Provider::Package (class)">Chef::Provider::Package</a></span></li>
+          
+            <li class="next">Chef::Provider::Package::Homebrew</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd>Mixin::ShellOut, <span class='object_link'><a href="../../../Homebrew/Mixin.html" title="Homebrew::Mixin (module)">Homebrew::Mixin</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>homebrew/libraries/homebrew_package.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Package
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#install_package-instance_method" title="#install_package (instance method)">#<strong>install_package</strong>(name, _version)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_current_resource-instance_method" title="#load_current_resource (instance method)">#<strong>load_current_resource</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#purge_package-instance_method" title="#purge_package (instance method)">#<strong>purge_package</strong>(name, version)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Homebrew doesn&#8217;t really have a notion of purging, so just remove.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_package-instance_method" title="#remove_package (instance method)">#<strong>remove_package</strong>(name, _version)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#upgrade_package-instance_method" title="#upgrade_package (instance method)">#<strong>upgrade_package</strong>(name, _version)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../../../Homebrew/Mixin.html" title="Homebrew::Mixin (module)">Homebrew::Mixin</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../../../Homebrew/Mixin.html#homebrew_owner-instance_method" title="Homebrew::Mixin#homebrew_owner (method)">#homebrew_owner</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="install_package-instance_method">
+  
+    #<strong>install_package</strong>(name, _version)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+49
+50
+51</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'homebrew/libraries/homebrew_package.rb', line 49</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_install_package identifier id'>install_package</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid__version identifier id'>_version</span><span class='rparen token'>)</span>
+  <span class='rubyid_brew identifier id'>brew</span><span class='lparen token'>(</span><span class='string val'>'install'</span><span class='comma token'>,</span> <span class='rubyid_@new_resource ivar id'>@new_resource</span><span class='dot token'>.</span><span class='rubyid_options identifier id'>options</span><span class='comma token'>,</span> <span class='rubyid_name identifier id'>name</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load_current_resource-instance_method">
+  
+    #<strong>load_current_resource</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43
+44
+45
+46
+47</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'homebrew/libraries/homebrew_package.rb', line 41</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_load_current_resource identifier id'>load_current_resource</span>
+  <span class='rubyid_@current_resource ivar id'>@current_resource</span> <span class='assign token'>=</span> <span class='rubyid_Chef constant id'>Chef</span><span class='colon2 op'>::</span><span class='rubyid_Resource constant id'>Resource</span><span class='colon2 op'>::</span><span class='rubyid_Package constant id'>Package</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_@new_resource ivar id'>@new_resource</span><span class='dot token'>.</span><span class='rubyid_name identifier id'>name</span><span class='rparen token'>)</span>
+  <span class='rubyid_@current_resource ivar id'>@current_resource</span><span class='dot token'>.</span><span class='rubyid_package_name identifier id'>package_name</span><span class='lparen token'>(</span><span class='rubyid_@new_resource ivar id'>@new_resource</span><span class='dot token'>.</span><span class='rubyid_package_name identifier id'>package_name</span><span class='rparen token'>)</span>
+  <span class='rubyid_@current_resource ivar id'>@current_resource</span><span class='dot token'>.</span><span class='rubyid_version identifier id'>version</span><span class='lparen token'>(</span><span class='rubyid_current_installed_version identifier id'>current_installed_version</span><span class='rparen token'>)</span>
+
+  <span class='rubyid_@current_resource ivar id'>@current_resource</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="purge_package-instance_method">
+  
+    #<strong>purge_package</strong>(name, version)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Homebrew doesn&#8217;t really have a notion of purging, so just remove.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+62
+63
+64
+65</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'homebrew/libraries/homebrew_package.rb', line 62</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_purge_package identifier id'>purge_package</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_version identifier id'>version</span><span class='rparen token'>)</span>
+  <span class='rubyid_@new_resource ivar id'>@new_resource</span><span class='dot token'>.</span><span class='rubyid_options identifier id'>options</span> <span class='assign token'>=</span> <span class='lparen token'>(</span><span class='lparen token'>(</span><span class='rubyid_@new_resource ivar id'>@new_resource</span><span class='dot token'>.</span><span class='rubyid_options identifier id'>options</span> <span class='orop op'>||</span> <span class='string val'>''</span><span class='rparen token'>)</span> <span class='lshft op'>&lt;&lt;</span> <span class='string val'>' --force'</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_strip identifier id'>strip</span>
+  <span class='rubyid_remove_package identifier id'>remove_package</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_version identifier id'>version</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="remove_package-instance_method">
+  
+    #<strong>remove_package</strong>(name, _version)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'homebrew/libraries/homebrew_package.rb', line 57</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_remove_package identifier id'>remove_package</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid__version identifier id'>_version</span><span class='rparen token'>)</span>
+  <span class='rubyid_brew identifier id'>brew</span><span class='lparen token'>(</span><span class='string val'>'uninstall'</span><span class='comma token'>,</span> <span class='rubyid_@new_resource ivar id'>@new_resource</span><span class='dot token'>.</span><span class='rubyid_options identifier id'>options</span><span class='comma token'>,</span> <span class='rubyid_name identifier id'>name</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="upgrade_package-instance_method">
+  
+    #<strong>upgrade_package</strong>(name, _version)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'homebrew/libraries/homebrew_package.rb', line 53</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_upgrade_package identifier id'>upgrade_package</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid__version identifier id'>_version</span><span class='rparen token'>)</span>
+  <span class='rubyid_brew identifier id'>brew</span><span class='lparen token'>(</span><span class='string val'>'upgrade'</span><span class='comma token'>,</span> <span class='rubyid_name identifier id'>name</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Sep 19 15:35:23 2016 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.5 (ruby-1.8.7).
+</div>
+
+    </div>
+  </body>
+</html>

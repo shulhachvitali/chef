@@ -1,0 +1,22 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: centos/6
+
+suites:
+  - name: default
+    cookbook 'jenkins_task', path: '/home/Student/Documents/chef-test-task/chef-repo/cookbooks/jenkins_task'
+    cookbook 'tomcat', path: '/home/Student/Documents/chef-test-task/chef-repo/cookbooks/tomcat'
+    cookbook 'web_nginx', path: '/home/Student/Documents/chef-test-task/chef-repo/cookbooks/web_nginx'
+    run_list: 
+      - recipe[jenkins_task::default]
+    attributes:
+       web_ports:
+         nginx_port: '80'
+         jenkins_port: '9080'
+         tomcat_port: '9090'

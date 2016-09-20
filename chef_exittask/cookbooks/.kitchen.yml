@@ -1,0 +1,25 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: ubuntu-14.04
+  - name: centos-7.2
+
+suites:
+    - name: default
+    run_list:
+      recipe[jenkins_task]
+    attributes:
+  - name: default
+    run_list:
+      recipe[tomcat]
+    attributes:
+  - name: default
+    run_list: 
+      - recipe[web_nginx]
+    attributes:
+   

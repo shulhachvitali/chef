@@ -1,0 +1,26 @@
+server {
+	listen <%= @nginx_default_port %> ;
+    server_name localhost;
+
+    location /jenkins {
+	proxy_set_header	Host $host:$server_port;
+	proxy_set_header	X-Real-Ip $remote_addr;
+	proxy_set_header	X-Forwarded-For $proxy_add_x_forwarded_for;
+	proxy_set_header        X-Forwarded-Proto $scheme;
+	
+	# Fix the "It appears that your reverse proxy set up is broken" error.
+	proxy_pass	http://localhost:<%= @jenkins_port %>;
+	proxy_read_timeout	90;
+	proxy_redirect		http://localhost/jenkins $scheme://localhost:<%= @jenkins_port %>/jenkins;
+    }
+
+
+    location /mnt-lab {
+	proxy_set_header	Host $host;
+	proxy_set_header	X-Real-Ip $remote_addr;
+	proxy_set_header	X-Forwarded-For $proxy_add_x_forwarded_for;
+	proxy_pass	http://localhost:<%= @tomcat_port %>/mnt-lab;
+	proxy_read_timeout	90;
+	proxy_redirect		default;
+    }
+}

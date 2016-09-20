@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Windows::Version
+  
+    &mdash; Documentation by YARD 0.9.5
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Windows::Version";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (V)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Windows.html" title="Windows (module)">Windows</a></span></span>
+     &raquo; 
+    <span class="title">Version</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="cookbooks_list_link"
+        href="../cookbooks_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="../class_list.html"></iframe>
+
+      <div id="content"><h1>Class: Windows::Version
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Windows::Version</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>windows/libraries/version.rb</dd>
+  </dl>
+  
+</div>
+
+
+  <h2>Constant Summary</h2>
+  <dl class="constants">
+    
+      <dt id="VER_SUITE_BACKOFFICE-constant" class="">VER_SUITE_BACKOFFICE =
+        <div class="docstring">
+  <div class="discussion">
+    <p>
+Suite Masks Microsoft BackOffice components are installed.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='integer val'>0x00000004</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_VER_SUITE_BACKOFFICE constant id'>VER_SUITE_BACKOFFICE</span><span class='rparen token'>)</span>
+</pre></dd>
+    
+      <dt id="VER_SUITE_BLADE-constant" class="">VER_SUITE_BLADE =
+        <div class="docstring">
+  <div class="discussion">
+    <p>
+Windows Server 2003, Web Edition is installed.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='integer val'>0x00000400</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_VER_SUITE_BLADE constant id'>VER_SUITE_BLADE</span><span class='rparen token'>)</span>
+</pre></dd>
+    
+      <dt id="VER_SUITE_COMPUTE_SERVER-constant" class="">VER_SUITE_COMPUTE_SERVER =
+        <div class="docstring">
+  <div class="discussion">
+    <p>
+Windows Server 2003, Compute Cluster Edition is installed.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='integer val'>0x00004000</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_VER_SUITE_COMPUTE_SERVER constant id'>VER_SUITE_COMPUTE_SERVER</span><span class='rparen token'>)</span>
+</pre></dd>
+    
+      <dt id="VER_SUITE_DATACENTER-constant" class="">VER_SUITE_DATACENTER =
+        <div class="docstring">
+  <div class="discussion">
+    <p>
+Windows Server 2008 Datacenter, Windows Server 2003, Datacenter Edition, or
+Windows 2000 Datacenter Server is installed.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='integer val'>0x00000080</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_VER_SUITE_DATACENTER constant id'>VER_SUITE_DATACENTER</span><span class='rparen token'>)</span>
+</pre></dd>
+    
+      <dt id="VER_SUITE_ENTERPRISE-constant" class="">VER_SUITE_ENTERPRISE =
+        <div class="docstring">
+  <div class="discussion">
+    <p>
+Windows Server 2008 Enterprise, Windows Server 2003, Enterprise Edition, or
+Windows 2000 Advanced Server is installed. Refer to the Remarks section for
+more information about this bit flag.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='integer val'>0x00000002</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_VER_SUITE_ENTERPRISE constant id'>VER_SUITE_ENTERPRISE</span><span class='rparen token'>)</span>
+</pre></dd>
+    
+      <dt id="VER_SUITE_EMBEDDEDNT-constant" class="">VER_SUITE_EMBEDDEDNT =
+        <div class="docstring">
+  <div class="discussion">
+    <p>
+Windows XP Embedded is installed.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='integer val'>0x00000040</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_VER_SUITE_EMBEDDEDNT constant id'>VER_SUITE_EMBEDDEDNT</span><span class='rparen token'>)</span>
+</pre></dd>
+    
+      <dt id="VER_SUITE_PERSONAL-constant" class="">VER_SUITE_PERSONAL =
+        <div class="docstring">
+  <div class="discussion">
+    <p>
+Windows Vista Home Premium, Windows Vista Home Basic, or Windows XP Home
+Edition is installed.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='integer val'>0x00000200</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_VER_SUITE_PERSONAL constant id'>VER_SUITE_PERSONAL</span><span class='rparen token'>)</span>
+</pre></dd>
+    
+      <dt id="VER_SUITE_SINGLEUSERTS-constant" class="">VER_SUITE_SINGLEUSERTS =
+        <div class="docstring">
+  <div class="discussion">
+    <p>
+Remote Desktop is supported, but only one interactive session is supported.
+This value is set unless the system is running in application server mode.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='integer val'>0x00000100</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_VER_SUITE_SINGLEUSERTS constant id'>VER_SUITE_SINGLEUSERTS</span><span class='rparen token'>)</span>
+</pre></dd>
+    
+      <dt id="VER_SUITE_SMALLBUSINESS-constant" class="">VER_SUITE_SMALLBUSINESS =
+        <div class="docstring">
+  <div class="discussion">
+    <p>
+Microsoft Small Business Server was once installed on the system, but may
+have been upgraded to another version of Windows. Refer to the Remarks
+section for more information about this bit flag.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='integer val'>0x00000001</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_VER_SUITE_SMALLBUSINESS constant id'>VER_SUITE_SMALLBUSINESS</span><span class='rparen token'>)</span>
+</pre></dd>
+    
+      <dt id="VER_SUITE_SMALLBUSINESS_RESTRICTED-constant" class="">VER_SUITE_SMALLBUSINESS_RESTRICTED =
+        <div class="docstring">
+  <div class="discussion">
+    <p>
+Microsoft Small Business Server is installed with the restrictive client
+license in force. Refer to the Remarks section for more information about
+this bit flag.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='integer val'>0x00000020</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_VER_SUITE_SMALLBUSINESS_RESTRICTED constant id'>VER_SUITE_SMALLBUSINESS_RESTRICTED</span><span class='rparen token'>)</span>
+</pre></dd>
+    
+      <dt id="VER_SUITE_STORAGE_SERVER-constant" class="">VER_SUITE_STORAGE_SERVER =
+        <div class="docstring">
+  <div class="discussion">
+    <p>
+Windows Storage Server 2003 R2 or Windows Storage Server 2003is installed.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='integer val'>0x00002000</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_VER_SUITE_STORAGE_SERVER constant id'>VER_SUITE_STORAGE_SERVER</span><span class='rparen token'>)</span>
+</pre></dd>
+    
+      <dt id="VER_SUITE_TERMINAL-constant" class="">VER_SUITE_TERMINAL =
+        <div class="docstring">
+  <div class="discussion">
+    <p>
+Terminal Services is installed. This value is always set. If
+VER_SUITE_TERMINAL is set but VER_SUITE_SINGLEUSERTS is not set, the system
+is running in application server mode.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='integer val'>0x00000010</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_VER_SUITE_TERMINAL constant id'>VER_SUITE_TERMINAL</span><span class='rparen token'>)</span>
+</pre></dd>
+    
+      <dt id="VER_SUITE_WH_SERVER-constant" class="">VER_SUITE_WH_SERVER =
+        <div class="docstring">
+  <div class="discussion">
+    <p>
+Windows Home Server is installed.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='integer val'>0x00008000</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_VER_SUITE_WH_SERVER constant id'>VER_SUITE_WH_SERVER</span><span class='rparen token'>)</span>
+</pre></dd>
+    
+      <dt id="VER_NT_DOMAIN_CONTROLLER-constant" class="">VER_NT_DOMAIN_CONTROLLER =
+        <div class="docstring">
+  <div class="discussion">
+    <p>
+Product Type The system is a domain controller and the operating system is
+Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows
+Server 2003, or Windows 2000 Server.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='integer val'>0x0000002</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_VER_NT_DOMAIN_CONTROLLER constant id'>VER_NT_DOMAIN_CONTROLLER</span><span class='rparen token'>)</span>
+</pre></dd>
+    
+      <dt id="VER_NT_SERVER-constant" class="">VER_NT_SERVER =
+        <div class="docstring">
+  <div class="discussion">
+    <p>
+The operating system is Windows Server 2012, Windows Server 2008 R2,
+Windows Server 2008, Windows Server 2003, or Windows 2000 Server. Note that
+a server that is also a domain controller is reported as
+VER_NT_DOMAIN_CONTROLLER, not VER_NT_SERVER.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='integer val'>0x0000003</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_VER_NT_SERVER constant id'>VER_NT_SERVER</span><span class='rparen token'>)</span>
+</pre></dd>
+    
+      <dt id="VER_NT_WORKSTATION-constant" class="">VER_NT_WORKSTATION =
+        <div class="docstring">
+  <div class="discussion">
+    <p>
+The operating system is Windows 7, Windows Vista, Windows XP Professional,
+Windows XP Home Edition, or Windows 2000 Professional.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='integer val'>0x0000001</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_VER_NT_WORKSTATION constant id'>VER_NT_WORKSTATION</span><span class='rparen token'>)</span>
+</pre></dd>
+    
+      <dt id="SM_SERVERR2-constant" class="">SM_SERVERR2 =
+        <div class="docstring">
+  <div class="discussion">
+    <p>
+GetSystemMetrics The build number if the system is Windows Server 2003 R2;
+otherwise, 0.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='integer val'>89</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_SM_SERVERR2 constant id'>SM_SERVERR2</span><span class='rparen token'>)</span>
+</pre></dd>
+    
+      <dt id="SKU-constant" class="">SKU =
+        <div class="docstring">
+  <div class="discussion">
+    <p>
+http://msdn.microsoft.com/en-us/library/ms724358(v=vs.85).aspx
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace token'>{</span>
+  <span class='integer val'>0x00000006</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_BUSINESS'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Business'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000010</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_BUSINESS_N'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Business N'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000012</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_CLUSTER_SERVER'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'HPC Edition'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000008</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_DATACENTER_SERVER'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Server Datacenter (full installation)'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x0000000</span><span class='rubyid_C constant id'>C</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_DATACENTER_SERVER_CORE'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Server Datacenter (core installation)'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000027</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_DATACENTER_SERVER_CORE_V'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Server Datacenter without Hyper-V (core installation)'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000025</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_DATACENTER_SERVER_V'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Server Datacenter without Hyper-V (full installation)'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000004</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_ENTERPRISE'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Enterprise'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000046</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_ENTERPRISE_E'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Not supported'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x0000001</span><span class='rubyid_B constant id'>B</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_ENTERPRISE_N'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Enterprise N'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x0000000</span><span class='rubyid_A constant id'>A</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_ENTERPRISE_SERVER'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Server Enterprise (full installation)'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x0000000</span><span class='rubyid_E constant id'>E</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_ENTERPRISE_SERVER_CORE'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Server Enterprise (core installation)'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000029</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_ENTERPRISE_SERVER_CORE_V'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Server Enterprise without Hyper-V (core installation)'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x0000000</span><span class='rubyid_F constant id'>F</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_ENTERPRISE_SERVER_IA64'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Server Enterprise for Itanium-based Systems'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000026</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_ENTERPRISE_SERVER_V'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Server Enterprise without Hyper-V (full installation)'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000002</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_HOME_BASIC'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Home Basic'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000043</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_HOME_BASIC_E'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Not supported'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000005</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_HOME_BASIC_N'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Home Basic N'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000003</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_HOME_PREMIUM'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Home Premium'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000044</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_HOME_PREMIUM_E'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Not supported'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x0000001</span><span class='rubyid_A constant id'>A</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_HOME_PREMIUM_N'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Home Premium N'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x0000002</span><span class='rubyid_A constant id'>A</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_HYPERV'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Microsoft Hyper-V Server'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x0000001</span><span class='rubyid_E constant id'>E</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_MEDIUMBUSINESS_SERVER_MANAGEMENT'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Windows Essential Business Server Management Server'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000020</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_MEDIUMBUSINESS_SERVER_MESSAGING'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Windows Essential Business Server Messaging Server'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x0000001</span><span class='rubyid_F constant id'>F</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_MEDIUMBUSINESS_SERVER_SECURITY'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Windows Essential Business Server Security Server'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000030</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_PROFESSIONAL'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Professional'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000045</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_PROFESSIONAL_E'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Not supported'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000031</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_PROFESSIONAL_N'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Professional N'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000067</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_PROFESSIONAL_WMC'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Professional with Media Center'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000018</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_SERVER_FOR_SMALLBUSINESS'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Windows Server 2008 for Windows Essential Server Solutions'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000023</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_SERVER_FOR_SMALLBUSINESS_V'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Windows Server 2008 without Hyper-V for Windows Essential Server Solutions'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000021</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_SERVER_FOUNDATION'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Server Foundation'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000022</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_HOME_PREMIUM_SERVER'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Windows Home Server 2011'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000032</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_SB_SOLUTION_SERVER'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Windows Small Business Server 2011 Essentials'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000013</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_HOME_SERVER'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Windows Storage Server 2008 R2 Essentials'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000009</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_SMALLBUSINESS_SERVER'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Windows Small Business Server'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000038</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_SOLUTION_EMBEDDEDSERVER'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Windows MultiPoint Server'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000007</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_STANDARD_SERVER'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Server Standard (full installation)'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x0000000</span><span class='rubyid_D constant id'>D</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_STANDARD_SERVER_CORE'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Server Standard (core installation)'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000028</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_STANDARD_SERVER_CORE_V'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Server Standard without Hyper-V (core installation)'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000024</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_STANDARD_SERVER_V'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Server Standard without Hyper-V (full installation)'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x0000000</span><span class='rubyid_B constant id'>B</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_STARTER'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Starter'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000042</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_STARTER_E'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Not supported'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x0000002</span><span class='rubyid_F constant id'>F</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_STARTER_N'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Starter N'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000017</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_STORAGE_ENTERPRISE_SERVER'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Storage Server Enterprise'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000014</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_STORAGE_EXPRESS_SERVER'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Storage Server Express'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000015</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_STORAGE_STANDARD_SERVER'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Storage Server Standard'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000016</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_STORAGE_WORKGROUP_SERVER'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Storage Server Workgroup'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000000</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_UNDEFINED'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'An unknown product'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000001</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_ULTIMATE'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Ultimate'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000047</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_ULTIMATE_E'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Not supported'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x0000001</span><span class='rubyid_C constant id'>C</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_ULTIMATE_N'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Ultimate N'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x00000011</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_WEB_SERVER'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Web Server (full installation)'</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='integer val'>0x0000001</span><span class='rubyid_D constant id'>D</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>ms_const:</span> <span class='string val'>'PRODUCT_WEB_SERVER_CORE'</span><span class='comma token'>,</span> <span class='label val'>name:</span> <span class='string val'>'Web Server (core installation)'</span> <span class='rbrace token'>}</span>
+<span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_freeze identifier id'>freeze</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_SKU constant id'>SKU</span><span class='rparen token'>)</span>
+</pre></dd>
+    
+      <dt id="WIN_VERSIONS-constant" class="">WIN_VERSIONS =
+        
+      </dt>
+      <dd><pre class="code"><span class='lbrace token'>{</span>
+  <span class='string val'>'Windows Server 2012 R2'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>major:</span> <span class='integer val'>6</span><span class='comma token'>,</span> <span class='label val'>minor:</span> <span class='integer val'>3</span><span class='comma token'>,</span> <span class='label val'>callable:</span> <span class='minus op'>-</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='rubyid_@product_type ivar id'>@product_type</span> <span class='neq op'>!=</span> <span class='rubyid_VER_NT_WORKSTATION constant id'>VER_NT_WORKSTATION</span> <span class='rbrace token'>}</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='string val'>'Windows 8'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>major:</span> <span class='integer val'>6</span><span class='comma token'>,</span> <span class='label val'>minor:</span> <span class='integer val'>2</span><span class='comma token'>,</span> <span class='label val'>callable:</span> <span class='minus op'>-</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='rubyid_@product_type ivar id'>@product_type</span> <span class='eq op'>==</span> <span class='rubyid_VER_NT_WORKSTATION constant id'>VER_NT_WORKSTATION</span> <span class='rbrace token'>}</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='string val'>'Windows Server 2012'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>major:</span> <span class='integer val'>6</span><span class='comma token'>,</span> <span class='label val'>minor:</span> <span class='integer val'>2</span><span class='comma token'>,</span> <span class='label val'>callable:</span> <span class='minus op'>-</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='rubyid_@product_type ivar id'>@product_type</span> <span class='neq op'>!=</span> <span class='rubyid_VER_NT_WORKSTATION constant id'>VER_NT_WORKSTATION</span> <span class='rbrace token'>}</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='string val'>'Windows 7'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>major:</span> <span class='integer val'>6</span><span class='comma token'>,</span> <span class='label val'>minor:</span> <span class='integer val'>1</span><span class='comma token'>,</span> <span class='label val'>callable:</span> <span class='minus op'>-</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='rubyid_@product_type ivar id'>@product_type</span> <span class='eq op'>==</span> <span class='rubyid_VER_NT_WORKSTATION constant id'>VER_NT_WORKSTATION</span> <span class='rbrace token'>}</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='string val'>'Windows Server 2008 R2'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>major:</span> <span class='integer val'>6</span><span class='comma token'>,</span> <span class='label val'>minor:</span> <span class='integer val'>1</span><span class='comma token'>,</span> <span class='label val'>callable:</span> <span class='minus op'>-</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='rubyid_@product_type ivar id'>@product_type</span> <span class='neq op'>!=</span> <span class='rubyid_VER_NT_WORKSTATION constant id'>VER_NT_WORKSTATION</span> <span class='rbrace token'>}</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='string val'>'Windows Server 2008'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>major:</span> <span class='integer val'>6</span><span class='comma token'>,</span> <span class='label val'>minor:</span> <span class='integer val'>0</span><span class='comma token'>,</span> <span class='label val'>callable:</span> <span class='minus op'>-</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='rubyid_@product_type ivar id'>@product_type</span> <span class='neq op'>!=</span> <span class='rubyid_VER_NT_WORKSTATION constant id'>VER_NT_WORKSTATION</span> <span class='rbrace token'>}</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='string val'>'Windows Vista'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>major:</span> <span class='integer val'>6</span><span class='comma token'>,</span> <span class='label val'>minor:</span> <span class='integer val'>0</span><span class='comma token'>,</span> <span class='label val'>callable:</span> <span class='minus op'>-</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='rubyid_@product_type ivar id'>@product_type</span> <span class='eq op'>==</span> <span class='rubyid_VER_NT_WORKSTATION constant id'>VER_NT_WORKSTATION</span> <span class='rbrace token'>}</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='string val'>'Windows Server 2003 R2'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>major:</span> <span class='integer val'>5</span><span class='comma token'>,</span> <span class='label val'>minor:</span> <span class='integer val'>2</span><span class='comma token'>,</span> <span class='label val'>callable:</span> <span class='minus op'>-</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='rubyid_Win32API constant id'>Win32API</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>'user32'</span><span class='comma token'>,</span> <span class='string val'>'GetSystemMetrics'</span><span class='comma token'>,</span> <span class='string val'>'I'</span><span class='comma token'>,</span> <span class='string val'>'I'</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_call identifier id'>call</span><span class='lparen token'>(</span><span class='rubyid_SM_SERVERR2 constant id'>SM_SERVERR2</span><span class='rparen token'>)</span> <span class='neq op'>!=</span> <span class='integer val'>0</span> <span class='rbrace token'>}</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='string val'>'Windows Home Server'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>major:</span> <span class='integer val'>5</span><span class='comma token'>,</span> <span class='label val'>minor:</span> <span class='integer val'>2</span><span class='comma token'>,</span> <span class='label val'>callable:</span> <span class='minus op'>-</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='lparen token'>(</span><span class='rubyid_@product_suite ivar id'>@product_suite</span> <span class='bitand op'>&amp;</span> <span class='rubyid_VER_SUITE_WH_SERVER constant id'>VER_SUITE_WH_SERVER</span><span class='rparen token'>)</span> <span class='eq op'>==</span> <span class='rubyid_VER_SUITE_WH_SERVER constant id'>VER_SUITE_WH_SERVER</span> <span class='rbrace token'>}</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='string val'>'Windows Server 2003'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>major:</span> <span class='integer val'>5</span><span class='comma token'>,</span> <span class='label val'>minor:</span> <span class='integer val'>2</span><span class='comma token'>,</span> <span class='label val'>callable:</span> <span class='minus op'>-</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='rubyid_Win32API constant id'>Win32API</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>'user32'</span><span class='comma token'>,</span> <span class='string val'>'GetSystemMetrics'</span><span class='comma token'>,</span> <span class='string val'>'I'</span><span class='comma token'>,</span> <span class='string val'>'I'</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_call identifier id'>call</span><span class='lparen token'>(</span><span class='rubyid_SM_SERVERR2 constant id'>SM_SERVERR2</span><span class='rparen token'>)</span> <span class='eq op'>==</span> <span class='integer val'>0</span> <span class='rbrace token'>}</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='string val'>'Windows XP'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>major:</span> <span class='integer val'>5</span><span class='comma token'>,</span> <span class='label val'>minor:</span> <span class='integer val'>1</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+  <span class='string val'>'Windows 2000'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='label val'>major:</span> <span class='integer val'>5</span><span class='comma token'>,</span> <span class='label val'>minor:</span> <span class='integer val'>0</span> <span class='rbrace token'>}</span>
+<span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_freeze identifier id'>freeze</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_WIN_VERSIONS constant id'>WIN_VERSIONS</span><span class='rparen token'>)</span>
+</pre></dd>
+    
+  </dl>
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#build_number-instance_method" title="#build_number (instance method)">#<strong>build_number</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute build_number.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#major_version-instance_method" title="#major_version (instance method)">#<strong>major_version</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute major_version.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#minor_version-instance_method" title="#minor_version (instance method)">#<strong>minor_version</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute minor_version.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#product_suite-instance_method" title="#product_suite (instance method)">#<strong>product_suite</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute product_suite.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#product_type-instance_method" title="#product_type (instance method)">#<strong>product_type</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute product_type.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#service_pack_major_version-instance_method" title="#service_pack_major_version (instance method)">#<strong>service_pack_major_version</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute service_pack_major_version.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#service_pack_minor_version-instance_method" title="#service_pack_minor_version (instance method)">#<strong>service_pack_minor_version</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute service_pack_minor_version.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sku-instance_method" title="#sku (instance method)">#<strong>sku</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute sku.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#version-instance_method" title="#version (instance method)">#<strong>version</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute version.
+</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; Version </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+A new instance of Version.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Windows::Version (class)">Version</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns a new instance of Version
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+133
+134
+135
+136
+137
+138
+139</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/version.rb', line 133</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_initialize identifier id'>initialize</span>
+  <span class='rubyid_unless unless kw'>unless</span> <span class='rubyid_RUBY_PLATFORM constant id'>RUBY_PLATFORM</span> <span class='match op'>=~</span> <span class='regexp val'>/mswin|mingw32|windows/</span>
+    <span class='rubyid_raise identifier id'>raise</span> <span class='rubyid_NotImplementedError constant id'>NotImplementedError</span><span class='comma token'>,</span> <span class='string val'>'only valid on Windows platform'</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_@version ivar id'>@version</span><span class='comma token'>,</span> <span class='rubyid_@product_type ivar id'>@product_type</span><span class='comma token'>,</span> <span class='rubyid_@product_suite ivar id'>@product_suite</span><span class='comma token'>,</span> <span class='rubyid_@sku ivar id'>@sku</span><span class='comma token'>,</span> <span class='rubyid_@service_pack_major_version ivar id'>@service_pack_major_version</span><span class='comma token'>,</span> <span class='rubyid_@service_pack_minor_version ivar id'>@service_pack_minor_version</span> <span class='assign token'>=</span> <span class='rubyid_get_os_info identifier id'>get_os_info</span>
+  <span class='rubyid_@major_version ivar id'>@major_version</span><span class='comma token'>,</span> <span class='rubyid_@minor_version ivar id'>@minor_version</span><span class='comma token'>,</span> <span class='rubyid_@build_number ivar id'>@build_number</span> <span class='assign token'>=</span> <span class='rubyid_version identifier id'>version</span><span class='dot token'>.</span><span class='rubyid_split identifier id'>split</span><span class='lparen token'>(</span><span class='string val'>'.'</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='symbol val'>:to_i</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="build_number-instance_method">
+  
+    #<strong>build_number</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute build_number
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+130
+131
+132</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/version.rb', line 130</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_build_number identifier id'>build_number</span>
+  <span class='rubyid_@build_number ivar id'>@build_number</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="major_version-instance_method">
+  
+    #<strong>major_version</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute major_version
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+130
+131
+132</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/version.rb', line 130</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_major_version identifier id'>major_version</span>
+  <span class='rubyid_@major_version ivar id'>@major_version</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="minor_version-instance_method">
+  
+    #<strong>minor_version</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute minor_version
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+130
+131
+132</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/version.rb', line 130</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_minor_version identifier id'>minor_version</span>
+  <span class='rubyid_@minor_version ivar id'>@minor_version</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="product_suite-instance_method">
+  
+    #<strong>product_suite</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute product_suite
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+131
+132
+133</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/version.rb', line 131</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_product_suite identifier id'>product_suite</span>
+  <span class='rubyid_@product_suite ivar id'>@product_suite</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="product_type-instance_method">
+  
+    #<strong>product_type</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute product_type
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+131
+132
+133</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/version.rb', line 131</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_product_type identifier id'>product_type</span>
+  <span class='rubyid_@product_type ivar id'>@product_type</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="service_pack_major_version-instance_method">
+  
+    #<strong>service_pack_major_version</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute service_pack_major_version
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+130
+131
+132</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/version.rb', line 130</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_service_pack_major_version identifier id'>service_pack_major_version</span>
+  <span class='rubyid_@service_pack_major_version ivar id'>@service_pack_major_version</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="service_pack_minor_version-instance_method">
+  
+    #<strong>service_pack_minor_version</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute service_pack_minor_version
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+130
+131
+132</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/version.rb', line 130</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_service_pack_minor_version identifier id'>service_pack_minor_version</span>
+  <span class='rubyid_@service_pack_minor_version ivar id'>@service_pack_minor_version</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="sku-instance_method">
+  
+    #<strong>sku</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute sku
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+131
+132
+133</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/version.rb', line 131</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_sku identifier id'>sku</span>
+  <span class='rubyid_@sku ivar id'>@sku</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="version-instance_method">
+  
+    #<strong>version</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute version
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+131
+132
+133</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'windows/libraries/version.rb', line 131</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_version identifier id'>version</span>
+  <span class='rubyid_@version ivar id'>@version</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Sep 19 15:35:22 2016 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.5 (ruby-1.8.7).
+</div>
+
+    </div>
+  </body>
+</html>
